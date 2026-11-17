@@ -24,7 +24,16 @@ EMAIL = re.compile(r'(?<![\w.+-])([\w.+-]+@[\w.-]+\.[A-Za-z]{2,})(?![\w.-])')
 EXCLUDE_EMAIL_DOMAINS = ('example.com','example.org','test.com')
 
 def clean(value):
-    return SPACES.sub(' ', html.unescape(TAGS.sub(' ', str(value or '')))).strip()
+    """Render ATS HTML as readable plain text, including entity-encoded markup."""
+    raw=str(value or '')
+    # Some providers supply HTML encoded once or twice; decode before stripping tags.
+    for _ in range(3):
+        decoded=html.unescape(raw)
+        if decoded==raw:
+            break
+        raw=decoded
+    raw=re.sub(r'(?i)<\s*br\s*/?\s*>|</\s*(?:p|div|li|h[1-6])\s*>', ' ', raw)
+    return SPACES.sub(' ', TAGS.sub(' ', raw)).strip()
 
 def get_json(url):
     req = urllib.request.Request(url, headers={'User-Agent':UA,'Accept':'application/json'})
@@ -39,13 +48,15 @@ def validate_slug(slug):
     return slug
 
 def norm_location(raw):
-    s = clean(raw)
-    l = s.lower()
-    if re.search(r'\b(spain|españa|espan[aã])\b', l) and re.search(r'\b(remote|remoto|teletrabajo|work from home)\b', l):
+    """Conservative location classification; ambiguous remote means unverified."""
+    loc=clean(raw).lower()
+    has_spain=bool(re.search(r'\b(?:spain|españa)\b',loc))
+    has_remote=bool(re.search(r'\b(?:remote|remoto|teletrabajo|work from home)\b',loc))
+    if has_spain and has_remote:
         return 'remote_spain_explicit'
-    if re.search(r'\b(spain|españa)\b', l):
+    if has_spain:
         return 'spain_location_check_remote'
-    if re.search(r'\b(remote|remoto|worldwide|europe|emea)\b', l):
+    if has_remote or re.search(r'\b(?:worldwide|europe|emea)\b',loc):
         return 'remote_scope_unverified'
     return 'location_unverified'
 
@@ -83,7 +94,7 @@ def normalise(provider, company, j):
         return None
     groups=classify(title)
     return {'id':f'{provider}:{company}:{jid}', 'company':company, 'title':title, 'location':loc,
-            'location_status':norm_location(loc+' '+desc[:500]),'categories':groups,
+            'location_status':norm_location(loc),'categories':groups,'seniority_hint':('senior_or_lead' if re.search(r'\b(?:senior|sr\.?|lead|head|director|manager|principal|staff)\b',title,re.I) else 'unspecified'),
             'url':url,'description_excerpt':desc[:650],
             'published_emails':application_emails(desc),
             'email_status':'found_in_posting_not_application_verified' if application_emails(desc) else 'none_found',

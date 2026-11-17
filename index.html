@@ -29,12 +29,12 @@ h1 em{color:var(--teal);font-style:italic}
 .section-top{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;align-items:baseline;margin-bottom:20px}
 .section-top h2{font-size:1.55rem;margin:0}
 .section-top span{font-size:.8rem;color:var(--muted)}
-.grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr) minmax(0,1fr);gap:16px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}.field:first-child{grid-column:1/-1}
 .field{min-width:0}
 label{display:block;font-size:.82rem;font-weight:700;margin:0 0 9px}
 input,select{display:block;width:100%;min-width:0;max-width:100%;padding:13px 12px;background:#fff;border:1px solid #9ca9a7;border-radius:3px;font:inherit;font-size:.92rem;color:var(--ink);height:49px}
 input::placeholder{color:#69767d}
-.options-line{display:flex;gap:18px;flex-wrap:wrap;margin-top:18px}.options-line label{display:flex;align-items:flex-start;gap:8px;font-size:.85rem;font-weight:500;margin:0}.options-line input{height:17px;width:17px;flex:none;margin-top:4px}.actions{display:flex;align-items:center;flex-wrap:wrap;gap:18px;margin-top:22px}
+#provinceWrap[hidden]{display:none!important}.options-line{display:grid;gap:14px;margin-top:24px;padding:20px;background:#f7f9f7;border:1px solid var(--line);border-radius:4px}.options-line>p{font-size:.75rem;text-transform:uppercase;letter-spacing:.1em;font-weight:750;color:var(--teal);margin:0 0 2px}.options-line label{display:flex;align-items:flex-start;gap:12px;font-size:.9rem;font-weight:500;line-height:1.5;margin:0;cursor:pointer}.options-line input[type="checkbox"]{display:inline-block;appearance:auto;height:19px;width:19px;min-width:19px;max-width:19px;padding:0;flex:0 0 19px;margin:2px 0 0;accent-color:var(--teal)}.actions{display:flex;align-items:center;flex-wrap:wrap;gap:18px;margin-top:22px}
 button{background:var(--teal);color:white;border:1px solid var(--teal);padding:12px 24px;font:inherit;font-size:.9rem;font-weight:700;cursor:pointer;min-height:48px}
 button:hover{background:#0f5048}
 .privacy{font-size:.81rem;color:var(--muted);margin:0;max-width:670px}
@@ -52,8 +52,8 @@ button:hover{background:#0f5048}
 .site-foot{border-top:1px solid var(--line);background:#f2f1ed;padding:28px 0}
 .foot{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;align-items:center;font-size:.83rem;color:var(--muted)}
 .foot a{font-weight:600}.foot p{margin:0}
-@media(max-width:800px){.grid{grid-template-columns:1fr 1fr}.field:first-child{grid-column:1/-1}.hero{padding-top:58px}}
-@media(max-width:560px){.wrap{width:min(100% - 28px,1080px)}.nav{min-height:70px}.brand{font-size:1.3rem}.nav-right{gap:12px;font-size:.76rem}.grid{grid-template-columns:1fr}.field:first-child{grid-column:auto}.hero{padding:48px 0 34px}h1{font-size:clamp(2.5rem,11vw,3.7rem)}.lead{font-size:1.05rem}.section-results{padding:40px 0 70px}.actions{align-items:stretch}.actions button{width:100%}}
+@media(max-width:800px){.hero{padding-top:58px}}
+@media(max-width:560px){.wrap{width:min(100% - 28px,1080px)}.nav{min-height:70px}.brand{font-size:1.3rem}.nav-right{gap:12px;font-size:.76rem}.grid{grid-template-columns:1fr}.field:first-child{grid-column:1/-1}.hero{padding:48px 0 34px}h1{font-size:clamp(2.5rem,11vw,3.7rem)}.lead{font-size:1.05rem}.section-results{padding:40px 0 70px}.actions{align-items:stretch}.actions button{width:100%}}
 </style>
 </head>
 <body>
@@ -77,18 +77,19 @@ button:hover{background:#0f5048}
     <div class="section-top"><h2 id="search-title">Find a real junior job</h2><span>Free to explore · No sign-up required</span></div>
     <div class="grid">
       <div class="field"><label for="query">Job title or keyword</label><input id="query" placeholder="e.g. Operations, finance, support"></div>
-      <div class="field"><label for="location">Where you can work</label><select id="location"><option value="spain">Explicitly remote from Spain</option><option value="review" selected>Spain or remote — check eligibility</option><option value="all">All available openings</option></select></div>
+      <div class="field"><label for="location">Work location</label><select id="location"><option value="remote">Remote from Spain</option><option value="province">On-site or hybrid — choose province</option><option value="spain">All jobs based in Spain</option><option value="all">All countries (explore feed)</option></select></div>
+      <div class="field" id="provinceWrap" hidden><label for="province">Province</label><select id="province"><option value="">Choose province</option><option value="Álava">Álava</option><option value="Albacete">Albacete</option><option value="Alicante">Alicante</option><option value="Almería">Almería</option><option value="Asturias">Asturias</option><option value="Ávila">Ávila</option><option value="Badajoz">Badajoz</option><option value="Barcelona">Barcelona</option><option value="Bizkaia">Bizkaia</option><option value="Burgos">Burgos</option><option value="Cáceres">Cáceres</option><option value="Cádiz">Cádiz</option><option value="Cantabria">Cantabria</option><option value="Castellón">Castellón</option><option value="Ceuta">Ceuta</option><option value="Ciudad Real">Ciudad Real</option><option value="Córdoba">Córdoba</option><option value="A Coruña">A Coruña</option><option value="Cuenca">Cuenca</option><option value="Gipuzkoa">Gipuzkoa</option><option value="Girona">Girona</option><option value="Granada">Granada</option><option value="Guadalajara">Guadalajara</option><option value="Huelva">Huelva</option><option value="Huesca">Huesca</option><option value="Illes Balears">Illes Balears</option><option value="Jaén">Jaén</option><option value="León">León</option><option value="Lleida">Lleida</option><option value="Lugo">Lugo</option><option value="Madrid">Madrid</option><option value="Málaga">Málaga</option><option value="Melilla">Melilla</option><option value="Murcia">Murcia</option><option value="Navarra">Navarra</option><option value="Ourense">Ourense</option><option value="Palencia">Palencia</option><option value="Las Palmas">Las Palmas</option><option value="Pontevedra">Pontevedra</option><option value="La Rioja">La Rioja</option><option value="Salamanca">Salamanca</option><option value="Santa Cruz de Tenerife">Santa Cruz de Tenerife</option><option value="Segovia">Segovia</option><option value="Sevilla">Sevilla</option><option value="Soria">Soria</option><option value="Tarragona">Tarragona</option><option value="Teruel">Teruel</option><option value="Toledo">Toledo</option><option value="Valencia">Valencia</option><option value="Valladolid">Valladolid</option><option value="Zamora">Zamora</option><option value="Zaragoza">Zaragoza</option></select></div>
       <div class="field"><label for="email">Application preference</label><select id="email"><option value="all">All application routes</option><option value="published">Email mentioned in job posting</option></select></div>
     </div>
-    <div class="options-line">
-      <label for="junior"><input id="junior" type="checkbox" checked> Hide internships, traineeships, senior positions and unpaid roles</label>
-      <label for="onlyVerified"><input id="onlyVerified" type="checkbox"> Show only explicitly Spain-remote positions</label>
+    <div class="options-line" role="group" aria-label="Additional filters">
+      <p>Additional filters</p>
+      <label for="junior"><input id="junior" type="checkbox" checked> Exclude internships, traineeships, unpaid work and senior roles</label>
     </div>
     <div class="actions">
       <button type="button" id="search">Search vacancies</button>
       <p class="privacy">Your filters stay in this browser. No CV or account is required.</p>
     </div>
-    <p class="note"><strong>Before applying:</strong> Always check work-location eligibility and requirements on the original employer posting. An email appearing in an advertisement is not necessarily a CV submission address.</p>
+    <p class="note"><strong>Location accuracy:</strong> Province matches currently use the employer's published location text; jobs without a specified province may be missed. “Remote from Spain” requires explicit Spain and remote wording in the job location. Always verify eligibility with the employer.<br><strong>Before applying:</strong> Always check work-location eligibility and requirements on the original employer posting. An email appearing in an advertisement is not necessarily a CV submission address.</p>
   </section>
   <section class="section-results" aria-labelledby="results-title">
     <div class="results-head"><h2 id="results-title">Opportunities</h2></div>
@@ -116,18 +117,33 @@ function assessClient(j){
 function render(){
   if(!feed)return;
   const q=clean($('query').value).trim(),loc=$('location').value,contact=$('email').value;
-  const junior=$('junior').checked,onlyVerified=$('onlyVerified').checked;
-  const eligible=j=>!onlyVerified||j.location_status==='remote_spain_explicit';
+  const junior=$('junior').checked, province=$('province').value;
+  const normalize=s=>String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+  const provinceAliases={"Álava":["araba","vitoria"],"Alicante":["alacant","elche","elx"],"Asturias":["oviedo","gijon"],"Bizkaia":["vizcaya","bilbao"],"A Coruña":["coruna","a coruna","santiago de compostela"],"Gipuzkoa":["guipuzcoa","san sebastian","donostia"],"Girona":["gerona"],"Illes Balears":["balearic","mallorca","palma","ibiza","menorca"],"Lleida":["lerida"],"Navarra":["pamplona","iruna"],"Ourense":["orense"],"Las Palmas":["gran canaria","lanzarote","fuerteventura"],"La Rioja":["logrono"],"Santa Cruz de Tenerife":["tenerife","la palma"],"Valencia":["valencia","valència"],"Castellón":["castello","castellon"],"Zaragoza":["zaragoza"]};
+  const provinceMatch=j=>{
+    if(!province)return false;
+    const place=normalize(j.location); const terms=[province,...(provinceAliases[province]||[])].map(normalize);
+    const padded=' '+place.replace(/[^a-z0-9]+/g,' ').trim()+' ';
+    return terms.some(t=>padded.includes(' '+t.replace(/[^a-z0-9]+/g,' ').trim()+' '));
+  };
+  const spainBased=j=>j.location_status==='remote_spain_explicit'||j.location_status==='spain_location_check_remote';
+  const locationMatch=j=>{
+    if(loc==='all')return true;
+    if(loc==='remote')return j.location_status==='remote_spain_explicit';
+    if(loc==='spain')return spainBased(j);
+    if(loc==='province')return spainBased(j)&&j.location_status!=='remote_spain_explicit'&&provinceMatch(j);
+    return false;
+  };
   const matches=feed.jobs.filter(j=>{
     const fit=assessClient(j);
     return (!q||clean(j.title+' '+j.company+' '+j.description_excerpt).includes(q))
-    &&(loc==='all'||(loc==='spain'?j.location_status==='remote_spain_explicit':j.location_status!=='location_unverified'))
+    &&locationMatch(j)
     &&(contact==='all'||j.published_emails?.length)
-    &&(!junior||fit.status!=='excluded')&&eligible(j);
+    &&(!junior||fit.status!=='excluded');
   }).slice(0,200);
   const root=$('results');root.replaceChildren();
   $('status').textContent=`${matches.length} listings for review · Feed checked ${new Date(feed.updated_utc).toLocaleString()} · ${feed.sources_checked} employer boards checked (${feed.source_errors} source errors). These are not verified personal matches.`;
-  if(!matches.length)root.append(el('p','No listings pass these filters yet. Widen the location filter or add more employer boards.','empty-state'));
+  if(!matches.length)root.append(el('p',loc==='province'&&!province?'Choose a province to see local vacancies.':'No listings match this location yet. We only scan a small number of employers; this does not mean no jobs exist there.','empty-state'));
   for(const j of matches){
     const a=el('article',undefined,'job');const fit=assessClient(j);
     a.append(el('h2',j.title),el('p',j.company+' · '+(j.location||'Location unspecified'),'muted'));
@@ -141,7 +157,7 @@ function render(){
     root.append(a);
   }
 }
-$('search').addEventListener('click',render);$('junior').addEventListener('change',render);$('onlyVerified').addEventListener('change',render);$('query').addEventListener('keydown',e=>{if(e.key==='Enter')render()});fetch('live-jobs.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error(`HTTP ${r.status}`);return r.json()}).then(j=>{if(!Array.isArray(j.jobs))throw Error('Invalid feed');feed=j;render()}).catch(e=>{$('status').textContent='The live feed has not been published yet or is temporarily unavailable.';$('results').append(el('p','Real job listings will appear here once the first employer-feed update is published. In the meantime, explore the prototype or check back later.','empty-state'))});
+$('search').addEventListener('click',render);$('junior').addEventListener('change',render);$('province').addEventListener('change',render);$('location').addEventListener('change',()=>{$('provinceWrap').hidden=$('location').value!=='province';render()});$('query').addEventListener('keydown',e=>{if(e.key==='Enter')render()});fetch('live-jobs.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error(`HTTP ${r.status}`);return r.json()}).then(j=>{if(!Array.isArray(j.jobs))throw Error('Invalid feed');feed=j;render()}).catch(e=>{$('status').textContent='The live feed has not been published yet or is temporarily unavailable.';$('results').append(el('p','Real job listings will appear here once the first employer-feed update is published. In the meantime, explore the prototype or check back later.','empty-state'))});
 
 </script>
 </body>

@@ -34,7 +34,7 @@ h1 em{color:var(--teal);font-style:italic}
 label{display:block;font-size:.82rem;font-weight:700;margin:0 0 9px}
 input,select{display:block;width:100%;min-width:0;max-width:100%;padding:13px 12px;background:#fff;border:1px solid #9ca9a7;border-radius:3px;font:inherit;font-size:.92rem;color:var(--ink);height:49px}
 input::placeholder{color:#69767d}
-.actions{display:flex;align-items:center;flex-wrap:wrap;gap:18px;margin-top:22px}
+.options-line{display:flex;gap:18px;flex-wrap:wrap;margin-top:18px}.options-line label{display:flex;align-items:flex-start;gap:8px;font-size:.85rem;font-weight:500;margin:0}.options-line input{height:17px;width:17px;flex:none;margin-top:4px}.actions{display:flex;align-items:center;flex-wrap:wrap;gap:18px;margin-top:22px}
 button{background:var(--teal);color:white;border:1px solid var(--teal);padding:12px 24px;font:inherit;font-size:.9rem;font-weight:700;cursor:pointer;min-height:48px}
 button:hover{background:#0f5048}
 .privacy{font-size:.81rem;color:var(--muted);margin:0;max-width:670px}
@@ -70,15 +70,19 @@ button:hover{background:#0f5048}
   <section class="hero">
     <p class="eyebrow">Find relevant opportunities</p>
     <h1>Less searching.<br><em>Better matches.</em></h1>
-    <p class="lead">Explore vacancies from employer career pages. Filter by role, location and how you want to apply — without creating an account.</p>
+    <p class="lead">Find paid junior and early-career jobs from employer career pages. We flag uncertain requirements instead of pretending every listing is a match.</p>
     <p class="hero-note"><span class="mini-dot" aria-hidden="true"></span> Early beta · Limited employer coverage · Not a complete search of all vacancies</p>
   </section>
   <section class="search-card" id="search-jobs" aria-labelledby="search-title">
-    <div class="section-top"><h2 id="search-title">Find your next role</h2><span>Free to explore · No sign-up required</span></div>
+    <div class="section-top"><h2 id="search-title">Find a real junior job</h2><span>Free to explore · No sign-up required</span></div>
     <div class="grid">
       <div class="field"><label for="query">Job title or keyword</label><input id="query" placeholder="e.g. Operations, finance, support"></div>
-      <div class="field"><label for="location">Where you can work</label><select id="location"><option value="spain">Explicitly remote from Spain</option><option value="review">Spain or remote — check eligibility</option><option value="all">All available openings</option></select></div>
+      <div class="field"><label for="location">Where you can work</label><select id="location"><option value="spain">Explicitly remote from Spain</option><option value="review" selected>Spain or remote — check eligibility</option><option value="all">All available openings</option></select></div>
       <div class="field"><label for="email">Application preference</label><select id="email"><option value="all">All application routes</option><option value="published">Email mentioned in job posting</option></select></div>
+    </div>
+    <div class="options-line">
+      <label for="junior"><input id="junior" type="checkbox" checked> Hide internships, traineeships, senior positions and unpaid roles</label>
+      <label for="onlyVerified"><input id="onlyVerified" type="checkbox"> Show only explicitly Spain-remote positions</label>
     </div>
     <div class="actions">
       <button type="button" id="search">Search vacancies</button>
@@ -101,10 +105,43 @@ button:hover{background:#0f5048}
 <script>
 
 const $=id=>document.getElementById(id);let feed=null;const clean=s=>String(s??'').toLowerCase();function el(tag,txt,cls){const n=document.createElement(tag);if(txt!==undefined)n.textContent=txt;if(cls)n.className=cls;return n;}
-function render(){if(!feed)return;const q=clean($('query').value).trim(),loc=$('location').value,contact=$('email').value;const matches=feed.jobs.filter(j=>(!q||clean(j.title+' '+j.company+' '+j.description_excerpt).includes(q))&&(loc==='all'||(loc==='spain'?j.location_status==='remote_spain_explicit':j.location_status!=='location_unverified'))&&(contact==='all'||j.published_emails?.length)).slice(0,200);const root=$('results');root.replaceChildren();$('status').textContent=`${matches.length} matching listings · Feed checked ${new Date(feed.updated_utc).toLocaleString()} · ${feed.sources_checked} employer boards checked (${feed.source_errors} source errors).`;
-if(!matches.length)root.append(el('p','No listings match. Try a broader filter, or check again when new employers are added.','panel'));
-for(const j of matches){const a=el('article',undefined,'job');a.append(el('h2',j.title),el('p',j.company+' · '+(j.location||'Location unspecified'),'muted'));const label=({remote_spain_explicit:'Remote Spain mentioned — verify full requirements',spain_location_check_remote:'Spain mentioned — remote status unverified',remote_scope_unverified:'Remote mentioned — Spain eligibility unverified',location_unverified:'Location/remote eligibility unverified'})[j.location_status]||'Eligibility unverified';a.append(el('p',label,'status'),el('p',j.description_excerpt.slice(0,320)+(j.description_excerpt.length>320?'…':'')));const link=el('a','View employer posting / Apply');link.href=j.url;link.target='_blank';link.rel='noopener noreferrer';a.append(link);if(j.published_emails?.length)a.append(el('p','Email in posting (NOT verified for CV applications): '+j.published_emails.join(', '),'status'));root.append(a);}}
-$('search').addEventListener('click',render);$('query').addEventListener('keydown',e=>{if(e.key==='Enter')render()});fetch('live-jobs.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error(`HTTP ${r.status}`);return r.json()}).then(j=>{if(!Array.isArray(j.jobs))throw Error('Invalid feed');feed=j;render()}).catch(e=>{$('status').textContent='The live feed has not been published yet or is temporarily unavailable.';$('results').append(el('p','Real job listings will appear here once the first employer-feed update is published. In the meantime, explore the prototype or check back later.','empty-state'))});
+function assessClient(j){
+  if(j.early_career_status)return {status:j.early_career_status,reason:j.early_career_reason||'Review full requirements'};
+  const title=clean(j.title), text=clean(j.description_excerpt||'');
+  if(/\b(intern(ship)?|prácticas?|becari[oa]|trainee(ship)?|apprentice(ship)?|graduate programm?e?)\b/.test(title))return {status:'excluded',reason:'Internship / trainee title'};
+  if(/\b(senior|lead|head|director|principal|staff|vp|chief|manager)\b/.test(title))return {status:'excluded',reason:'Senior or management title'};
+  if(/\b(unpaid|sin remuneración)\b/.test(text))return {status:'excluded',reason:'Unpaid role indicated'};
+  return {status:'worth_checking',reason:'Check full experience requirements and compensation'};
+}
+function render(){
+  if(!feed)return;
+  const q=clean($('query').value).trim(),loc=$('location').value,contact=$('email').value;
+  const junior=$('junior').checked,onlyVerified=$('onlyVerified').checked;
+  const eligible=j=>!onlyVerified||j.location_status==='remote_spain_explicit';
+  const matches=feed.jobs.filter(j=>{
+    const fit=assessClient(j);
+    return (!q||clean(j.title+' '+j.company+' '+j.description_excerpt).includes(q))
+    &&(loc==='all'||(loc==='spain'?j.location_status==='remote_spain_explicit':j.location_status!=='location_unverified'))
+    &&(contact==='all'||j.published_emails?.length)
+    &&(!junior||fit.status!=='excluded')&&eligible(j);
+  }).slice(0,200);
+  const root=$('results');root.replaceChildren();
+  $('status').textContent=`${matches.length} listings for review · Feed checked ${new Date(feed.updated_utc).toLocaleString()} · ${feed.sources_checked} employer boards checked (${feed.source_errors} source errors). These are not verified personal matches.`;
+  if(!matches.length)root.append(el('p','No listings pass these filters yet. Widen the location filter or add more employer boards.','empty-state'));
+  for(const j of matches){
+    const a=el('article',undefined,'job');const fit=assessClient(j);
+    a.append(el('h2',j.title),el('p',j.company+' · '+(j.location||'Location unspecified'),'muted'));
+    const locLabel=({remote_spain_explicit:'Remote Spain appears in location — verify full posting',spain_location_check_remote:'Spain location — remote status unverified',remote_scope_unverified:'Remote scope ambiguous — Spain eligibility unverified',location_unverified:'Work location/eligibility unverified'})[j.location_status]||'Eligibility unverified';
+    a.append(el('p',locLabel,'status'));
+    a.append(el('p',(fit.status==='excluded'?'Excluded by default: ':'Needs review: ')+fit.reason,'status'));
+    a.append(el('p','Compensation and contract type: not independently verified.','muted'));
+    const desc=String(j.description_excerpt||'');a.append(el('p',desc.slice(0,320)+(desc.length>320?'…':'')));
+    const link=el('a','View original employer posting / Apply');link.href=j.url;link.target='_blank';link.rel='noopener noreferrer';a.append(link);
+    if(j.published_emails?.length)a.append(el('p','Email found in posting (not verified for CV applications): '+j.published_emails.join(', '),'status'));
+    root.append(a);
+  }
+}
+$('search').addEventListener('click',render);$('junior').addEventListener('change',render);$('onlyVerified').addEventListener('change',render);$('query').addEventListener('keydown',e=>{if(e.key==='Enter')render()});fetch('live-jobs.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error(`HTTP ${r.status}`);return r.json()}).then(j=>{if(!Array.isArray(j.jobs))throw Error('Invalid feed');feed=j;render()}).catch(e=>{$('status').textContent='The live feed has not been published yet or is temporarily unavailable.';$('results').append(el('p','Real job listings will appear here once the first employer-feed update is published. In the meantime, explore the prototype or check back later.','empty-state'))});
 
 </script>
 </body>

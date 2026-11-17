@@ -89,7 +89,7 @@ button:hover{background:#0f5048}
       <button type="button" id="search">Search vacancies</button>
       <p class="privacy">Your filters stay in this browser. No CV or account is required.</p>
     </div>
-    <p class="note"><strong>Location accuracy:</strong> Province matches currently use the employer's published location text; jobs without a specified province may be missed. “Remote from Spain” requires explicit Spain and remote wording in the job location. Always verify eligibility with the employer.<br><strong>Before applying:</strong> Always check work-location eligibility and requirements on the original employer posting. An email appearing in an advertisement is not necessarily a CV submission address.</p>
+    <p class="note"><strong>Location accuracy:</strong> Province matches use verified city/province names from published location fields; unrecognised places remain unclassified. “Remote from Spain” requires explicit Spain and remote wording in the job location. Always verify eligibility with the employer.<br><strong>Before applying:</strong> Always check work-location eligibility and requirements on the original employer posting. An email appearing in an advertisement is not necessarily a CV submission address.</p>
   </section>
   <section class="section-results" aria-labelledby="results-title">
     <div class="results-head"><h2 id="results-title">Opportunities</h2></div>
@@ -119,13 +119,7 @@ function render(){
   const q=clean($('query').value).trim(),loc=$('location').value,contact=$('email').value;
   const junior=$('junior').checked, province=$('province').value;
   const normalize=s=>String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
-  const provinceAliases={"Álava":["araba","vitoria"],"Alicante":["alacant","elche","elx"],"Asturias":["oviedo","gijon"],"Bizkaia":["vizcaya","bilbao"],"A Coruña":["coruna","a coruna","santiago de compostela"],"Gipuzkoa":["guipuzcoa","san sebastian","donostia"],"Girona":["gerona"],"Illes Balears":["balearic","mallorca","palma","ibiza","menorca"],"Lleida":["lerida"],"Navarra":["pamplona","iruna"],"Ourense":["orense"],"Las Palmas":["gran canaria","lanzarote","fuerteventura"],"La Rioja":["logrono"],"Santa Cruz de Tenerife":["tenerife","la palma"],"Valencia":["valencia","valència"],"Castellón":["castello","castellon"],"Zaragoza":["zaragoza"]};
-  const provinceMatch=j=>{
-    if(!province)return false;
-    const place=normalize(j.location); const terms=[province,...(provinceAliases[province]||[])].map(normalize);
-    const padded=' '+place.replace(/[^a-z0-9]+/g,' ').trim()+' ';
-    return terms.some(t=>padded.includes(' '+t.replace(/[^a-z0-9]+/g,' ').trim()+' '));
-  };
+  const provinceMatch=j=>Array.isArray(j.provinces)&&j.provinces.some(p=>normalize(p)===normalize(province));
   const spainBased=j=>j.location_status==='remote_spain_explicit'||j.location_status==='spain_location_check_remote';
   const locationMatch=j=>{
     if(loc==='all')return true;

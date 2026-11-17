@@ -79,6 +79,35 @@ def classify(text):
            'project_support':['project assistant','project administrator','project coordinator']}
     return [key for key,words in terms.items() if any(w in s for w in words)]
 
+
+# Conservative, explainable early-career indicators: not a hiring prediction.
+INTERNSHIP_TITLE = re.compile(r"\b(intern(?:ship)?|pr[aá]ctic[ao]s?|becari[oa]|trainee(?:ship)?|apprentice(?:ship)?|working student|student placement|graduate programme|graduate program)\b", re.I)
+SENIOR_TITLE = re.compile(r"\b(senior|sr\.?|lead|head|director|principal|staff|vice president|vp|chief|manager|architect|expert|supervisor)\b", re.I)
+JUNIOR_TITLE = re.compile(r"\b(junior|jr\.?|associate|assistant|administrator|coordinator|specialist|representative|analyst|support|entry.level)\b", re.I)
+YEARS_REQUIRED = re.compile(r"\b(?:minimum of |at least |requires? |required:?[ ]*)?(\d{1,2})(?:\s*[-–]\s*(\d{1,2}))?\s*\+?\s*years?\s+(?:of\s+)?(?:relevant |professional |proven |hands.on |prior |work |industry )?experience\b", re.I)
+
+def assess_early_career(title, desc):
+    '''Return conservative suitability evidence, retaining uncertainty.'''
+    if INTERNSHIP_TITLE.search(title):
+        return 'excluded', 'Internship, trainee or placement title'
+    if SENIOR_TITLE.search(title):
+        return 'excluded', 'Senior/management title'
+    years = [int(m.group(1)) for m in YEARS_REQUIRED.finditer(desc[:3500])]
+    if years and min(years) >= 4:
+        return 'excluded', f'Posting mentions {min(years)}+ years of experience; verify context'
+    if years and min(years) <= 3:
+        return 'worth_checking', f'Posting mentions {min(years)} years of experience; verify requirements'
+    if JUNIOR_TITLE.search(title):
+        return 'worth_checking', 'Early-career title; full requirements not verified'
+    return 'worth_checking', 'Seniority not established from available information'
+
+def pay_indicator(title, desc):
+    '''Only a screening signal. Do not infer annual salary or employment type.'''
+    txt = (title+' '+desc[:4000]).lower()
+    if re.search(r'\b(unpaid|volunteer position|no compensation|sin remuneraci[oó]n|non.remunerated)\b', txt):
+        return 'unpaid_indicated'
+    return 'not_verified'
+
 def normalise(provider, company, j):
     if provider=='greenhouse':
         title=clean(j.get('title')); loc=clean((j.get('location') or {}).get('name',''))
@@ -93,8 +122,11 @@ def normalise(provider, company, j):
     if not title or not jid or not url.startswith('https://'):
         return None
     groups=classify(title)
+    fit_status, fit_reason = assess_early_career(title, desc)
+    if pay_indicator(title,desc)=='unpaid_indicated':
+        fit_status,fit_reason='excluded','Unpaid work indicated in posting'
     return {'id':f'{provider}:{company}:{jid}', 'company':company, 'title':title, 'location':loc,
-            'location_status':norm_location(loc),'categories':groups,'seniority_hint':('senior_or_lead' if re.search(r'\b(?:senior|sr\.?|lead|head|director|manager|principal|staff)\b',title,re.I) else 'unspecified'),
+            'location_status':norm_location(loc),'categories':groups,'early_career_status':fit_status,'early_career_reason':fit_reason,'pay_status':pay_indicator(title,desc),'seniority_hint':('senior_or_lead' if re.search(r'\b(?:senior|sr\.?|lead|head|director|manager|principal|staff)\b',title,re.I) else 'unspecified'),
             'url':url,'description_excerpt':desc[:650],
             'published_emails':application_emails(desc),
             'email_status':'found_in_posting_not_application_verified' if application_emails(desc) else 'none_found',

@@ -1,4 +1,19 @@
 {
-  "greenhouse": [],
-  "lever": []
+  "greenhouse": [
+    {"slug": "typeform", "company": "Typeform"},
+    {"slug": "berlinbrands", "company": "Berlin Brands Group"},
+    {"slug": "pinecagroup", "company": "Pineca Group"},
+    {"slug": "affirm", "company": "Affirm"},
+    {"slug": "grafanalabs", "company": "Grafana Labs"},
+    {"slug": "extrahopnetworks", "company": "ExtraHop"},
+    {"slug": "bondora", "company": "Bondora"},
+    {"slug": "jetbrains", "company": "JetBrains"},
+    {"slug": "duettoresearch", "company": "Duetto"},
+    {"slug": "pingidentity", "company": "Ping Identity"}
+  ],
+  "lever": [
+    {"slug": "360learning", "company": "360Learning"},
+    {"slug": "airalo", "company": "Airalo"},
+    {"slug": "veeva", "company": "Veeva Systems"}
+  ]
 }

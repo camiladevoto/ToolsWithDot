@@ -60,6 +60,48 @@ def norm_location(raw):
         return 'remote_scope_unverified'
     return 'location_unverified'
 
+# Conservative city/province mapping: clear names only; no guessed province from generic regions.
+PROVINCE_TERMS = {
+    'Valencia': ['valencia', 'valència', 'gandia', 'paterna', 'torrent', 'sagunto', 'sagunt'],
+    'Madrid': ['madrid', 'alcobendas', 'getafe', 'leganes', 'leganés', 'pozuelo', 'mostoles', 'móstoles'],
+    'Barcelona': ['barcelona', 'hospitalet', 'l’hospitalet', "l'hospitalet", 'sabadell', 'terrassa', 'sant cugat', 'badalona'],
+    'Alicante': ['alicante', 'alacant', 'elche', 'elx', 'benidorm', 'torrevieja'],
+    'Málaga': ['malaga', 'málaga', 'marbella', 'fuengirola'],
+    'Sevilla': ['sevilla', 'seville', 'dos hermanas'],
+    'Zaragoza': ['zaragoza'], 'Murcia':['murcia','cartagena'],
+    'Bizkaia':['bilbao','bizkaia','vizcaya'],
+    'Gipuzkoa':['donostia','san sebastian','san sebastián','gipuzkoa','guipuzcoa'],
+    'Granada':['granada'], 'Córdoba':['cordoba','córdoba'],
+    'Valladolid':['valladolid'], 'Castellón':['castellon','castellón','castello','castelló'],
+    'Navarra':['pamplona','navarra'], 'A Coruña':['a coruña','a coruna','santiago de compostela'],
+    'Illes Balears':['palma de mallorca','mallorca','ibiza','eivissa'],
+    'Las Palmas':['las palmas de gran canaria','las palmas','lanzarote'],
+    'Santa Cruz de Tenerife':['santa cruz de tenerife','tenerife'],
+    'Asturias':['oviedo','gijon','gijón','asturias'], 'La Rioja':['logrono','logroño'],
+    'Cádiz':['cadiz','cádiz','jerez de la frontera'], 'Girona':['girona','gerona'],
+    'Tarragona':['tarragona','reus'], 'Almería':['almeria','almería'],
+    'Álava':['vitoria','gasteiz','alava','álava'],
+}
+def folded(s):
+    import unicodedata
+    return ''.join(c for c in unicodedata.normalize('NFKD', str(s or '')) if not unicodedata.combining(c)).lower()
+def provinces_from_location(location):
+    text=' '+re.sub(r'[^a-z0-9]+',' ',folded(location)).strip()+' '
+    return [province for province, names in PROVINCE_TERMS.items() if any(
+        (' '+re.sub(r'[^a-z0-9]+',' ',folded(name)).strip()+' ') in text for name in names)]
+def location_details(location, workplace=''):
+    loc=clean(location)
+    provinces=provinces_from_location(loc)
+    has_spain=bool(re.search(r'\b(?:spain|españa|espana|\bES\b)\b',loc,re.I)) or bool(provinces)
+    # 'Remote' from a provider workplaceType is meaningful, but Spain eligibility
+    # requires a clear Spanish location too. The job posting must still be checked.
+    has_remote=bool(re.search(r'\b(?:remote|remoto|teletrabajo|work from home)\b',loc,re.I)) or workplace.lower()=='remote'
+    if has_spain and has_remote: status='remote_spain_explicit'
+    elif has_spain: status='spain_location_check_remote'
+    elif has_remote or re.search(r'\b(?:worldwide|europe|emea)\b',loc,re.I): status='remote_scope_unverified'
+    else: status='location_unverified'
+    return status,provinces
+
 def application_emails(description):
     # Only expose addresses published in vacancy text, never guess recruiter emails.
     # A published email is NOT necessarily an authorised application contact.
@@ -119,6 +161,8 @@ def normalise(provider, company, j):
         desc=clean(' '.join([str(j.get('descriptionPlain','')),str(j.get('additionalPlain','')),str(j.get('description',''))]))
         url=j.get('hostedUrl') or j.get('applyUrl') or ''
         jid=str(j.get('id',''))
+    workplace = (j.get('workplaceType','') if provider == 'lever' else '') or ''
+    location_status, provinces = location_details(loc, workplace)
     if not title or not jid or not url.startswith('https://'):
         return None
     groups=classify(title)
@@ -126,7 +170,7 @@ def normalise(provider, company, j):
     if pay_indicator(title,desc)=='unpaid_indicated':
         fit_status,fit_reason='excluded','Unpaid work indicated in posting'
     return {'id':f'{provider}:{company}:{jid}', 'company':company, 'title':title, 'location':loc,
-            'location_status':norm_location(loc),'categories':groups,'early_career_status':fit_status,'early_career_reason':fit_reason,'pay_status':pay_indicator(title,desc),'seniority_hint':('senior_or_lead' if re.search(r'\b(?:senior|sr\.?|lead|head|director|manager|principal|staff)\b',title,re.I) else 'unspecified'),
+            'location_status':location_status,'provinces':provinces,'workplace_type':workplace,'categories':groups,'early_career_status':fit_status,'early_career_reason':fit_reason,'pay_status':pay_indicator(title,desc),'seniority_hint':('senior_or_lead' if re.search(r'\b(?:senior|sr\.?|lead|head|director|manager|principal|staff)\b',title,re.I) else 'unspecified'),
             'url':url,'description_excerpt':desc[:650],
             'published_emails':application_emails(desc),
             'email_status':'found_in_posting_not_application_verified' if application_emails(desc) else 'none_found',

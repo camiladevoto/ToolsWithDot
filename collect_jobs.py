@@ -8,6 +8,7 @@ import html
 import json
 import re
 import sys
+import time
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -86,7 +87,7 @@ def normalise(provider, company, j):
             'url':url,'description_excerpt':desc[:650],
             'published_emails':application_emails(desc),
             'email_status':'found_in_posting_not_application_verified' if application_emails(desc) else 'none_found',
-            'source':provider}
+            'source':provider, 'last_checked_utc':dt.datetime.now(dt.timezone.utc).isoformat(timespec='seconds')}
 
 def read_boards(config):
     out=[]
@@ -114,6 +115,7 @@ def run():
         except (urllib.error.URLError,TimeoutError,ValueError,RuntimeError,KeyError) as exc:
             errors.append(f'{provider}/{slug}: {type(exc).__name__}: {exc}')
             print(errors[-1],file=sys.stderr)
+        time.sleep(0.4)  # moderate request rate; one request per company
     if succeeded==0:
         # Never overwrite a previously good file with an empty feed on outage/empty config.
         print('No boards fetched successfully: not replacing feed', file=sys.stderr)

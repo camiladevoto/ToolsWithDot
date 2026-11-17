@@ -1,0 +1,29 @@
+name: Update public live jobs
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '37 7 * * *'
+permissions:
+  contents: write
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Fetch published job feeds
+        run: python collect_jobs.py
+      - name: Commit public job feed only
+        run: |
+          if git diff --quiet -- live-jobs.json && ! git ls-files --others --exclude-standard | grep -q '^live-jobs.json$'; then
+            echo "No changes"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add live-jobs.json
+          git commit -m "Refresh public job feed"
+          git push

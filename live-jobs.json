@@ -1,7 +1,7 @@
 {
-  "updated_utc": "2026-11-19T08:44:04+00:00",
-  "sources_checked": 16,
-  "source_errors": 1,
+  "updated_utc": "2026-11-20T08:42:14+00:00",
+  "sources_checked": 17,
+  "source_errors": 0,
   "jobs": [
     {
       "id": "lever:360Learning:ce475b7e-540a-4b5e-8035-795c89b20926",
@@ -23,7 +23,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "lever",
-      "last_checked_utc": "2026-11-19T08:43:42+00:00"
+      "last_checked_utc": "2026-11-20T08:42:06+00:00"
     },
     {
       "id": "greenhouse:Berlin Brands Group:6180324004",
@@ -45,7 +45,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-19T08:43:36+00:00"
+      "last_checked_utc": "2026-11-20T08:41:59+00:00"
     },
     {
       "id": "greenhouse:Berlin Brands Group:6248387004",
@@ -67,7 +67,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-19T08:43:36+00:00"
+      "last_checked_utc": "2026-11-20T08:41:59+00:00"
     },
     {
       "id": "greenhouse:Berlin Brands Group:6256096004",
@@ -89,7 +89,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-19T08:43:36+00:00"
+      "last_checked_utc": "2026-11-20T08:41:59+00:00"
     },
     {
       "id": "greenhouse:Berlin Brands Group:6256121004",
@@ -111,7 +111,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-19T08:43:36+00:00"
+      "last_checked_utc": "2026-11-20T08:41:59+00:00"
     },
     {
       "id": "greenhouse:Berlin Brands Group:6223013004",
@@ -133,7 +133,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-19T08:43:36+00:00"
+      "last_checked_utc": "2026-11-20T08:41:59+00:00"
     },
     {
       "id": "greenhouse:Berlin Brands Group:6254044004",
@@ -155,7 +155,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-19T08:43:36+00:00"
+      "last_checked_utc": "2026-11-20T08:41:59+00:00"
     },
     {
       "id": "greenhouse:Berlin Brands Group:6256087004",
@@ -177,7 +177,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-19T08:43:36+00:00"
+      "last_checked_utc": "2026-11-20T08:41:59+00:00"
     },
     {
       "id": "greenhouse:Berlin Brands Group:6256129004",
@@ -199,7 +199,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-19T08:43:36+00:00"
+      "last_checked_utc": "2026-11-20T08:41:59+00:00"
     },
     {
       "id": "greenhouse:Duetto:8120547",
@@ -221,7 +221,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-19T08:43:40+00:00"
+      "last_checked_utc": "2026-11-20T08:42:04+00:00"
     },
     {
       "id": "lever:Emburse:90653b75-e196-435d-8dfc-3b95568ed15a",
@@ -243,7 +243,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "lever",
-      "last_checked_utc": "2026-11-19T08:44:03+00:00"
+      "last_checked_utc": "2026-11-20T08:42:12+00:00"
     },
     {
       "id": "lever:Emburse:c8965c6d-4c42-4df4-8162-42a6287ff253",
@@ -265,7 +265,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "lever",
-      "last_checked_utc": "2026-11-19T08:44:03+00:00"
+      "last_checked_utc": "2026-11-20T08:42:12+00:00"
     },
     {
       "id": "lever:Emburse:47822d8f-21fb-4ae3-8dc2-40e4b5e24bab",
@@ -287,7 +287,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "lever",
-      "last_checked_utc": "2026-11-19T08:44:03+00:00"
+      "last_checked_utc": "2026-11-20T08:42:12+00:00"
     },
     {
       "id": "greenhouse:ExtraHop:6150808004",
@@ -309,7 +309,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-19T08:43:38+00:00"
+      "last_checked_utc": "2026-11-20T08:42:02+00:00"
     },
     {
       "id": "greenhouse:ExtraHop:6241540004",
@@ -331,7 +331,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-19T08:43:38+00:00"
+      "last_checked_utc": "2026-11-20T08:42:02+00:00"
     },
     {
       "id": "greenhouse:ExtraHop:6251522004",
@@ -353,7 +353,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-19T08:43:38+00:00"
+      "last_checked_utc": "2026-11-20T08:42:02+00:00"
     },
     {
       "id": "greenhouse:Grafana Labs:6221389004",
@@ -375,95 +375,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-19T08:43:38+00:00"
-    },
-    {
-      "id": "greenhouse:JetBrains:4828073101",
-      "company": "JetBrains",
-      "title": "Customer Success Engineer (China)",
-      "location": "Shanghai, China",
-      "location_status": "location_unverified",
-      "provinces": [],
-      "workplace_type": "",
-      "categories": [
-        "customer_operations"
-      ],
-      "early_career_status": "worth_checking",
-      "early_career_reason": "Seniority not established from available information",
-      "pay_status": "not_verified",
-      "seniority_hint": "unspecified",
-      "url": "https://job-boards.eu.greenhouse.io/jetbrains/jobs/4828073101",
-      "description_excerpt": "About JetBrains At JetBrains, code is our passion. Ever since we started, back in 2000, we have been striving to make the strongest, most effective developer tools on earth. Over 15.9 million developers already use our products, and 88 Fortune Global Top 100 companies are JetBrains customers. About the role We are looking for a Customer Success Engineer to join our growing team. In this role, you will work to maintain close relationships with our existing customers in China and help grow the business in the region. As part of our team, you will: Work closely with JetBrains account executives and support engineers to ensure a smooth pre-sales ",
-      "published_emails": [],
-      "email_status": "none_found",
-      "source": "greenhouse",
-      "last_checked_utc": "2026-11-19T08:43:39+00:00"
-    },
-    {
-      "id": "greenhouse:JetBrains:4976225101",
-      "company": "JetBrains",
-      "title": "Customer Success Engineer - Americas",
-      "location": "Marlton, New Jersey; Remote, United States",
-      "location_status": "remote_scope_unverified",
-      "provinces": [],
-      "workplace_type": "",
-      "categories": [
-        "customer_operations"
-      ],
-      "early_career_status": "worth_checking",
-      "early_career_reason": "Seniority not established from available information",
-      "pay_status": "not_verified",
-      "seniority_hint": "unspecified",
-      "url": "https://job-boards.eu.greenhouse.io/jetbrains/jobs/4976225101",
-      "description_excerpt": "At JetBrains, code is our passion. Since we started in 2000, we have strived to make the most effective developer tools on earth so developers can learn fast and make amazing things happen – with code. Customer Success Engineers (CSE) are technical points of contact for JetBrains customers. They work with the JetBrains product teams and customers to ensure that the products meet the needs of our enterprise users, helping our products retain their position as the best on the market. Many of our customers begin with a set of strategic projects that grow into sizable partnerships. We are looking for Customer Success Engineers to build great tech",
-      "published_emails": [],
-      "email_status": "none_found",
-      "source": "greenhouse",
-      "last_checked_utc": "2026-11-19T08:43:39+00:00"
-    },
-    {
-      "id": "greenhouse:JetBrains:4991149101",
-      "company": "JetBrains",
-      "title": "Customer Success Engineer - LATAM",
-      "location": "Remote, United States",
-      "location_status": "remote_scope_unverified",
-      "provinces": [],
-      "workplace_type": "",
-      "categories": [
-        "customer_operations"
-      ],
-      "early_career_status": "worth_checking",
-      "early_career_reason": "Seniority not established from available information",
-      "pay_status": "not_verified",
-      "seniority_hint": "unspecified",
-      "url": "https://job-boards.eu.greenhouse.io/jetbrains/jobs/4991149101",
-      "description_excerpt": "At JetBrains, code is our passion. Since we started in 2000, we have strived to make the most effective developer tools on earth so developers can learn fast and make amazing things happen – with code. Customer Success Engineers (CSE) are technical points of contact for JetBrains customers. They work with the JetBrains product teams and customers to ensure that the products meet the needs of our enterprise users, helping our products retain their position as the best on the market. Many of our customers begin with a set of strategic projects that grow into sizable partnerships. We are looking for Customer Success Engineers to build great tech",
-      "published_emails": [],
-      "email_status": "none_found",
-      "source": "greenhouse",
-      "last_checked_utc": "2026-11-19T08:43:39+00:00"
-    },
-    {
-      "id": "greenhouse:JetBrains:4991146101",
-      "company": "JetBrains",
-      "title": "Customer Support Specialist",
-      "location": "Marlton, New Jersey",
-      "location_status": "location_unverified",
-      "provinces": [],
-      "workplace_type": "",
-      "categories": [
-        "customer_operations"
-      ],
-      "early_career_status": "worth_checking",
-      "early_career_reason": "Early-career title; full requirements not verified",
-      "pay_status": "not_verified",
-      "seniority_hint": "unspecified",
-      "url": "https://job-boards.eu.greenhouse.io/jetbrains/jobs/4991146101",
-      "description_excerpt": "Do you enjoy unraveling tricky problems, simplifying complicated choices, and helping people find clarity? If you take pride in making someone’s day easier and want to support the people building the future of software, you will fit right in. About JetBrains We create intelligent software development tools for developers and teams. More than 15 million users, over 300,000 companies, and 88 of the Fortune Global Top 100 rely on our products to solve real, complex problems. Our mission is simple: make development teams more productive and AI adoptable at scale. What you’ll do Our developer ecosystem is growing rapidly across the Americas. Licen",
-      "published_emails": [],
-      "email_status": "none_found",
-      "source": "greenhouse",
-      "last_checked_utc": "2026-11-19T08:43:39+00:00"
+      "last_checked_utc": "2026-11-20T08:42:01+00:00"
     },
     {
       "id": "greenhouse:Pineca Group:4998265101",
@@ -485,7 +397,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-19T08:43:36+00:00"
+      "last_checked_utc": "2026-11-20T08:42:00+00:00"
     },
     {
       "id": "greenhouse:Pineca Group:4998238101",
@@ -507,7 +419,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-19T08:43:36+00:00"
+      "last_checked_utc": "2026-11-20T08:42:00+00:00"
     },
     {
       "id": "greenhouse:Ping Identity:8912619002",
@@ -529,7 +441,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-19T08:43:40+00:00"
+      "last_checked_utc": "2026-11-20T08:42:04+00:00"
     },
     {
       "id": "greenhouse:Ping Identity:8912988002",
@@ -551,7 +463,361 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-19T08:43:40+00:00"
+      "last_checked_utc": "2026-11-20T08:42:04+00:00"
+    },
+    {
+      "id": "lever:Veeva Systems:7c8fdf32-e8e0-4c0f-a996-4f20851a04f0",
+      "company": "Veeva Systems",
+      "title": "Customer Success Associate - RTSM",
+      "location": "South Korea - Seoul",
+      "location_status": "location_unverified",
+      "provinces": [],
+      "workplace_type": "onsite",
+      "categories": [
+        "customer_operations"
+      ],
+      "early_career_status": "worth_checking",
+      "early_career_reason": "Early-career title; full requirements not verified",
+      "pay_status": "not_verified",
+      "seniority_hint": "unspecified",
+      "url": "https://jobs.lever.co/veeva/7c8fdf32-e8e0-4c0f-a996-4f20851a04f0",
+      "description_excerpt": "Veeva Systems is a mission-driven organization and pioneer in industry cloud, helping life sciences companies bring therapies to patients faster. As one of the fastest-growing SaaS companies in history, we surpassed $3B in revenue in our last fiscal year with extensive growth potential ahead. At the heart of Veeva are our values: Do the Right Thing, Customer Success, Employee Success, and Speed. We're not just any public company – we made history in 2021 by becoming a public benefit corporation (PBC), legally bound to balancing the interests of customers, employees, society, and investors. Join us in transforming the life sciences industry, c",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "lever",
+      "last_checked_utc": "2026-11-20T08:42:08+00:00"
+    },
+    {
+      "id": "lever:Veeva Systems:c7b81fa6-01f2-418f-b57b-561aa007516e",
+      "company": "Veeva Systems",
+      "title": "Customer Success Associate - RTSM",
+      "location": "South Korea - Busan",
+      "location_status": "location_unverified",
+      "provinces": [],
+      "workplace_type": "onsite",
+      "categories": [
+        "customer_operations"
+      ],
+      "early_career_status": "worth_checking",
+      "early_career_reason": "Early-career title; full requirements not verified",
+      "pay_status": "not_verified",
+      "seniority_hint": "unspecified",
+      "url": "https://jobs.lever.co/veeva/c7b81fa6-01f2-418f-b57b-561aa007516e",
+      "description_excerpt": "Veeva Systems is a mission-driven organization and pioneer in industry cloud, helping life sciences companies bring therapies to patients faster. As one of the fastest-growing SaaS companies in history, we surpassed $3B in revenue in our last fiscal year with extensive growth potential ahead. At the heart of Veeva are our values: Do the Right Thing, Customer Success, Employee Success, and Speed. We're not just any public company – we made history in 2021 by becoming a public benefit corporation (PBC), legally bound to balancing the interests of customers, employees, society, and investors. Join us in transforming the life sciences industry, c",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "lever",
+      "last_checked_utc": "2026-11-20T08:42:08+00:00"
+    },
+    {
+      "id": "lever:Veeva Systems:6d479321-f2ec-4b30-98dd-d40b2dfc652c",
+      "company": "Veeva Systems",
+      "title": "Customer Success Manager - CRM Suite",
+      "location": "Massachusetts - Boston",
+      "location_status": "remote_scope_unverified",
+      "provinces": [],
+      "workplace_type": "remote",
+      "categories": [
+        "customer_operations"
+      ],
+      "early_career_status": "excluded",
+      "early_career_reason": "Senior/management title",
+      "pay_status": "not_verified",
+      "seniority_hint": "senior_or_lead",
+      "url": "https://jobs.lever.co/veeva/6d479321-f2ec-4b30-98dd-d40b2dfc652c",
+      "description_excerpt": "Veeva Systems is a mission-driven organization and pioneer in industry cloud, helping life sciences companies bring therapies to patients faster. As one of the fastest-growing SaaS companies in history, we surpassed $3B in revenue in our last fiscal year with extensive growth potential ahead. At the heart of Veeva are our values: Do the Right Thing, Customer Success, Employee Success, and Speed. We're not just any public company – we made history in 2021 by becoming a public benefit corporation (PBC), legally bound to balancing the interests of customers, employees, society, and investors. As a Work Anywhere company, we support your flexibili",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "lever",
+      "last_checked_utc": "2026-11-20T08:42:08+00:00"
+    },
+    {
+      "id": "lever:Veeva Systems:87e81ce9-4bf0-44d1-9b2a-e5cce65e239c",
+      "company": "Veeva Systems",
+      "title": "Customer Success Manager - Pharmacovigilance",
+      "location": "Spain - Barcelona",
+      "location_status": "remote_spain_explicit",
+      "provinces": [
+        "Barcelona"
+      ],
+      "workplace_type": "remote",
+      "categories": [
+        "customer_operations"
+      ],
+      "early_career_status": "excluded",
+      "early_career_reason": "Senior/management title",
+      "pay_status": "not_verified",
+      "seniority_hint": "senior_or_lead",
+      "url": "https://jobs.lever.co/veeva/87e81ce9-4bf0-44d1-9b2a-e5cce65e239c",
+      "description_excerpt": "Veeva Systems is a mission-driven organization and pioneer in industry cloud, helping life sciences companies bring therapies to patients faster. As one of the fastest-growing SaaS companies in history, we surpassed $3B in revenue in our last fiscal year with extensive growth potential ahead. At the heart of Veeva are our values: Do the Right Thing, Customer Success, Employee Success, and Speed. We're not just any public company – we made history in 2021 by becoming a public benefit corporation (PBC), legally bound to balancing the interests of customers, employees, society, and investors. As a Work Anywhere company, we support your flexibili",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "lever",
+      "last_checked_utc": "2026-11-20T08:42:08+00:00"
+    },
+    {
+      "id": "lever:Veeva Systems:8e0c5693-f17d-46fc-8c8f-f68421561e2f",
+      "company": "Veeva Systems",
+      "title": "Customer Success Manager - Pharmacovigilance",
+      "location": "United Kingdom - London",
+      "location_status": "remote_scope_unverified",
+      "provinces": [],
+      "workplace_type": "remote",
+      "categories": [
+        "customer_operations"
+      ],
+      "early_career_status": "excluded",
+      "early_career_reason": "Senior/management title",
+      "pay_status": "not_verified",
+      "seniority_hint": "senior_or_lead",
+      "url": "https://jobs.lever.co/veeva/8e0c5693-f17d-46fc-8c8f-f68421561e2f",
+      "description_excerpt": "Veeva Systems is a mission-driven organization and pioneer in industry cloud, helping life sciences companies bring therapies to patients faster. As one of the fastest-growing SaaS companies in history, we surpassed $3B in revenue in our last fiscal year with extensive growth potential ahead. At the heart of Veeva are our values: Do the Right Thing, Customer Success, Employee Success, and Speed. We're not just any public company – we made history in 2021 by becoming a public benefit corporation (PBC), legally bound to balancing the interests of customers, employees, society, and investors. As a Work Anywhere company, we support your flexibili",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "lever",
+      "last_checked_utc": "2026-11-20T08:42:08+00:00"
+    },
+    {
+      "id": "lever:Veeva Systems:e4ac318e-ab36-4b28-9d20-c8be9c51ae96",
+      "company": "Veeva Systems",
+      "title": "Customer Success Manager - Pharmacovigilance",
+      "location": "Germany - Berlin",
+      "location_status": "remote_scope_unverified",
+      "provinces": [],
+      "workplace_type": "remote",
+      "categories": [
+        "customer_operations"
+      ],
+      "early_career_status": "excluded",
+      "early_career_reason": "Senior/management title",
+      "pay_status": "not_verified",
+      "seniority_hint": "senior_or_lead",
+      "url": "https://jobs.lever.co/veeva/e4ac318e-ab36-4b28-9d20-c8be9c51ae96",
+      "description_excerpt": "Veeva Systems is a mission-driven organization and pioneer in industry cloud, helping life sciences companies bring therapies to patients faster. As one of the fastest-growing SaaS companies in history, we surpassed $3B in revenue in our last fiscal year with extensive growth potential ahead. At the heart of Veeva are our values: Do the Right Thing, Customer Success, Employee Success, and Speed. We're not just any public company – we made history in 2021 by becoming a public benefit corporation (PBC), legally bound to balancing the interests of customers, employees, society, and investors. As a Work Anywhere company, we support your flexibili",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "lever",
+      "last_checked_utc": "2026-11-20T08:42:08+00:00"
+    },
+    {
+      "id": "lever:Veeva Systems:579e0618-1cf5-46d7-a6cd-3360c66103f9",
+      "company": "Veeva Systems",
+      "title": "Customer Success Manager - Quality",
+      "location": "Illinois - Chicago",
+      "location_status": "remote_scope_unverified",
+      "provinces": [],
+      "workplace_type": "remote",
+      "categories": [
+        "customer_operations"
+      ],
+      "early_career_status": "excluded",
+      "early_career_reason": "Senior/management title",
+      "pay_status": "not_verified",
+      "seniority_hint": "senior_or_lead",
+      "url": "https://jobs.lever.co/veeva/579e0618-1cf5-46d7-a6cd-3360c66103f9",
+      "description_excerpt": "Veeva Systems is a mission-driven organization and pioneer in industry cloud, helping life sciences companies bring therapies to patients faster. As one of the fastest-growing SaaS companies in history, we surpassed $3B in revenue in our last fiscal year with extensive growth potential ahead. At the heart of Veeva are our values: Do the Right Thing, Customer Success, Employee Success, and Speed. We're not just any public company – we made history in 2021 by becoming a public benefit corporation (PBC), legally bound to balancing the interests of customers, employees, society, and investors. As a Work Anywhere company, we support your flexibili",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "lever",
+      "last_checked_utc": "2026-11-20T08:42:08+00:00"
+    },
+    {
+      "id": "lever:Veeva Systems:bf77c839-0073-4fe8-957b-1572f746a6ab",
+      "company": "Veeva Systems",
+      "title": "Customer Success Manager - Quality",
+      "location": "Pennsylvania - Philadelphia",
+      "location_status": "remote_scope_unverified",
+      "provinces": [],
+      "workplace_type": "remote",
+      "categories": [
+        "customer_operations"
+      ],
+      "early_career_status": "excluded",
+      "early_career_reason": "Senior/management title",
+      "pay_status": "not_verified",
+      "seniority_hint": "senior_or_lead",
+      "url": "https://jobs.lever.co/veeva/bf77c839-0073-4fe8-957b-1572f746a6ab",
+      "description_excerpt": "Veeva Systems is a mission-driven organization and pioneer in industry cloud, helping life sciences companies bring therapies to patients faster. As one of the fastest-growing SaaS companies in history, we surpassed $3B in revenue in our last fiscal year with extensive growth potential ahead. At the heart of Veeva are our values: Do the Right Thing, Customer Success, Employee Success, and Speed. We're not just any public company – we made history in 2021 by becoming a public benefit corporation (PBC), legally bound to balancing the interests of customers, employees, society, and investors. As a Work Anywhere company, we support your flexibili",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "lever",
+      "last_checked_utc": "2026-11-20T08:42:08+00:00"
+    },
+    {
+      "id": "lever:Veeva Systems:d0cc2938-21fa-43dd-9d55-12dddad5a10e",
+      "company": "Veeva Systems",
+      "title": "Customer Success Manager - Quality",
+      "location": "Massachusetts - Boston",
+      "location_status": "remote_scope_unverified",
+      "provinces": [],
+      "workplace_type": "remote",
+      "categories": [
+        "customer_operations"
+      ],
+      "early_career_status": "excluded",
+      "early_career_reason": "Senior/management title",
+      "pay_status": "not_verified",
+      "seniority_hint": "senior_or_lead",
+      "url": "https://jobs.lever.co/veeva/d0cc2938-21fa-43dd-9d55-12dddad5a10e",
+      "description_excerpt": "Veeva Systems is a mission-driven organization and pioneer in industry cloud, helping life sciences companies bring therapies to patients faster. As one of the fastest-growing SaaS companies in history, we surpassed $3B in revenue in our last fiscal year with extensive growth potential ahead. At the heart of Veeva are our values: Do the Right Thing, Customer Success, Employee Success, and Speed. We're not just any public company – we made history in 2021 by becoming a public benefit corporation (PBC), legally bound to balancing the interests of customers, employees, society, and investors. As a Work Anywhere company, we support your flexibili",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "lever",
+      "last_checked_utc": "2026-11-20T08:42:08+00:00"
+    },
+    {
+      "id": "lever:Veeva Systems:57b392bc-6918-43f3-b1e2-b5be94f72947",
+      "company": "Veeva Systems",
+      "title": "Head of Customer Success and Implementation Delivery - Veeva Ostro",
+      "location": "Massachusetts - Boston",
+      "location_status": "remote_scope_unverified",
+      "provinces": [],
+      "workplace_type": "remote",
+      "categories": [
+        "customer_operations"
+      ],
+      "early_career_status": "excluded",
+      "early_career_reason": "Senior/management title",
+      "pay_status": "not_verified",
+      "seniority_hint": "senior_or_lead",
+      "url": "https://jobs.lever.co/veeva/57b392bc-6918-43f3-b1e2-b5be94f72947",
+      "description_excerpt": "Veeva Systems is a mission-driven organization and pioneer in industry cloud, helping life sciences companies bring therapies to patients faster. As one of the fastest-growing SaaS companies in history, we surpassed $3B in revenue in our last fiscal year with extensive growth potential ahead. At the heart of Veeva are our values: Do the Right Thing, Customer Success, Employee Success, and Speed. We're not just any public company – we made history in 2021 by becoming a public benefit corporation (PBC), legally bound to balancing the interests of customers, employees, society, and investors. As a Work Anywhere company, we support your flexibili",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "lever",
+      "last_checked_utc": "2026-11-20T08:42:09+00:00"
+    },
+    {
+      "id": "lever:Veeva Systems:039516d3-491e-4ef3-b15a-75f18bca8e7f",
+      "company": "Veeva Systems",
+      "title": "Principal Customer Success Manager - Ostro",
+      "location": "Massachusetts - Boston",
+      "location_status": "remote_scope_unverified",
+      "provinces": [],
+      "workplace_type": "remote",
+      "categories": [
+        "customer_operations"
+      ],
+      "early_career_status": "excluded",
+      "early_career_reason": "Senior/management title",
+      "pay_status": "not_verified",
+      "seniority_hint": "senior_or_lead",
+      "url": "https://jobs.lever.co/veeva/039516d3-491e-4ef3-b15a-75f18bca8e7f",
+      "description_excerpt": "Veeva Systems is a mission-driven organization and pioneer in industry cloud, helping life sciences companies bring therapies to patients faster. As one of the fastest-growing SaaS companies in history, we surpassed $3B in revenue in our last fiscal year with extensive growth potential ahead. At the heart of Veeva are our values: Do the Right Thing, Customer Success, Employee Success, and Speed. We're not just any public company – we made history in 2021 by becoming a public benefit corporation (PBC), legally bound to balancing the interests of customers, employees, society, and investors. As a Work Anywhere company, we support your flexibili",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "lever",
+      "last_checked_utc": "2026-11-20T08:42:09+00:00"
+    },
+    {
+      "id": "lever:Veeva Systems:5ff3db43-cc72-40b1-a618-7d90aecfe12c",
+      "company": "Veeva Systems",
+      "title": "Senior Customer Success Manager - Ostro",
+      "location": "Massachusetts - Boston",
+      "location_status": "remote_scope_unverified",
+      "provinces": [],
+      "workplace_type": "remote",
+      "categories": [
+        "customer_operations"
+      ],
+      "early_career_status": "excluded",
+      "early_career_reason": "Senior/management title",
+      "pay_status": "not_verified",
+      "seniority_hint": "senior_or_lead",
+      "url": "https://jobs.lever.co/veeva/5ff3db43-cc72-40b1-a618-7d90aecfe12c",
+      "description_excerpt": "Veeva Systems is a mission-driven organization and pioneer in industry cloud, helping life sciences companies bring therapies to patients faster. As one of the fastest-growing SaaS companies in history, we surpassed $3B in revenue in our last fiscal year with extensive growth potential ahead. At the heart of Veeva are our values: Do the Right Thing, Customer Success, Employee Success, and Speed. We're not just any public company – we made history in 2021 by becoming a public benefit corporation (PBC), legally bound to balancing the interests of customers, employees, society, and investors. As a Work Anywhere company, we support your flexibili",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "lever",
+      "last_checked_utc": "2026-11-20T08:42:09+00:00"
+    },
+    {
+      "id": "lever:Veeva Systems:0287a2b0-5972-4bff-89c2-36e2a36dc4a8",
+      "company": "Veeva Systems",
+      "title": "Talent Operations Associate",
+      "location": "New York - New York City",
+      "location_status": "remote_scope_unverified",
+      "provinces": [],
+      "workplace_type": "remote",
+      "categories": [
+        "business_operations"
+      ],
+      "early_career_status": "worth_checking",
+      "early_career_reason": "Early-career title; full requirements not verified",
+      "pay_status": "not_verified",
+      "seniority_hint": "unspecified",
+      "url": "https://jobs.lever.co/veeva/0287a2b0-5972-4bff-89c2-36e2a36dc4a8",
+      "description_excerpt": "Veeva Systems is a mission-driven organization and pioneer in industry cloud, helping life sciences companies bring therapies to patients faster. As one of the fastest-growing SaaS companies in history, we surpassed $3B in revenue in our last fiscal year with extensive growth potential ahead. At the heart of Veeva are our values: Do the Right Thing, Customer Success, Employee Success, and Speed. We're not just any public company – we made history in 2021 by becoming a public benefit corporation (PBC), legally bound to balancing the interests of customers, employees, society, and investors. As a Work Anywhere company, we support your flexibili",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "lever",
+      "last_checked_utc": "2026-11-20T08:42:09+00:00"
+    },
+    {
+      "id": "lever:Veeva Systems:17198a0e-8a38-4bd1-b103-c347887983ac",
+      "company": "Veeva Systems",
+      "title": "Talent Operations Associate",
+      "location": "Canada - Toronto",
+      "location_status": "remote_scope_unverified",
+      "provinces": [],
+      "workplace_type": "remote",
+      "categories": [
+        "business_operations"
+      ],
+      "early_career_status": "worth_checking",
+      "early_career_reason": "Early-career title; full requirements not verified",
+      "pay_status": "not_verified",
+      "seniority_hint": "unspecified",
+      "url": "https://jobs.lever.co/veeva/17198a0e-8a38-4bd1-b103-c347887983ac",
+      "description_excerpt": "Veeva Systems is a mission-driven organization and pioneer in industry cloud, helping life sciences companies bring therapies to patients faster. As one of the fastest-growing SaaS companies in history, we surpassed $3B in revenue in our last fiscal year with extensive growth potential ahead. At the heart of Veeva are our values: Do the Right Thing, Customer Success, Employee Success, and Speed. We're not just any public company – we made history in 2021 by becoming a public benefit corporation (PBC), legally bound to balancing the interests of customers, employees, society, and investors. As a Work Anywhere company, we support your flexibili",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "lever",
+      "last_checked_utc": "2026-11-20T08:42:09+00:00"
+    },
+    {
+      "id": "lever:Veeva Systems:4e962ef7-7d6f-4962-a344-7a2740b99aa1",
+      "company": "Veeva Systems",
+      "title": "Talent Operations Associate",
+      "location": "Massachusetts - Boston",
+      "location_status": "remote_scope_unverified",
+      "provinces": [],
+      "workplace_type": "remote",
+      "categories": [
+        "business_operations"
+      ],
+      "early_career_status": "worth_checking",
+      "early_career_reason": "Early-career title; full requirements not verified",
+      "pay_status": "not_verified",
+      "seniority_hint": "unspecified",
+      "url": "https://jobs.lever.co/veeva/4e962ef7-7d6f-4962-a344-7a2740b99aa1",
+      "description_excerpt": "Veeva Systems is a mission-driven organization and pioneer in industry cloud, helping life sciences companies bring therapies to patients faster. As one of the fastest-growing SaaS companies in history, we surpassed $3B in revenue in our last fiscal year with extensive growth potential ahead. At the heart of Veeva are our values: Do the Right Thing, Customer Success, Employee Success, and Speed. We're not just any public company – we made history in 2021 by becoming a public benefit corporation (PBC), legally bound to balancing the interests of customers, employees, society, and investors. As a Work Anywhere company, we support your flexibili",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "lever",
+      "last_checked_utc": "2026-11-20T08:42:09+00:00"
+    },
+    {
+      "id": "lever:Veeva Systems:707ce008-54be-4476-9816-34dee0f8f248",
+      "company": "Veeva Systems",
+      "title": "Technical Customer Service Associate",
+      "location": "Massachusetts - Boston",
+      "location_status": "remote_scope_unverified",
+      "provinces": [],
+      "workplace_type": "remote",
+      "categories": [
+        "customer_operations"
+      ],
+      "early_career_status": "worth_checking",
+      "early_career_reason": "Early-career title; full requirements not verified",
+      "pay_status": "not_verified",
+      "seniority_hint": "unspecified",
+      "url": "https://jobs.lever.co/veeva/707ce008-54be-4476-9816-34dee0f8f248",
+      "description_excerpt": "Veeva Systems is a mission-driven organization and pioneer in industry cloud, helping life sciences companies bring therapies to patients faster. As one of the fastest-growing SaaS companies in history, we surpassed $3B in revenue in our last fiscal year with extensive growth potential ahead. At the heart of Veeva are our values: Do the Right Thing, Customer Success, Employee Success, and Speed. We're not just any public company – we made history in 2021 by becoming a public benefit corporation (PBC), legally bound to balancing the interests of customers, employees, society, and investors. As a Work Anywhere company, we support your flexibili",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "lever",
+      "last_checked_utc": "2026-11-20T08:42:09+00:00"
     }
   ]
 }

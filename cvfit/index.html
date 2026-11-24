@@ -54,9 +54,10 @@ h1>span,h1 em{display:block}h1 em{font-style:normal}
 .intro-wordmark{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);color:#fffdf8;z-index:9999;pointer-events:none;font-size:clamp(2rem,10vw,8rem);font-weight:850;letter-spacing:-.045em;line-height:1.15;white-space:nowrap}
 .intro-wordmark span{color:#ff38b8}
 @media(max-width:640px){.category-nav{gap:9px}.home-brand,.recruit-menu summary{font-size:.95rem}.recruit-menu{padding-left:9px}.recruit-menu summary svg{width:10px;margin-left:5px}.recruit-options{left:0;min-width:145px}.nav{flex-wrap:wrap;padding-block:12px}}
+.finance-menu summary span{color:#ffea00}.finance-menu .recruit-options small{display:block;font-size:.65rem;font-weight:500;color:#ddd}.category-nav{flex-wrap:wrap}@media(max-width:640px){.category-nav{gap:8px}.finance-menu{padding-left:8px}.finance-menu .recruit-options{left:auto;right:0}}
 </style></head><body><header class="site-head">
   <nav class="wrap nav" aria-label="Main navigation">
-    <div class="tool-brands category-nav"><a class="home-brand" href="../">HOME<span>.</span></a><details class="recruit-menu"><summary id="recruit-target">RECRUITMENT<span>.</span><svg aria-hidden="true" width="13" height="9" viewBox="0 0 13 9"><path d="M1 1l5.5 6L12 1" fill="none" stroke="currentColor" stroke-width="2"/></svg></summary><div class="recruit-options"><a href="../jobmatch/">JobMatch<span class="job-dot">.</span></a><a href="../cvfit/" aria-current="page">CVFit<span class="cv-dot">.</span></a><a href="../applytrack/">ApplyTrack<span style="color:#ff6500">.</span></a></div></details></div>
+    <div class="tool-brands category-nav"><a class="home-brand" href="../">HOME<span>.</span></a><details class="recruit-menu"><summary id="recruit-target">RECRUITMENT<span>.</span><svg aria-hidden="true" width="13" height="9" viewBox="0 0 13 9"><path d="M1 1l5.5 6L12 1" fill="none" stroke="currentColor" stroke-width="2"/></svg></summary><div class="recruit-options"><a href="../jobmatch/">JobMatch<span class="job-dot">.</span></a><a href="../cvfit/" aria-current="page">CVFit<span class="cv-dot">.</span></a><a href="../applytrack/">ApplyTrack<span style="color:#ff6500">.</span></a></div></details><details class="recruit-menu finance-menu"><summary>FINANCE<span>.</span><svg aria-hidden="true" width="13" height="9" viewBox="0 0 13 9"><path d="M1 1l5.5 6L12 1" fill="none" stroke="currentColor" stroke-width="2"/></svg></summary><div class="recruit-options"><a href="../#finance">SalaryLens<span style="color:#1500ff">.</span><small>Coming soon</small></a><a href="../#finance">Runway<span style="color:#40ff00">.</span><small>Coming soon</small></a><a href="../#finance">TripFund<span style="color:#0086ff">.</span><small>Coming soon</small></a></div></details></div>
     <div class="nav-right">
       <a href="#analyse">Analyse CV</a>
       
@@ -145,4 +146,4 @@ $('clear').addEventListener('click',()=>{$('file-name').textContent='No file cho
 window.addEventListener('resize',fitInputs);
 fitInputs();
 
-</script></body></html>
+</script><script>(()=>{const menus=[...document.querySelectorAll('.recruit-menu')];for(const m of menus)m.addEventListener('toggle',()=>{if(m.open)for(const other of menus)if(other!==m)other.open=false});document.addEventListener('click',e=>{for(const m of menus)if(!m.contains(e.target))m.open=false});document.addEventListener('keydown',e=>{if(e.key==='Escape')for(const m of menus)if(m.open){m.open=false;m.querySelector('summary').focus()}})})();</script></body></html>

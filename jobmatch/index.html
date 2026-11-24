@@ -144,6 +144,20 @@ button:hover { background: #ff7467; }
 .intro-wordmark span{color:#ff4938}
 @media(max-width:640px){.category-nav{gap:9px}.home-brand,.recruit-menu summary{font-size:.95rem}.recruit-menu{padding-left:9px}.recruit-menu summary svg{width:10px;margin-left:5px}.recruit-options{left:0;min-width:145px}.nav{flex-wrap:wrap;padding-block:12px}}
 .finance-menu summary span{color:#ffea00}.finance-menu .recruit-options small{display:block;font-size:.65rem;font-weight:500;color:#ddd}.category-nav{flex-wrap:wrap}@media(max-width:640px){.category-nav{gap:8px}.finance-menu{padding-left:8px}.finance-menu .recruit-options{left:auto;right:0}}
+
+/* Shared navigation: identical category labels and spacing across all pages. */
+header .nav{display:flex;justify-content:space-between;align-items:center;min-height:76px;gap:16px;flex-wrap:wrap}
+.category-nav{display:flex;align-items:center;justify-content:flex-start;gap:18px;flex-wrap:wrap;order:0;width:auto}
+.home-brand,.recruit-menu summary{font-size:1.25rem;font-weight:850;letter-spacing:-.035em;line-height:1.2;white-space:nowrap;text-decoration:none;color:#fffdf8}
+.home-brand span{color:#456cff}
+.recruit-menu{padding-left:18px;border-left:1px solid #66636e;position:relative;z-index:30}
+.recruit-menu summary{display:flex;align-items:center;list-style:none;cursor:pointer}
+.recruit-menu summary svg{margin-left:9px;flex:none}
+.recruit-menu[open] summary svg{transform:rotate(180deg)}
+.recruit-menu:not(.finance-menu) summary span{color:#d7ff3f}
+.finance-menu summary span{color:#ffea00}
+.recruit-options{z-index:31;box-shadow:5px 5px 0 #456cff}
+@media(max-width:760px){header .nav{min-height:64px;padding-block:12px}.category-nav{gap:9px}.home-brand,.recruit-menu summary{font-size:.95rem}.recruit-menu{padding-left:9px}.recruit-menu summary svg{width:10px;margin-left:5px}}
 </style>
 </head>
 <body>

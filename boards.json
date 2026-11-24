@@ -95,6 +95,10 @@
     {
       "slug": "canonical",
       "company": "Canonical"
+    },
+    {
+      "slug": "elastic",
+      "company": "Elastic"
     }
   ],
   "lever": [

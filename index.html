@@ -32,8 +32,26 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .intro-backdrop { position: fixed; inset: 0; z-index: 1; background: var(--periwinkle); pointer-events: none; }
 .site-head { background: var(--periwinkle); color: var(--ink); border-bottom: 2px solid var(--border); }
 .nav { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
-.brand { font-weight: 850; font-size: 1.55rem; letter-spacing: -.06em; text-decoration: none; }
-.brand { color: var(--tomato); -webkit-text-stroke: .11em var(--border); paint-order: stroke fill; }
+.brand {
+  color: var(--ink);
+  font-weight: 850;
+  font-size: 1.55rem;
+  letter-spacing: -.06em;
+  text-decoration: none;
+}
+.brand span {
+  display: inline-block;
+  width: .25em;
+  height: .25em;
+  margin-left: .07em;
+  vertical-align: .025em;
+  border-radius: 50%;
+  background: var(--tomato);
+  outline: .055em solid var(--border);
+  font-size: inherit;
+  color: transparent;
+  overflow: hidden;
+}
 .hero em { color: var(--ink); }
 .nav-right { display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: center; font-size: .88rem; }
 .nav-right a { text-decoration: none; font-weight: 650; }
@@ -103,7 +121,7 @@ button:hover { background: #ff7467; }
 <body>
 <header class="site-head">
   <nav class="wrap nav" aria-label="Main navigation">
-    <a href="./" class="brand" aria-label="JobMatch home">JobMatch<span>.</span></a>
+    <a href="./" class="brand" aria-label="JobMatch home">JobMatch<span aria-hidden="true"></span></a>
     <div class="nav-right">
       <a href="#search-jobs">Find jobs</a>
       <a href="https://camiladevoto.github.io/portafolio/job-hunter.html" target="_blank" rel="noopener noreferrer">How it works ↗</a>

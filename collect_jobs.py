@@ -169,7 +169,13 @@ def normalise(provider, company, j):
     fit_status, fit_reason = assess_early_career(title, desc)
     if pay_indicator(title,desc)=='unpaid_indicated':
         fit_status,fit_reason='excluded','Unpaid work indicated in posting'
-    return {'id':f'{provider}:{company}:{jid}', 'company':company, 'title':title, 'location':loc,
+    published = None
+    if provider == 'lever' and isinstance(j.get('createdAt'), (int, float)):
+        try:
+            published = dt.datetime.fromtimestamp(j['createdAt']/1000, dt.timezone.utc).isoformat(timespec='seconds')
+        except (ValueError, OverflowError, OSError):
+            pass
+    return {'published_utc':published, 'id':f'{provider}:{company}:{jid}', 'company':company, 'title':title, 'location':loc,
             'location_status':location_status,'provinces':provinces,'workplace_type':workplace,'categories':groups,'early_career_status':fit_status,'early_career_reason':fit_reason,'pay_status':pay_indicator(title,desc),'seniority_hint':('senior_or_lead' if re.search(r'\b(?:senior|sr\.?|lead|head|director|manager|principal|staff)\b',title,re.I) else 'unspecified'),
             'url':url,'description_excerpt':desc[:650], 'matching_text':desc[:20000], 'matching_text_truncated':len(desc)>20000,
             'published_emails':application_emails(desc),
@@ -230,6 +236,21 @@ def run():
     jobs=list({j['id']:j for j in jobs}.values())
     jobs.sort(key=lambda j:(j['company'].casefold(),j['title'].casefold()))
     jobs = merge_shortlist(jobs, dt.datetime.now(dt.timezone.utc))
+    # Preserve first discovery separately from employer publication and last check.
+    previous = {}
+    if OUTPUT.exists():
+        try:
+            previous = {j['id']:j for j in json.loads(OUTPUT.read_text(encoding='utf8')).get('jobs',[]) if j.get('id')}
+        except (OSError, ValueError, TypeError):
+            pass
+    now = dt.datetime.now(dt.timezone.utc).isoformat(timespec='seconds')
+    for job in jobs:
+        old = previous.get(job['id'])
+        if old:
+            # Existing feed entries without historical dates remain unknown.
+            job['first_seen_utc'] = old.get('first_seen_utc')
+        else:
+            job['first_seen_utc'] = now if previous else None
     output={'updated_utc':dt.datetime.now(dt.timezone.utc).isoformat(timespec='seconds'),
             'sources_checked':succeeded,'source_errors':len(errors),'jobs':jobs}
     temp=OUTPUT.with_suffix('.json.tmp')

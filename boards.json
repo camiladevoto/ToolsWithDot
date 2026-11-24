@@ -99,6 +99,38 @@
     {
       "slug": "elastic",
       "company": "Elastic"
+    },
+    {
+      "slug": "wallapop",
+      "company": "Wallapop"
+    },
+    {
+      "slug": "n26",
+      "company": "N26"
+    },
+    {
+      "slug": "scopely",
+      "company": "Scopely"
+    },
+    {
+      "slug": "stripe",
+      "company": "Stripe"
+    },
+    {
+      "slug": "datadog",
+      "company": "Datadog"
+    },
+    {
+      "slug": "monzo",
+      "company": "Monzo"
+    },
+    {
+      "slug": "bitpanda",
+      "company": "Bitpanda"
+    },
+    {
+      "slug": "thunes",
+      "company": "Thunes"
     }
   ],
   "lever": [
@@ -133,6 +165,14 @@
     {
       "slug": "moonpay",
       "company": "MoonPay"
+    },
+    {
+      "slug": "octoenergy",
+      "company": "Octopus Energy"
+    },
+    {
+      "slug": "aleph",
+      "company": "Aleph"
     }
   ]
 }

@@ -71,11 +71,11 @@ button:hover{background:#0f5048}
   <section class="hero">
     <p class="eyebrow">Find relevant opportunities</p>
     <h1>Less searching.<br><em>Better matches.</em></h1>
-    <p class="lead">Find paid junior and early-career jobs from employer career pages. We flag uncertain requirements instead of pretending every listing is a match.</p>
-    <p class="hero-note"><span class="mini-dot" aria-hidden="true"></span> Early beta · Limited employer coverage · Not a complete search of all vacancies</p>
+    <p class="lead">Explore vacancies across roles and industries from employer career pages. Narrow your search by location and experience level.</p>
+    <p class="hero-note"><span class="mini-dot" aria-hidden="true"></span> Early beta · Selected employer boards · Not a complete search of all vacancies</p>
   </section>
   <section class="search-card" id="search-jobs" aria-labelledby="search-title">
-    <div class="section-top"><h2 id="search-title">Find a real junior job</h2><span>Free to explore · No sign-up required</span></div>
+    <div class="section-top"><h2 id="search-title">Find a vacancy</h2><span>Free to explore · No sign-up required</span></div>
     <div class="grid">
       <div class="field"><label for="query">Job title or keyword</label><input id="query" placeholder="e.g. Operations, finance, support"></div>
       <div class="field"><label for="location">Work location</label><select id="location"><option value="remote">Remote from Spain</option><option value="worldwide">Worldwide remote</option><option value="province">On-site or hybrid — choose province</option><option value="spain">All jobs based in Spain</option><option value="all">All countries (explore feed)</option></select></div>
@@ -96,6 +96,7 @@ button:hover{background:#0f5048}
     <div class="results-head"><h2 id="results-title">Opportunities</h2></div>
     <p id="status" role="status" aria-live="polite">Loading employer listings…</p>
     <div id="results" aria-label="Job listings"></div>
+    <div class="actions"><button type="button" id="load-more" hidden>Show more listings</button></div>
   </section>
 </main>
 <footer class="site-foot">
@@ -115,6 +116,8 @@ function assessClient(j){
   if(/\b(unpaid|sin remuneración)\b/.test(text))return {status:'excluded',reason:'Unpaid role indicated'};
   return {status:'worth_checking',reason:'Check full experience requirements and compensation'};
 }
+const PAGE_SIZE = 50;
+let visibleCount = PAGE_SIZE;
 function render(){
   if(!feed)return;
   const q=clean($('query').value).trim(),loc=$('location').value,contact=$('email').value;
@@ -136,11 +139,13 @@ function render(){
     &&locationMatch(j)
     &&(contact==='all'||j.published_emails?.length)
     &&(!junior||fit.status!=='excluded');
-  }).slice(0,200);
+  });
+  const shown = matches.slice(0, visibleCount);
+  $('load-more').hidden = shown.length === matches.length;
   const root=$('results');root.replaceChildren();
-  $('status').textContent=`${matches.length} listings for review · Feed checked ${new Date(feed.updated_utc).toLocaleString()} · ${feed.sources_checked} employer boards checked (${feed.source_errors} source errors). These are not verified personal matches.`;
-  if(!matches.length)root.append(el('p',loc==='province'&&!province?'Choose a province to see local vacancies.':'No listings match this location yet. We only scan a small number of employers; this does not mean no jobs exist there.','empty-state'));
-  for(const j of matches){
+  $('status').textContent=`Showing ${shown.length} of ${matches.length} matching listings · Feed checked ${new Date(feed.updated_utc).toLocaleString()} · ${feed.sources_checked} employer boards checked (${feed.source_errors} source errors). These are not verified personal matches.`;
+  if(!matches.length)root.append(el('p',loc==='province'&&!province?'Choose a province to see local vacancies.':'No listings match these filters. Try another keyword, location or experience setting.','empty-state'));
+  for(const j of shown){
     const a=el('article',undefined,'job');const fit=assessClient(j);
     a.append(el('h2',j.title),el('p',j.company+' · '+(j.location||'Location unspecified'),'muted'));
     const locLabel=({remote_worldwide_explicit:'Worldwide remote — verify terms with employer',remote_spain_explicit:'Remote from Spain — verify full posting',spain_location_check_remote:'Spain location — remote status unverified',remote_scope_unverified:'Remote scope ambiguous — Spain eligibility unverified',location_unverified:'Work location/eligibility unverified'})[j.location_status]||'Eligibility unverified';
@@ -153,7 +158,12 @@ function render(){
     root.append(a);
   }
 }
-$('search').addEventListener('click',render);$('junior').addEventListener('change',render);$('province').addEventListener('change',render);$('location').addEventListener('change',()=>{$('provinceWrap').hidden=$('location').value!=='province';render()});$('query').addEventListener('keydown',e=>{if(e.key==='Enter')render()});fetch('live-jobs.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error(`HTTP ${r.status}`);return r.json()}).then(j=>{if(!Array.isArray(j.jobs))throw Error('Invalid feed');feed=j;render()}).catch(e=>{$('status').textContent='The live feed has not been published yet or is temporarily unavailable.';$('results').append(el('p','Real job listings will appear here once the first employer-feed update is published. In the meantime, explore the prototype or check back later.','empty-state'))});
+function search(){visibleCount=PAGE_SIZE;render();}
+$('load-more').addEventListener('click',()=>{visibleCount+=PAGE_SIZE;render()});
+$('search').addEventListener('click',search);
+for(const field of ['junior','province','email'])$(field).addEventListener('change',search);
+$('location').addEventListener('change',()=>{$('provinceWrap').hidden=$('location').value!=='province';search()});
+$('query').addEventListener('keydown',e=>{if(e.key==='Enter')search()});fetch('live-jobs.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error(`HTTP ${r.status}`);return r.json()}).then(j=>{if(!Array.isArray(j.jobs))throw Error('Invalid feed');feed=j;render()}).catch(e=>{$('status').textContent='The live feed has not been published yet or is temporarily unavailable.';$('results').append(el('p','Real job listings will appear here once the first employer-feed update is published. In the meantime, explore the prototype or check back later.','empty-state'))});
 
 </script>
 </body>

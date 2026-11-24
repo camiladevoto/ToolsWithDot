@@ -217,7 +217,7 @@ def run():
             succeeded+=1
             for j in entries:
                 item=normalise(provider,company,j)
-                if item and item['categories']: jobs.append(item)
+                if item: jobs.append(item)
             print(f'{company}: checked {len(entries)} postings')
         except (urllib.error.URLError,TimeoutError,ValueError,RuntimeError,KeyError) as exc:
             errors.append(f'{provider}/{slug}: {type(exc).__name__}: {exc}')

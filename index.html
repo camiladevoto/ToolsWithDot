@@ -42,6 +42,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 }
 h1, h2 { margin: 0; line-height: 1.07; letter-spacing: -.055em; }
 h1 { font-size: clamp(3rem, 8vw, 6.8rem); font-weight: 800; }
+h1 > span, h1 em { display: block; }
 h1 em { font-style: normal; }
 .lead { font-size: clamp(1.02rem, 2.2vw, 1.18rem); max-width: 44ch; color: #dce6f1; margin: 24px 0 0; }
 .hero-note { margin: 18px 0 0; font-size: .87rem; color: #d1deed; }
@@ -108,7 +109,7 @@ button:hover { background: #ffc197; }
 <main>
   <section class="hero" aria-labelledby="hero-title">
     <div class="wrap">
-      <h1 id="hero-title">Less searching.<br><em>Better matches.</em></h1>
+      <h1 id="hero-title"><span>Find work</span><em>that fits.</em></h1>
       <p class="lead">Browse direct employer listings. Filter by location and experience level to find roles worth a closer look.</p>
       <p class="hero-note">Remote, hybrid and on-site roles from selected employer boards</p>
     </div>
@@ -150,6 +151,50 @@ button:hover { background: #ffc197; }
   </div>
 </footer>
 <script>
+
+const brand = document.querySelector('.brand');
+const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+if (typeof brand.animate === 'function' && !motionPreference.matches && window.scrollY === 0) {
+  const bounds = brand.getBoundingClientRect();
+  const scale = Math.min(4.2, window.innerWidth * 0.75 / bounds.width);
+  const x = (window.innerWidth - bounds.width) / 2 - bounds.left;
+  const y = (window.innerHeight - bounds.height) / 2 - bounds.top;
+  const centered = `translate(${x}px, ${y}px)`;
+  brand.style.position = 'relative';
+  brand.style.zIndex = '2';
+
+  const logo = brand.animate([
+    { transform: `${centered} scale(${scale}) rotateY(0deg)` },
+    { transform: `${centered} scale(${scale}) rotateY(360deg)`, offset: .58 },
+    { transform: 'translate(0, 0) scale(1) rotateY(360deg)' }
+  ], { duration: 900, easing: 'ease-in-out' });
+
+  const lines = [...document.querySelectorAll('#hero-title > *')].map((line, index) =>
+    line.animate([
+      { transform: 'translateX(-48px)', opacity: 0 },
+      { transform: 'translateX(0)', opacity: 1 }
+    ], { delay: 900 + index * 160, duration: 480, easing: 'ease-out', fill: 'backwards' })
+  );
+
+  function finishIntro() {
+    brand.style.removeProperty('position');
+    brand.style.removeProperty('z-index');
+    window.removeEventListener('resize', cancelIntro);
+    motionPreference.removeEventListener('change', cancelIntro);
+  }
+
+  function cancelIntro() {
+    logo.cancel();
+    lines.forEach(line => line.cancel());
+    finishIntro();
+  }
+
+  lines[lines.length - 1].onfinish = finishIntro;
+  window.addEventListener('resize', cancelIntro, { once: true });
+  motionPreference.addEventListener('change', cancelIntro);
+}
+
 
 const $=id=>document.getElementById(id);let feed=null;const clean=s=>String(s??'').toLowerCase();function el(tag,txt,cls){const n=document.createElement(tag);if(txt!==undefined)n.textContent=txt;if(cls)n.className=cls;return n;}
 function assessClient(j){

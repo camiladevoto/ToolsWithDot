@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#d7ff3f">
+<meta name="theme-color" content="#100e14">
 <meta name="description" content="JobMatch helps you explore vacancies from employer career pages with transparent location and application details.">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2214%22%20fill%3D%22%239b8cff%22%2F%3E%3Cpath%20d%3D%22M24%2025v-5a3%203%200%200%201%203-3h10a3%203%200%200%201%203%203v5M20%2025h24a5%205%200%200%201%205%205v13a5%205%200%200%201-5%205H20a5%205%200%200%201-5-5V30a5%205%200%200%201%205-5Z%22%20fill%3D%22none%22%20stroke%3D%22%2317141f%22%20stroke-width%3D%224%22%20stroke-linejoin%3D%22round%22%2F%3E%3Cpath%20d%3D%22m25%2036%205%205%209-10%22%20fill%3D%22none%22%20stroke%3D%22%23ff4938%22%20stroke-width%3D%224%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E">
 <title>JobMatch | Find work that fits</title>
@@ -29,11 +29,11 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 }
 [hidden] { display: none !important; }
 .wrap { width: min(1120px, calc(100% - 48px)); margin-inline: auto; }
-.intro-backdrop { position: fixed; inset: 0; z-index: 1; background: var(--periwinkle); pointer-events: none; }
-.site-head { background: var(--lime); color: var(--ink); border-bottom: 2px solid var(--border); }
+.intro-backdrop { position: fixed; inset: 0; z-index: 1; background: var(--border); pointer-events: none; }
+.site-head { background: var(--border); color: #fffdf8; border-bottom: 2px solid var(--border); }
 .nav { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
 .brand {
-  color: var(--ink);
+  color: #fffdf8;
   font-weight: 850;
   font-size: 1.55rem;
   letter-spacing: -.035em;
@@ -121,6 +121,7 @@ button:hover { background: #ff7467; }
 .match-panel textarea{width:100%;border:2px solid var(--border);border-radius:9px;padding:10px;font:inherit;background:var(--card);color:var(--ink)}.result-filters{margin-top:18px}.job-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}.job-actions button{min-height:36px;font-size:.8rem;padding:5px 12px;background:var(--card)}.job-actions button[aria-pressed="true"]{background:var(--lime)}
 .local-dashboard{margin-top:20px;border:2px solid var(--border);border-radius:14px;padding:18px;background:var(--card);box-shadow:3px 3px 0 var(--border)}.local-dashboard h3{margin:0 0 12px;font-size:1.4rem}.dashboard-counts{display:flex;flex-wrap:wrap;gap:10px}.dashboard-counts button{background:var(--periwinkle);min-height:42px}.dashboard-counts button:first-child{background:var(--lime)}.local-dashboard .actions button{background:var(--card);font-size:.85rem;min-height:40px}.match-coverage{font-size:.82rem;font-weight:700;color:var(--muted)}
 .result-summary{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;background:var(--lime);border:2px solid var(--border);box-shadow:3px 3px 0 var(--border);border-radius:14px;padding:18px;margin:20px 0;scroll-margin-top:22px}.result-summary h3{margin:0;font-size:clamp(1.25rem,3vw,1.8rem);letter-spacing:-.035em}.result-summary #status{margin:5px 0 0;color:var(--ink)}.result-summary-copy{flex:1;min-width:220px}.result-summary button{background:var(--card);font-size:.85rem;min-height:40px}.result-summary:focus-visible{outline:3px solid var(--border);outline-offset:5px}.search-feedback{margin:12px 0 0;font-weight:750;color:var(--ink)}
+.site-head a:focus-visible { outline-color: #fffdf8; }
 </style>
 </head>
 <body>

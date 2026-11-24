@@ -120,6 +120,7 @@ button:hover { background: #ff7467; }
 .match-panel{margin-top:24px;padding:20px;border:2px solid var(--border);border-radius:14px;background:var(--paper)}.match-panel summary{cursor:pointer;font-weight:800;font-size:1.15rem}.match-panel .grid{margin-top:16px}.match-panel #match-run{background:var(--lime)}.match-panel #match-reset{background:var(--card)}.match-score{font-weight:850;font-size:1.25rem;background:var(--tomato);border:2px solid var(--border);border-radius:10px;padding:5px 10px}.match-keywords{font-size:.82rem;color:var(--muted)}
 .match-panel textarea{width:100%;border:2px solid var(--border);border-radius:9px;padding:10px;font:inherit;background:var(--card);color:var(--ink)}.result-filters{margin-top:18px}.job-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}.job-actions button{min-height:36px;font-size:.8rem;padding:5px 12px;background:var(--card)}.job-actions button[aria-pressed="true"]{background:var(--lime)}
 .local-dashboard{margin-top:20px;border:2px solid var(--border);border-radius:14px;padding:18px;background:var(--card);box-shadow:3px 3px 0 var(--border)}.local-dashboard h3{margin:0 0 12px;font-size:1.4rem}.dashboard-counts{display:flex;flex-wrap:wrap;gap:10px}.dashboard-counts button{background:var(--periwinkle);min-height:42px}.dashboard-counts button:first-child{background:var(--lime)}.local-dashboard .actions button{background:var(--card);font-size:.85rem;min-height:40px}.match-coverage{font-size:.82rem;font-weight:700;color:var(--muted)}
+.result-summary{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;background:var(--lime);border:2px solid var(--border);box-shadow:3px 3px 0 var(--border);border-radius:14px;padding:18px;margin:20px 0;scroll-margin-top:22px}.result-summary h3{margin:0;font-size:clamp(1.25rem,3vw,1.8rem);letter-spacing:-.035em}.result-summary #status{margin:5px 0 0;color:var(--ink)}.result-summary-copy{flex:1;min-width:220px}.result-summary button{background:var(--card);font-size:.85rem;min-height:40px}.result-summary:focus-visible{outline:3px solid var(--border);outline-offset:5px}.search-feedback{margin:12px 0 0;font-weight:750;color:var(--ink)}
 </style>
 </head>
 <body>
@@ -156,7 +157,7 @@ button:hover { background: #ff7467; }
       <button type="button" id="search">Search vacancies</button>
       <p class="privacy">Your filters and CV stay in this browser. Saved job statuses are stored locally; no account required.</p>
     </div>
-    <details class="match-panel" id="match-panel">
+    <p id="search-feedback" class="search-feedback" role="status" hidden></p><details class="match-panel" id="match-panel">
 <summary>Match jobs to my profile</summary>
 <p class="muted">Optional: enter your skills, experience and preferred roles. Your profile is processed in this browser only and is not uploaded or saved.</p>
 <div class="field"><label for="cv-file">Import CV (PDF or TXT)</label><input id="cv-file" type="file" accept=".pdf,.txt,application/pdf,text/plain"><p id="cv-status" class="muted" role="status">Optional. Review suggested skills and languages before ranking. No CV is uploaded.</p><label for="cv-review">Education and experience notes (review locally)</label><textarea id="cv-review" rows="3" placeholder="Review CV evidence here"></textarea></div><div class="grid">
@@ -176,7 +177,7 @@ button:hover { background: #ff7467; }
   </section>
   <section class="section-results" aria-labelledby="results-title">
     <div class="results-head"><h2 id="results-title">Opportunities</h2></div><section class="local-dashboard" aria-labelledby="dashboard-title"><h3 id="dashboard-title">My activity.</h3><div id="dashboard-counts" class="dashboard-counts"></div><p class="muted">Private to this browser. Saved and applied vacancies are retained even if they disappear from the feed. Backups contain personal profile information if you opt to remember it; keep them private.</p><div class="actions"><button type="button" id="backup-export">Export my data</button><button type="button" id="backup-import">Import backup</button><input type="file" id="backup-file" accept=".json,application/json" hidden><button type="button" id="backup-clear">Clear local data</button></div></section><div class="grid result-filters"><div><label for="job-view">Vacancy status</label><select id="job-view"><option value="discover">Discover (hide dismissed and applied)</option><option value="saved">Saved jobs</option><option value="applied">Applied jobs</option><option value="dismissed">Dismissed jobs</option><option value="all">All statuses</option></select></div><div><label for="freshness">Date first discovered</label><select id="freshness"><option value="all">Any date / unknown</option><option value="1">Last 24 hours</option><option value="7">Last 7 days</option><option value="30">Last 30 days</option></select></div></div><p id="local-status" class="muted" role="status"></p>
-    <p id="status" role="status" aria-live="polite">Loading employer listings…</p>
+    <div id="result-summary" class="result-summary" tabindex="-1"><div class="result-summary-copy"><h3 id="result-count">Finding opportunities…</h3><p id="status" role="status" aria-live="polite">Loading employer listings…</p></div><button type="button" id="edit-search">Edit filters ↑</button></div>
     <div id="results" aria-label="Job listings"></div>
     <div class="actions"><button type="button" id="load-more" hidden>Show more listings</button></div>
   </section>
@@ -321,7 +322,7 @@ function setJob(j,value){const k=jobKey(j);if(saved[k]===value){delete saved[k];
 function captureProfile(){return {fields:Object.fromEntries(profileFields.map(id=>[id,$(id).value])),junior:$('junior').checked,matching};}
 function persistProfile(){try{if($('remember-profile').checked)localStorage.setItem(profileKey,JSON.stringify(captureProfile()));else localStorage.removeItem(profileKey);}catch{$('local-status').textContent='Profile could not be stored locally.'}}
 function restoreProfile(data){if(!data||typeof data.fields!=='object')return;for(const id of profileFields){const v=data.fields[id];if(typeof v==='string'&&v.length<=12000){const field=$(id);if(field.tagName!=='SELECT'||Array.from(field.options).some(o=>o.value===v))field.value=v;}}if(typeof data.junior==='boolean')$('junior').checked=data.junior;matching=data.matching===true;$('provinceWrap').hidden=$('location').value!=='province';$('remember-profile').checked=true;}
-function dashboard(){const root=$('dashboard-counts');root.replaceChildren();for(const [value,label] of [['saved','Saved'],['applied','Applied'],['dismissed','Dismissed']]){const b=el('button',label+' · '+Object.values(saved).filter(v=>v===value).length);b.type='button';b.addEventListener('click',()=>{$('job-view').value=value;search()});root.append(b)}}
+function dashboard(){const root=$('dashboard-counts');root.replaceChildren();for(const [value,label] of [['saved','Saved'],['applied','Applied'],['dismissed','Dismissed']]){const b=el('button',label+' · '+Object.values(saved).filter(v=>v===value).length);b.type='button';b.addEventListener('click',()=>{$('job-view').value=value;search(true)});root.append(b)}}
 function validUrl(v){try{return new URL(v).protocol==='https:'}catch{return false}}
 function downloadBackup(){const data={version:1,exported_utc:new Date().toISOString(),statuses:saved,archive,profile:$('remember-profile').checked?captureProfile():null};const url=URL.createObjectURL(new Blob([JSON.stringify(data,null,2)],{type:'application/json'}));const a=el('a');a.href=url;a.download='jobmatch-backup.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
 $('backup-export').addEventListener('click',downloadBackup);$('backup-import').addEventListener('click',()=>$('backup-file').click());
@@ -352,7 +353,7 @@ function rank(j,p,loc){
  if(!j.matching_text||j.matching_text_truncated)notes.push('Incomplete listing text; review original posting');if(!x.requirementsFound)notes.push('No distinct qualification section detected; skill mentions may not be requirements.');if(x.preferred.length)notes.push('Preferred skill signals (not mandatory): '+x.preferred.join(', '));
  const score=known?Math.round(100*points/known):null;const coverage=Math.round(known);return {...x,score,coverage,rankScore:score===null?-1:score*(0.4+0.6*known/100),parts,notes,gaps,missing};
 }
-$('match-run').addEventListener('click',()=>{const p=profile();if(!p.skills.length&&!p.roles.length&&p.years===null&&!p.languages.length){$('match-skills').focus();return;}matching=true;persistProfile();search()});
+$('match-run').addEventListener('click',()=>{const p=profile();if(!p.skills.length&&!p.roles.length&&p.years===null&&!p.languages.length){$('match-skills').focus();return;}matching=true;persistProfile();search(true)});
 $('match-reset').addEventListener('click',()=>{for(const id of ['match-skills','match-years','match-roles','match-languages'])$(id).value='';$('cv-file').value='';$('cv-review').value='';$('cv-status').textContent='Optional. Review suggested skills and languages before ranking. No CV is uploaded.';matching=false;persistProfile();search()});
 
 const PAGE_SIZE = 50;
@@ -384,6 +385,8 @@ function render(){
   });
   const ranked=new Map(); if(matching){const p=profile();for(const j of matches)ranked.set(j,rank(j,p,loc));matches.sort((a,b)=>ranked.get(b).rankScore-ranked.get(a).rankScore||ranked.get(b).coverage-ranked.get(a).coverage);}
   const shown = matches.slice(0, visibleCount);
+  $('result-count').textContent=matches.length.toLocaleString()+' '+(matches.length===1?'opportunity':'opportunities')+' found'+(matching?' · Ranked by match':'');
+  if(!$('search-feedback').hidden)$('search-feedback').textContent=matches.length.toLocaleString()+' '+(matches.length===1?'result':'results')+' found ↓';
   $('load-more').hidden = shown.length === matches.length;
   const root=$('results');root.replaceChildren();
   $('status').textContent=`Showing ${shown.length} of ${matches.length} matching listings · ${feed?'Feed checked '+new Date(feed.updated_utc).toLocaleString()+' · '+feed.sources_checked+' employer boards checked ('+feed.source_errors+' source errors).':'Live feed unavailable.'} ${matching?"Match uses assessable criteria only; ranking also favours higher evidence coverage.":"These are not verified personal matches."}`;
@@ -402,12 +405,15 @@ function render(){
     root.append(a);
   }
 }
-function search(){visibleCount=PAGE_SIZE;render();}
+let pendingJump=false,feedFailed=false;
+function jumpToResults(){const target=$('result-summary');target.focus({preventScroll:true});target.scrollIntoView({behavior:motionPreference.matches?'instant':'smooth',block:'start'});}
+function search(jump=false){visibleCount=PAGE_SIZE;render();if(jump===true){$('search-feedback').hidden=false;if(!feed&&$('job-view').value==='discover'){$('search-feedback').textContent=feedFailed?'Live feed unavailable — see results below.':'Loading vacancies…';pendingJump=!feedFailed;}else{$('search-feedback').textContent=$('result-count').textContent+' ↓';}jumpToResults();}}
+$('edit-search').addEventListener('click',()=>{$('search-jobs').scrollIntoView({behavior:motionPreference.matches?'instant':'smooth',block:'start'});$('query').focus({preventScroll:true});});
 $('load-more').addEventListener('click',()=>{visibleCount+=PAGE_SIZE;render()});
-$('search').addEventListener('click',search);
+$('search').addEventListener('click',()=>search(true));
 for(const field of ['junior','province','email','job-view','freshness'])$(field).addEventListener('change',search);
 $('location').addEventListener('change',()=>{$('provinceWrap').hidden=$('location').value!=='province';search()});
-$('query').addEventListener('keydown',e=>{if(e.key==='Enter')search()});fetch('../live-jobs.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error(`HTTP ${r.status}`);return r.json()}).then(j=>{if(!Array.isArray(j.jobs))throw Error('Invalid feed');feed=j;render()}).catch(e=>{$('status').textContent='The live feed has not been published yet or is temporarily unavailable.';$('results').append(el('p','Live listings are unavailable. Your saved and applied vacancies remain accessible through My activity.','empty-state'))});
+$('query').addEventListener('keydown',e=>{if(e.key==='Enter')search(true)});fetch('../live-jobs.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error(`HTTP ${r.status}`);return r.json()}).then(j=>{if(!Array.isArray(j.jobs))throw Error('Invalid feed');feed=j;render();if(pendingJump){pendingJump=false;jumpToResults()}}).catch(e=>{feedFailed=true;pendingJump=false;$('result-count').textContent='Vacancy feed unavailable';if(!$('search-feedback').hidden)$('search-feedback').textContent='Live feed unavailable — try refreshing.';$('status').textContent='The live feed has not been published yet or is temporarily unavailable.';$('results').append(el('p','Live listings are unavailable. Your saved and applied vacancies remain accessible through My activity.','empty-state'))});
 
 </script>
 </body>

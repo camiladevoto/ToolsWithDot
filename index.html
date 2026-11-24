@@ -118,6 +118,7 @@ button:hover { background: #ff7467; }
   html { scroll-behavior: auto; }
 }
 .match-panel{margin-top:24px;padding:20px;border:2px solid var(--border);border-radius:14px;background:var(--paper)}.match-panel summary{cursor:pointer;font-weight:800;font-size:1.15rem}.match-panel .grid{margin-top:16px}.match-panel #match-run{background:var(--lime)}.match-panel #match-reset{background:var(--card)}.match-score{font-weight:850;font-size:1.25rem;background:var(--lime);border:2px solid var(--border);border-radius:10px;padding:5px 10px}.match-keywords{font-size:.82rem;color:var(--muted)}
+.match-panel textarea{width:100%;border:2px solid var(--border);border-radius:9px;padding:10px;font:inherit;background:var(--card);color:var(--ink)}.result-filters{margin-top:18px}.job-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}.job-actions button{min-height:36px;font-size:.8rem;padding:5px 12px;background:var(--card)}.job-actions button[aria-pressed="true"]{background:var(--lime)}
 </style>
 </head>
 <body>
@@ -143,7 +144,7 @@ button:hover { background: #ff7467; }
     <div class="section-top"><h2 id="search-title">Find a vacancy</h2></div>
     <div class="grid">
       <div class="field"><label for="query">Job title or keyword</label><input id="query" placeholder="e.g. Operations, finance, support"></div>
-      <div class="field"><label for="location">Work location</label><select id="location"><option value="remote">Remote from Spain</option><option value="worldwide">Worldwide remote</option><option value="province">On-site or hybrid — choose province</option><option value="spain">All jobs based in Spain</option><option value="all">All countries (explore feed)</option></select></div>
+      <div class="field"><label for="location">Work location</label><select id="location"><option value="remote">Remote from Spain</option><option value="worldwide">Worldwide remote</option><option value="eu">Europe / EU remote (check country eligibility)</option><option value="ambiguous">Remote — eligibility uncertain</option><option value="province">On-site or hybrid — choose province</option><option value="spain">All jobs based in Spain</option><option value="all">All countries (explore feed)</option></select></div>
       <div class="field" id="provinceWrap" hidden><label for="province">Province</label><select id="province"><option value="">Choose province</option><option value="Álava">Álava</option><option value="Albacete">Albacete</option><option value="Alicante">Alicante</option><option value="Almería">Almería</option><option value="Asturias">Asturias</option><option value="Ávila">Ávila</option><option value="Badajoz">Badajoz</option><option value="Barcelona">Barcelona</option><option value="Bizkaia">Bizkaia</option><option value="Burgos">Burgos</option><option value="Cáceres">Cáceres</option><option value="Cádiz">Cádiz</option><option value="Cantabria">Cantabria</option><option value="Castellón">Castellón</option><option value="Ceuta">Ceuta</option><option value="Ciudad Real">Ciudad Real</option><option value="Córdoba">Córdoba</option><option value="A Coruña">A Coruña</option><option value="Cuenca">Cuenca</option><option value="Gipuzkoa">Gipuzkoa</option><option value="Girona">Girona</option><option value="Granada">Granada</option><option value="Guadalajara">Guadalajara</option><option value="Huelva">Huelva</option><option value="Huesca">Huesca</option><option value="Illes Balears">Illes Balears</option><option value="Jaén">Jaén</option><option value="León">León</option><option value="Lleida">Lleida</option><option value="Lugo">Lugo</option><option value="Madrid">Madrid</option><option value="Málaga">Málaga</option><option value="Melilla">Melilla</option><option value="Murcia">Murcia</option><option value="Navarra">Navarra</option><option value="Ourense">Ourense</option><option value="Palencia">Palencia</option><option value="Las Palmas">Las Palmas</option><option value="Pontevedra">Pontevedra</option><option value="La Rioja">La Rioja</option><option value="Salamanca">Salamanca</option><option value="Santa Cruz de Tenerife">Santa Cruz de Tenerife</option><option value="Segovia">Segovia</option><option value="Sevilla">Sevilla</option><option value="Soria">Soria</option><option value="Tarragona">Tarragona</option><option value="Teruel">Teruel</option><option value="Toledo">Toledo</option><option value="Valencia">Valencia</option><option value="Valladolid">Valladolid</option><option value="Zamora">Zamora</option><option value="Zaragoza">Zaragoza</option></select></div>
       <div class="field"><label for="email">Application preference</label><select id="email"><option value="all">All application routes</option><option value="published">Email mentioned in job posting</option></select></div>
     </div>
@@ -152,18 +153,18 @@ button:hover { background: #ff7467; }
     </div>
     <div class="actions">
       <button type="button" id="search">Search vacancies</button>
-      <p class="privacy">Your filters stay in this browser. No CV or account is required.</p>
+      <p class="privacy">Your filters and CV stay in this browser. Saved job statuses are stored locally; no account required.</p>
     </div>
     <details class="match-panel" id="match-panel">
 <summary>Match jobs to my profile</summary>
 <p class="muted">Optional: enter your skills, experience and preferred roles. Your profile is processed in this browser only and is not uploaded or saved.</p>
-<div class="grid">
+<div class="field"><label for="cv-file">Import CV (PDF or TXT)</label><input id="cv-file" type="file" accept=".pdf,.txt,application/pdf,text/plain"><p id="cv-status" class="muted" role="status">Optional. Review suggested skills and languages before ranking. No CV is uploaded.</p><label for="cv-review">Education and experience notes (review locally)</label><textarea id="cv-review" rows="3" placeholder="Review CV evidence here"></textarea></div><div class="grid">
 <div class="field"><label for="match-skills">Skills (comma-separated)</label><input id="match-skills" placeholder="Excel, SQL, accounting, customer support"></div>
 <div class="field"><label for="match-years">Relevant years of experience</label><input id="match-years" type="number" min="0" max="60" step="0.5" placeholder="e.g. 1"></div>
 <div class="field"><label for="match-roles">Preferred roles (comma-separated)</label><input id="match-roles" placeholder="Business analyst, finance analyst"></div>
 <div class="field"><label for="match-languages">Working languages (comma-separated)</label><input id="match-languages" placeholder="English, Spanish"></div>
 </div>
-<div class="actions"><button type="button" id="match-run">Rank my matches</button><button type="button" id="match-reset">Clear profile</button></div>
+<details class="note"><summary>Customise matching weights</summary><div class="grid"><div><label for="weight-0">Skills</label><input id="weight-0" type="number" min="0" max="100" value="30"></div><div><label for="weight-1">Experience</label><input id="weight-1" type="number" min="0" max="100" value="25"></div><div><label for="weight-2">Location</label><input id="weight-2" type="number" min="0" max="100" value="20"></div><div><label for="weight-3">Roles</label><input id="weight-3" type="number" min="0" max="100" value="15"></div><div><label for="weight-4">Languages</label><input id="weight-4" type="number" min="0" max="100" value="10"></div></div><p class="muted">Weights are normalised to 100. Unknown criteria remain unscored.</p><button type="button" id="weights-reset">Restore defaults</button></details><div class="actions"><button type="button" id="match-run">Rank my matches</button><button type="button" id="match-reset">Clear profile</button></div>
 <p class="muted">Scores are evidence-based estimates, not hiring probabilities. Unknown requirements are not treated as met. Location filters still apply.</p>
 </details>
     <details class="note">
@@ -173,7 +174,7 @@ button:hover { background: #ff7467; }
     </details>
   </section>
   <section class="section-results" aria-labelledby="results-title">
-    <div class="results-head"><h2 id="results-title">Opportunities</h2></div>
+    <div class="results-head"><h2 id="results-title">Opportunities</h2></div><div class="grid result-filters"><div><label for="job-view">Vacancy status</label><select id="job-view"><option value="discover">Discover (hide dismissed and applied)</option><option value="saved">Saved jobs</option><option value="applied">Applied jobs</option><option value="dismissed">Dismissed jobs</option><option value="all">All statuses</option></select></div><div><label for="freshness">Date first discovered</label><select id="freshness"><option value="all">Any date / unknown</option><option value="1">Last 24 hours</option><option value="7">Last 7 days</option><option value="30">Last 30 days</option></select></div></div><p id="local-status" class="muted" role="status"></p>
     <p id="status" role="status" aria-live="polite">Loading employer listings…</p>
     <div id="results" aria-label="Job listings"></div>
     <div class="actions"><button type="button" id="load-more" hidden>Show more listings</button></div>
@@ -264,7 +265,7 @@ function assessClient(j){
 
 let matching=false;
 const fold=s=>String(s??'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
-const canonical=s=>fold(s).replace(/[^a-z0-9+#.]+/g,' ').trim();
+const canonical=s=>fold(s).replace(/[^a-z0-9+#]+/g,' ').trim();
 const contains=(text,term)=>{const a=' '+canonical(text)+' ',b=canonical(term);return !!b&&a.includes(' '+b+' ')};
 const splitTerms=s=>[...new Set(s.split(/[,;\n]+/).map(canonical).filter(Boolean))];
 const skillGroups={
@@ -283,6 +284,7 @@ const skillGroups={
 'Cloud':['aws','azure','google cloud'],'Cybersecurity':['cybersecurity','information security'],'Data engineering':['data engineering','etl','data pipelines'],
 'Machine learning':['machine learning','deep learning'],'Automation':['automation','workflow automation','automatisation'],'Negotiation':['negotiation','negociacion'],
 'Logistics':['logistics','supply chain','inventory management','logistica'],'Compliance':['compliance','risk management','regulatory compliance']};
+Object.assign(skillGroups,{'Business analysis':['business analysis','business analyst','requirements gathering','business requirements','analisis de negocio'],'Data visualisation':['data visualization','data visualisation','dashboards','dashboarding'],'Microsoft Office':['microsoft office','office 365','microsoft 365'],'Financial analysis':['financial analysis','financial analyst','analisis financiero'],'Reconciliation':['reconciliation','reconciliations','conciliacion bancaria'],'Customer onboarding':['onboarding','implementation specialist','customer implementation'],'Ticketing':['zendesk','intercom','ticketing systems'],'Git':['git','github','gitlab'],'Statistics':['statistics','statistical analysis','econometrics','regression'],'Purchasing':['procurement','purchasing','compras'],'B2B':['b2b','business to business'],'Presentation':['powerpoint','google slides','presentations']});
 const languageGroups={'English':['english','ingles'],'Spanish':['spanish','espanol','castellano'],'French':['french','frances'],'German':['german','aleman'],'Italian':['italian','italiano'],'Portuguese':['portuguese','portugues'],'Dutch':['dutch','neerlandes'],'Arabic':['arabic','arabe'],'Japanese':['japanese','japones'],'Mandarin':['mandarin','chinese','chino']};
 const stop=new Set('about above across after also among and are based been before being both can company could each employer experience first from have help into job join more must our over people position role team than that their them then there these they this those through time using very want were what when where which while will with work working would years your para como esta este desde sobre entre somos equipo puesto trabajo empresa experiencia con los las del una que por'.split(' '));
 function extract(j,p){
@@ -292,14 +294,29 @@ function extract(j,p){
  const extra=p.skills.filter(s=>contains(text,s)&&!matched.some(k=>[k,...skillGroups[k]].some(t=>canonical(t)===s)));
  const tokens=canonical(text).split(' ').filter(t=>t.length>=4&&!stop.has(t)&&!/\d/.test(t));const freq=new Map();for(const t of tokens)freq.set(t,(freq.get(t)||0)+1);
  const keywords=[...new Set([...skills,...extra,...[...freq].sort((a,b)=>b[1]-a[1]).slice(0,10).map(x=>x[0])])];
- const langText=fold(text);const languages=Object.entries(languageGroups).filter(([k,v])=>v.some(t=>{const e=t.replace(/[.*+?^$\x7b\x7d()|[\]\\]/g,'\\const PAGE_SIZE = 50;');return new RegExp('\\b(?:fluent|fluency|proficiency|proficient|native|business level|professional level|advanced|required|fluido|fluidez|nivel avanzado|dominio)\\s+(?:in\\s+|de\\s+)?'+e+'\\b|\\b'+e+'\\s+(?:language\\s+)?(?:fluency|proficiency|required|is required|is mandatory|c1|c2|b2)\\b','i').test(langText)})).map(([k])=>k);
+ const langText=fold(text);const languages=Object.entries(languageGroups).filter(([k,v])=>v.some(t=>{const e=t;return new RegExp('\\b(?:fluent|fluency|proficiency|proficient|native|business level|professional level|advanced|required|fluido|fluidez|nivel avanzado|dominio)\\s+(?:in\\s+|de\\s+)?'+e+'\\b|\\b'+e+'\\s+(?:language\\s+)?(?:fluency|proficiency|required|is required|is mandatory|c1|c2|b2)\\b','i').test(langText)})).map(([k])=>k);
  const years=[...langText.matchAll(/\b(\d{1,2})(?:\s*[-–]\s*\d{1,2})?\s*\+?\s*(?:years?|anos)\s+(?:of\s+|de\s+)?(?:relevant\s+|professional\s+|prior\s+|work\s+)?(?:experience|experiencia)\b/g)].map(m=>+m[1]);
  return {skills,matched,extra,keywords,languages,years:years.length?Math.max(...years):null};
 }
+const defaults=[30,25,20,15,10];
+function weights(){const a=defaults.map((_,i)=>Math.max(0,Math.min(100,Number($('weight-'+i).value)||0)));const total=a.reduce((x,y)=>x+y,0);return total?a.map(x=>100*x/total):defaults;}
+$('weights-reset').addEventListener('click',()=>{defaults.forEach((v,i)=>$('weight-'+i).value=v);if(matching)search()});
+function remoteScope(j){const loc=fold(j.location), body=fold(j.matching_text||j.description_excerpt), remote=/\b(remote|remoto|teletrabajo|work from home)\b/.test(loc)||j.workplace_type==='remote'||/^remote_/.test(j.location_status||'');const region=loc+' '+body;
+const restrictions=(body.match(/[^.!?]{0,75}\b(?:time zone|timezone|time-zone|utc[+-]|gmt[+-]|cet hours|must (?:reside|be based|live)|only (?:in|within)|work authorization|right to work)\b[^.!?]{0,85}/gi)||[]).slice(0,3);
+let scope='unknown';if(remote){if(/\b(?:worldwide|anywhere in the world|globally remote)\b/.test(loc)||j.location_status==='remote_worldwide_explicit')scope='worldwide';else if(j.location_status==='remote_spain_explicit')scope='spain';else if(/\b(?:europe|eu|european union|emea)\b/.test(loc))scope='eu';else if(/\b(?:united states|usa|united kingdom|uk|canada|germany|france|india|australia|netherlands|poland|portugal|italy)\b/.test(loc))scope='country';else scope='ambiguous';}
+else if(j.workplace_type==='hybrid'||/\bhybrid\b/.test(loc))scope='hybrid';else if(j.workplace_type==='on-site'||j.workplace_type==='onsite')scope='onsite';
+return {scope,restrictions};}
+const stateKey='jobmatch.vacancy-status.v1';let saved={};try{const raw=JSON.parse(localStorage.getItem(stateKey)||'{}');if(raw&&typeof raw==='object'&&!Array.isArray(raw))saved=raw;}catch{}
+function jobKey(j){return String(j.id||j.url);}
+function setJob(j,value){const k=jobKey(j);if(saved[k]===value)delete saved[k];else saved[k]=value;try{localStorage.setItem(stateKey,JSON.stringify(saved));$('local-status').textContent='Job status saved in this browser.';}catch{$('local-status').textContent='Browser storage unavailable; status retained only for this session.';}render();}
+function dateValue(v){const t=Date.parse(v);return Number.isFinite(t)?t:null;}
+function freshnessMatch(j){const days=$('freshness').value;if(days==='all')return true;const t=dateValue(j.first_seen_utc);return t!==null&&Date.now()-t>=0&&Date.now()-t<=Number(days)*86400000;}
+function viewMatch(j){const v=$('job-view').value,s=saved[jobKey(j)];return v==='all'||(v==='discover'?!['applied','dismissed'].includes(s):s===v);}
+$('cv-file').addEventListener('change',async()=>{const f=$('cv-file').files[0];if(!f)return;const status=$('cv-status');if(f.size>10*1024*1024){status.textContent='Choose a file under 10 MB.';return;}status.textContent='Reading CV locally…';try{let text='';if(f.name.toLowerCase().endsWith('.txt'))text=await f.text();else if(f.name.toLowerCase().endsWith('.pdf')){const pdf=await import('https://cdn.jsdelivr.net/npm/pdfjs-dist@4.10.38/build/pdf.mjs');pdf.GlobalWorkerOptions.workerSrc='https://cdn.jsdelivr.net/npm/pdfjs-dist@4.10.38/build/pdf.worker.mjs';const doc=await pdf.getDocument({data:new Uint8Array(await f.arrayBuffer()),isEvalSupported:false}).promise;for(let i=1;i<=Math.min(doc.numPages,30);i++){const page=await doc.getPage(i);const content=await page.getTextContent();text+=content.items.map(x=>x.str||'').join(' ')+'\n';}await doc.destroy();}else throw Error('Choose PDF or TXT');if(!text.trim())throw Error('No selectable text found; paste skills manually (scans require OCR).');const detected=Object.entries(skillGroups).filter(([k,v])=>[k,...v].some(t=>contains(text,t))).map(([k])=>k);const langs=Object.entries(languageGroups).filter(([k,v])=>v.some(t=>contains(text,t))).map(([k])=>k);const merge=(id,items)=>{$(id).value=[...new Set([...$(id).value.split(',').map(s=>s.trim()).filter(Boolean),...items])].join(', ')};merge('match-skills',detected);merge('match-languages',langs);$('cv-review').value=text.slice(0,12000);status.textContent='Suggested '+detected.length+' skills and '+langs.length+' languages. Review proficiency, education, roles and relevant years manually before ranking.';}catch(e){status.textContent='CV could not be read: '+e.message+' You can enter your profile manually.';}});
 function profile(){return {skills:splitTerms($('match-skills').value),years:$('match-years').value===''?null:Math.max(0,Number($('match-years').value)),roles:splitTerms($('match-roles').value),languages:splitTerms($('match-languages').value)}}
 function rank(j,p,loc){
  const x=extract(j,p), parts=[],notes=[],gaps=[];let points=0,known=0;
- function add(label,w,value){parts.push(label+': '+(value===null?'unknown':Math.round(value*100)+'%'));if(value!==null){points+=w*value;known+=w;}}
+ function add(label,w,value){w=weights()[[30,25,20,15,10].indexOf(w)];parts.push(label+': '+(value===null?'unknown':Math.round(value*100)+'%'));if(value!==null){points+=w*value;known+=w;}}
  add('Skills',30,x.skills.length&&p.skills.length?x.matched.length/x.skills.length:null);
  if(x.skills.length)gaps.push(...x.skills.filter(k=>!x.matched.includes(k)).map(k=>'Skill mentioned: '+k));
  add('Experience',25,x.years!==null&&p.years!==null?Math.min(1,p.years/Math.max(1,x.years)):null);
@@ -313,10 +330,10 @@ function rank(j,p,loc){
  add('Languages',10,x.languages.length&&p.languages.length?langs.length/x.languages.length:null);
  if(x.languages.length)gaps.push(...x.languages.filter(k=>!langs.includes(k)).map(k=>'Language requirement signal: '+k));
  if(!j.matching_text||j.matching_text_truncated)notes.push('Incomplete listing text; review original posting');
- return {...x,score:Math.round(points),coverage:known,parts,notes,gaps};
+ return {...x,score:Math.round(points),coverage:Math.round(known),parts,notes,gaps};
 }
 $('match-run').addEventListener('click',()=>{const p=profile();if(!p.skills.length&&!p.roles.length&&p.years===null&&!p.languages.length){$('match-skills').focus();return;}matching=true;search()});
-$('match-reset').addEventListener('click',()=>{for(const id of ['match-skills','match-years','match-roles','match-languages'])$(id).value='';matching=false;search()});
+$('match-reset').addEventListener('click',()=>{for(const id of ['match-skills','match-years','match-roles','match-languages'])$(id).value='';$('cv-file').value='';$('cv-review').value='';$('cv-status').textContent='Optional. Review suggested skills and languages before ranking. No CV is uploaded.';matching=false;search()});
 
 const PAGE_SIZE = 50;
 let visibleCount = PAGE_SIZE;
@@ -329,16 +346,18 @@ function render(){
   const spainBased=j=>j.location_status==='remote_spain_explicit'||j.location_status==='spain_location_check_remote';
   const locationMatch=j=>{
     if(loc==='all')return true;
-    if(loc==='remote')return j.location_status==='remote_spain_explicit'||j.location_status==='remote_worldwide_explicit';
-    if(loc==='worldwide')return j.location_status==='remote_worldwide_explicit';
+    if(loc==='remote')return ['spain','worldwide'].includes(remoteScope(j).scope);
+    if(loc==='worldwide')return remoteScope(j).scope==='worldwide';
+    if(loc==='eu')return remoteScope(j).scope==='eu';
+    if(loc==='ambiguous')return ['ambiguous','country'].includes(remoteScope(j).scope);
     if(loc==='spain')return spainBased(j);
     if(loc==='province')return spainBased(j)&&j.location_status!=='remote_spain_explicit'&&provinceMatch(j);
     return false;
   };
   let matches=feed.jobs.filter(j=>{
     const fit=assessClient(j);
-    return (!q||clean(j.title+' '+j.company+' '+j.description_excerpt).includes(q))
-    &&locationMatch(j)
+    return (!q||clean(j.title+' '+j.company+' '+(j.matching_text||j.description_excerpt)).includes(q))
+    &&locationMatch(j)&&viewMatch(j)&&freshnessMatch(j)
     &&(contact==='all'||j.published_emails?.length)
     &&(!junior||fit.status!=='excluded');
   });
@@ -352,7 +371,7 @@ function render(){
     const a=el('article',undefined,'job');const fit=assessClient(j);
     a.append(el('h2',j.title),el('p',j.company+' · '+(j.location||'Location unspecified'),'company'));
     const locLabel=({remote_worldwide_explicit:'Worldwide remote — verify terms with employer',remote_spain_explicit:'Remote from Spain — verify full posting',spain_location_check_remote:'Spain location — remote status unverified',remote_scope_unverified:'Remote scope ambiguous — Spain eligibility unverified',location_unverified:'Work location/eligibility unverified'})[j.location_status]||'Eligibility unverified';
-    a.append(el('p',locLabel,'location'));
+    const scope=remoteScope(j);a.append(el('p',({worldwide:'Worldwide remote — confirm restrictions',spain:'Spain remote — confirm restrictions',eu:'Regional remote — country eligibility unverified',country:'Country-specific remote — verify eligibility',ambiguous:'Remote scope unclear',hybrid:'Hybrid',onsite:'On-site'})[scope.scope]||locLabel,'location'));if(scope.restrictions.length)a.append(el('p','Location / time-zone signals: '+scope.restrictions.join(' · '),'status'));a.append(el('p','First discovered: '+(dateValue(j.first_seen_utc)!==null?new Date(j.first_seen_utc).toLocaleDateString():'Unknown')+' · Published: '+(dateValue(j.published_utc)!==null?new Date(j.published_utc).toLocaleDateString():'Unknown'),'status'));const actions=el('div',undefined,'job-actions');for(const [value,label] of [['saved','Save'],['applied','Applied'],['dismissed','Dismiss']]){const b=el('button',saved[jobKey(j)]===value?label+' ✓':label);b.type='button';b.setAttribute('aria-pressed',String(saved[jobKey(j)]===value));b.addEventListener('click',()=>setJob(j,value));actions.append(b);}a.append(actions);
     a.append(el('p',(fit.status==='excluded'?'Excluded by default: ':'Needs review: ')+fit.reason,'status'));
     a.append(el('p',j.employment_terms||'Compensation and contract type: not independently verified.','muted'));
     if(matching){const m=ranked.get(j);a.append(el('p',m.score+'/100 evidence score · '+m.coverage+'% criteria assessable','match-score'));a.append(el('p','Matched skills: '+([...m.matched,...m.extra].join(', ')||'None identified'),'status'));a.append(el('p','Listing keywords: '+(m.keywords.join(', ')||'None identified'),'match-keywords'));const detail=el('details');detail.append(el('summary','Score breakdown and gaps'),el('p',m.parts.join(' · '),'status'),el('p',m.gaps.join(' · ')||'No gaps identified from available evidence','status'),el('p',m.notes.join(' · '),'status'));a.append(detail);}
@@ -365,7 +384,7 @@ function render(){
 function search(){visibleCount=PAGE_SIZE;render();}
 $('load-more').addEventListener('click',()=>{visibleCount+=PAGE_SIZE;render()});
 $('search').addEventListener('click',search);
-for(const field of ['junior','province','email'])$(field).addEventListener('change',search);
+for(const field of ['junior','province','email','job-view','freshness'])$(field).addEventListener('change',search);
 $('location').addEventListener('change',()=>{$('provinceWrap').hidden=$('location').value!=='province';search()});
 $('query').addEventListener('keydown',e=>{if(e.key==='Enter')search()});fetch('live-jobs.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error(`HTTP ${r.status}`);return r.json()}).then(j=>{if(!Array.isArray(j.jobs))throw Error('Invalid feed');feed=j;render()}).catch(e=>{$('status').textContent='The live feed has not been published yet or is temporarily unavailable.';$('results').append(el('p','Real job listings will appear here once the first employer-feed update is published. In the meantime, explore the prototype or check back later.','empty-state'))});
 

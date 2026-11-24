@@ -1,8 +1,162 @@
 {
-  "updated_utc": "2026-11-24T16:33:58+00:00",
-  "sources_checked": 24,
-  "source_errors": 1,
+  "updated_utc": "2026-11-24T16:38:01+00:00",
+  "sources_checked": 32,
+  "source_errors": 0,
   "jobs": [
+    {
+      "id": "lever:360Learning:9d1ee4da-6fba-426b-bc40-71e87b22bb8f",
+      "company": "360Learning",
+      "title": "Customer Success Partner, Enterprise",
+      "location": "Canada, Remote",
+      "location_status": "remote_scope_unverified",
+      "provinces": [],
+      "workplace_type": "remote",
+      "categories": [
+        "customer_operations"
+      ],
+      "early_career_status": "worth_checking",
+      "early_career_reason": "Seniority not established from available information",
+      "pay_status": "not_verified",
+      "seniority_hint": "unspecified",
+      "url": "https://jobs.lever.co/360learning/9d1ee4da-6fba-426b-bc40-71e87b22bb8f",
+      "description_excerpt": "Introduction to the Team & Role As a Customer Success Partner, you will partner with our clients to achieve their digital training strategy through the 360Learning platform. The relationship you create with your customers will allow you to map your customer’s key business objectives, audit and analyze platform usage to identify opportunities, review benchmarks and best practices, create action plans to capitalize on those opportunities. You will ensure the renewal of contracts by helping our customers achieve their desired outcomes, which in many cases includes coordinating different resources to address customer requirements (technical, educ",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "lever",
+      "last_checked_utc": "2026-11-24T16:37:57+00:00"
+    },
+    {
+      "id": "lever:360Learning:ce475b7e-540a-4b5e-8035-795c89b20926",
+      "company": "360Learning",
+      "title": "Strategic Customer Success Partner Coach - France",
+      "location": "Paris, Remote",
+      "location_status": "remote_scope_unverified",
+      "provinces": [],
+      "workplace_type": "remote",
+      "categories": [
+        "customer_operations"
+      ],
+      "early_career_status": "worth_checking",
+      "early_career_reason": "Seniority not established from available information",
+      "pay_status": "not_verified",
+      "seniority_hint": "unspecified",
+      "url": "https://jobs.lever.co/360learning/ce475b7e-540a-4b5e-8035-795c89b20926",
+      "description_excerpt": "Introduction to the Team & Role As a Client Success Partner Coach (or CSP Coach), you will own the most critical customers in France and support, mentor and guide the CSPs that manage them. The Client Success Partners are guiding the learning and development strategies of our customers through the 360Learning platform. They develop a strong relationship with each client and make sure our customers are satisfied, our contracts are renewed and our customers expand. As a Coach, your role is fundamental for the team: you are responsible for the development of every team member and the achievement of renewal and expansion of clients, for the large",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "lever",
+      "last_checked_utc": "2026-11-24T16:37:57+00:00"
+    },
+    {
+      "id": "greenhouse:Appfire:4753361005",
+      "company": "Appfire",
+      "title": "Deal Desk Analyst",
+      "location": "Spain",
+      "location_status": "spain_location_check_remote",
+      "provinces": [],
+      "workplace_type": "",
+      "categories": [
+        "sales_operations"
+      ],
+      "early_career_status": "worth_checking",
+      "early_career_reason": "Early-career title; full requirements not verified",
+      "pay_status": "not_verified",
+      "seniority_hint": "unspecified",
+      "url": "https://job-boards.greenhouse.io/appfire/jobs/4753361005",
+      "description_excerpt": "At Appfire, we believe that great work happens when people get to choose how they work. After 20 years of creating software that empowers teams to break silos and collaborate seamlessly, we've learned that one size does not fit all. We’re a team of 800+ employees, working remotely across 28 countries. Our flagship products include: JXL, Comala Document Management, 7Pace Time Tracker, Jira Misc Workflow Extensions, and BigPicture. Here you can read some of our customer stories: https://appfire.com/resources/resource-library/customer-stories Job Purpose The Deal Desk Analyst supports Appfire by evaluating and coordinating Deal Desk requests rel",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "greenhouse",
+      "last_checked_utc": "2026-11-24T16:37:53+00:00"
+    },
+    {
+      "id": "greenhouse:Appfire:4754413005",
+      "company": "Appfire",
+      "title": "Deal Desk Analyst",
+      "location": "Bulgaria",
+      "location_status": "location_unverified",
+      "provinces": [],
+      "workplace_type": "",
+      "categories": [
+        "sales_operations"
+      ],
+      "early_career_status": "worth_checking",
+      "early_career_reason": "Early-career title; full requirements not verified",
+      "pay_status": "not_verified",
+      "seniority_hint": "unspecified",
+      "url": "https://job-boards.greenhouse.io/appfire/jobs/4754413005",
+      "description_excerpt": "At Appfire, we believe that great work happens when people get to choose how they work. After 20 years of creating software that empowers teams to break silos and collaborate seamlessly, we've learned that one size does not fit all. We’re a team of 800+ employees, working remotely across 28 countries. Our flagship products include: JXL, Comala Document Management, 7Pace Time Tracker, Jira Misc Workflow Extensions, and BigPicture. Here you can read some of our customer stories: https://appfire.com/resources/resource-library/customer-stories Job Purpose The Deal Desk Analyst supports Appfire by evaluating and coordinating Deal Desk requests rel",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "greenhouse",
+      "last_checked_utc": "2026-11-24T16:37:53+00:00"
+    },
+    {
+      "id": "greenhouse:Appfire:4754415005",
+      "company": "Appfire",
+      "title": "Deal Desk Analyst",
+      "location": "Poland",
+      "location_status": "location_unverified",
+      "provinces": [],
+      "workplace_type": "",
+      "categories": [
+        "sales_operations"
+      ],
+      "early_career_status": "worth_checking",
+      "early_career_reason": "Early-career title; full requirements not verified",
+      "pay_status": "not_verified",
+      "seniority_hint": "unspecified",
+      "url": "https://job-boards.greenhouse.io/appfire/jobs/4754415005",
+      "description_excerpt": "At Appfire, we believe that great work happens when people get to choose how they work. After 20 years of creating software that empowers teams to break silos and collaborate seamlessly, we've learned that one size does not fit all. We’re a team of 800+ employees, working remotely across 28 countries. Our flagship products include: JXL, Comala Document Management, 7Pace Time Tracker, Jira Misc Workflow Extensions, and BigPicture. Here you can read some of our customer stories: https://appfire.com/resources/resource-library/customer-stories Job Purpose The Deal Desk Analyst supports Appfire by evaluating and coordinating Deal Desk requests rel",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "greenhouse",
+      "last_checked_utc": "2026-11-24T16:37:53+00:00"
+    },
+    {
+      "id": "greenhouse:Appfire:4753594005",
+      "company": "Appfire",
+      "title": "Senior Customer Success Manager",
+      "location": "Poland",
+      "location_status": "location_unverified",
+      "provinces": [],
+      "workplace_type": "",
+      "categories": [
+        "customer_operations"
+      ],
+      "early_career_status": "excluded",
+      "early_career_reason": "Senior/management title",
+      "pay_status": "not_verified",
+      "seniority_hint": "senior_or_lead",
+      "url": "https://job-boards.greenhouse.io/appfire/jobs/4753594005",
+      "description_excerpt": "At Appfire, we believe that great work happens when people get to choose how they work. After 20 years of creating software that empowers teams to break silos and collaborate seamlessly, we've learned that one size does not fit all. We’re a team of 800+ employees, working remotely across 28 countries. Our flagship products include: JXL, Comala Document Management, 7Pace Time Tracker, Jira Misc Workflow Extensions, and BigPicture. Here you can read some of our customer stories: https://appfire.com/resources/resource-library/customer-stories About the role: As a Sr. Customer Success Manager at Appfire, you will own and strategically grow our hi",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "greenhouse",
+      "last_checked_utc": "2026-11-24T16:37:53+00:00"
+    },
+    {
+      "id": "greenhouse:Appfire:4753592005",
+      "company": "Appfire",
+      "title": "Senior Customer Success Manager",
+      "location": "Spain",
+      "location_status": "spain_location_check_remote",
+      "provinces": [],
+      "workplace_type": "",
+      "categories": [
+        "customer_operations"
+      ],
+      "early_career_status": "excluded",
+      "early_career_reason": "Senior/management title",
+      "pay_status": "not_verified",
+      "seniority_hint": "senior_or_lead",
+      "url": "https://job-boards.greenhouse.io/appfire/jobs/4753592005",
+      "description_excerpt": "At Appfire, we believe that great work happens when people get to choose how they work. After 20 years of creating software that empowers teams to break silos and collaborate seamlessly, we've learned that one size does not fit all. We’re a team of 800+ employees, working remotely across 28 countries. Our flagship products include: JXL, Comala Document Management, 7Pace Time Tracker, Jira Misc Workflow Extensions, and BigPicture. Here you can read some of our customer stories: https://appfire.com/resources/resource-library/customer-stories About the role: As a Sr. Customer Success Manager at Appfire, you will own and strategically grow our hi",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "greenhouse",
+      "last_checked_utc": "2026-11-24T16:37:53+00:00"
+    },
     {
       "id": "greenhouse:Berlin Brands Group:6180324004",
       "company": "Berlin Brands Group",
@@ -23,7 +177,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-24T16:33:45+00:00"
+      "last_checked_utc": "2026-11-24T16:37:44+00:00"
     },
     {
       "id": "greenhouse:Berlin Brands Group:6248387004",
@@ -45,7 +199,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-24T16:33:45+00:00"
+      "last_checked_utc": "2026-11-24T16:37:44+00:00"
     },
     {
       "id": "greenhouse:Berlin Brands Group:6256096004",
@@ -67,7 +221,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-24T16:33:45+00:00"
+      "last_checked_utc": "2026-11-24T16:37:44+00:00"
     },
     {
       "id": "greenhouse:Berlin Brands Group:6256121004",
@@ -89,7 +243,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-24T16:33:45+00:00"
+      "last_checked_utc": "2026-11-24T16:37:44+00:00"
     },
     {
       "id": "greenhouse:Berlin Brands Group:6223013004",
@@ -111,7 +265,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-24T16:33:45+00:00"
+      "last_checked_utc": "2026-11-24T16:37:44+00:00"
     },
     {
       "id": "greenhouse:Berlin Brands Group:6254044004",
@@ -133,7 +287,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-24T16:33:45+00:00"
+      "last_checked_utc": "2026-11-24T16:37:44+00:00"
     },
     {
       "id": "greenhouse:Berlin Brands Group:6256087004",
@@ -155,7 +309,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-24T16:33:45+00:00"
+      "last_checked_utc": "2026-11-24T16:37:44+00:00"
     },
     {
       "id": "greenhouse:Berlin Brands Group:6256129004",
@@ -177,7 +331,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-24T16:33:45+00:00"
+      "last_checked_utc": "2026-11-24T16:37:44+00:00"
     },
     {
       "id": "greenhouse:Cabify:8918217002",
@@ -199,7 +353,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-24T16:33:51+00:00"
+      "last_checked_utc": "2026-11-24T16:37:49+00:00"
     },
     {
       "id": "greenhouse:Cabify:8937520002",
@@ -221,7 +375,205 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-24T16:33:51+00:00"
+      "last_checked_utc": "2026-11-24T16:37:49+00:00"
+    },
+    {
+      "id": "greenhouse:Canonical:7971310",
+      "company": "Canonical",
+      "title": "Accounts Payable Clerk",
+      "location": "Home based - EMEA; Office Based - London, UK",
+      "location_status": "remote_scope_unverified",
+      "provinces": [],
+      "workplace_type": "",
+      "categories": [
+        "finance_support"
+      ],
+      "early_career_status": "worth_checking",
+      "early_career_reason": "Seniority not established from available information",
+      "pay_status": "not_verified",
+      "seniority_hint": "unspecified",
+      "url": "https://job-boards.greenhouse.io/canonical/jobs/7971310",
+      "description_excerpt": "The role of an Accounts Payable Clerk at Canonical We have an exciting opportunity for an Accounts Payable Clerk to join our growing team. If you are passionate about the technology industry and want to work for a company that aligns with your interests, we might be the place for you! Canonical, and our world class Ubuntu product, attracts some of the leading talent from around the world. Come and work with exceptional people and kick start your career in Finance! Our Finance team is growing and it's a really exciting time to join the team. We are looking for bright, truly motivated people who have a passion for making a difference. You will ",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "greenhouse",
+      "last_checked_utc": "2026-11-24T16:37:56+00:00"
+    },
+    {
+      "id": "greenhouse:Canonical:7548330",
+      "company": "Canonical",
+      "title": "Customer Success - Team Manager",
+      "location": "Home Based - APAC",
+      "location_status": "location_unverified",
+      "provinces": [],
+      "workplace_type": "",
+      "categories": [
+        "customer_operations"
+      ],
+      "early_career_status": "excluded",
+      "early_career_reason": "Senior/management title",
+      "pay_status": "not_verified",
+      "seniority_hint": "senior_or_lead",
+      "url": "https://job-boards.greenhouse.io/canonical/jobs/7548330",
+      "description_excerpt": "Canonical is a leading provider of open source software and operating systems to the global enterprise and technology markets. Our platform, Ubuntu, is very widely used in breakthrough enterprise initiatives such as public cloud, data science, AI, engineering innovation and IoT. Our customers include the world's leading public cloud and silicon providers, and industry leaders in many sectors. The company is a pioneer of global distributed collaboration, with 1000+ colleagues in 70+ countries and very few office based roles. Teams meet two to four times yearly in person, in interesting locations around the world, to align on strategy and execu",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "greenhouse",
+      "last_checked_utc": "2026-11-24T16:37:56+00:00"
+    },
+    {
+      "id": "greenhouse:Canonical:6856788",
+      "company": "Canonical",
+      "title": "Enterprise Customer Success Manager",
+      "location": "Home based - Worldwide",
+      "location_status": "remote_scope_unverified",
+      "provinces": [],
+      "workplace_type": "",
+      "categories": [
+        "customer_operations"
+      ],
+      "early_career_status": "excluded",
+      "early_career_reason": "Senior/management title",
+      "pay_status": "not_verified",
+      "seniority_hint": "senior_or_lead",
+      "url": "https://job-boards.greenhouse.io/canonical/jobs/6856788",
+      "description_excerpt": "Canonical is a leading provider of open source software and operating systems to the global enterprise and technology markets. Our platform, Ubuntu, is very widely used in breakthrough enterprise initiatives such as public cloud, data science, AI, engineering innovation, and IoT. Our customers include the world's leading public cloud and silicon providers, and industry leaders in many sectors. The company is a pioneer of global distributed collaboration, with 1200+ colleagues in 75+ countries and very few office-based roles. Teams meet two to four times yearly in person, in interesting locations around the world, to align on strategy and exec",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "greenhouse",
+      "last_checked_utc": "2026-11-24T16:37:56+00:00"
+    },
+    {
+      "id": "greenhouse:Canonical:7084000",
+      "company": "Canonical",
+      "title": "Enterprise Customer Success Manager (French speaker)",
+      "location": "Home based - EMEA",
+      "location_status": "remote_scope_unverified",
+      "provinces": [],
+      "workplace_type": "",
+      "categories": [
+        "customer_operations"
+      ],
+      "early_career_status": "excluded",
+      "early_career_reason": "Senior/management title",
+      "pay_status": "not_verified",
+      "seniority_hint": "senior_or_lead",
+      "url": "https://job-boards.greenhouse.io/canonical/jobs/7084000",
+      "description_excerpt": "The role of an Enterprise Customer Success Manager at Canonical Customer success is a fairly new and strategic department at Canonical, with the objective to reduce risk and churn, facilitate the adoption of new products or services and support expansion within existing accounts. Customer Success Managers (CSM) are responsible for developing trust with their assigned customers and providing them with the best possible experience navigating Canonical's vast offering. By clearly understanding their customer’s objectives, the CSM can align expectations, suggest a large range of additional services or product capacity to increase loyalty, allevia",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "greenhouse",
+      "last_checked_utc": "2026-11-24T16:37:56+00:00"
+    },
+    {
+      "id": "greenhouse:Canonical:7549144",
+      "company": "Canonical",
+      "title": "Enterprise Customer Success Manager (Japanese speaker)",
+      "location": "Home Based - APAC",
+      "location_status": "location_unverified",
+      "provinces": [],
+      "workplace_type": "",
+      "categories": [
+        "customer_operations"
+      ],
+      "early_career_status": "excluded",
+      "early_career_reason": "Senior/management title",
+      "pay_status": "not_verified",
+      "seniority_hint": "senior_or_lead",
+      "url": "https://job-boards.greenhouse.io/canonical/jobs/7549144",
+      "description_excerpt": "The role of an Enterprise Customer Success Manager at Canonical Customer success is a fairly new and strategic department at Canonical, with the objective to reduce risk and churn, facilitate the adoption of new products or services and support expansion within existing accounts. Customer Success Managers (CSM) are responsible for developing trust with their assigned customers and providing them with the best possible experience navigating Canonical's vast offering. By clearly understanding their customer’s objectives, the CSM can align expectations, suggest a large range of additional services or product capacity to increase loyalty, allevia",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "greenhouse",
+      "last_checked_utc": "2026-11-24T16:37:56+00:00"
+    },
+    {
+      "id": "greenhouse:Canonical:4181031",
+      "company": "Canonical",
+      "title": "Financial Analyst",
+      "location": "Home Based - Americas",
+      "location_status": "location_unverified",
+      "provinces": [],
+      "workplace_type": "",
+      "categories": [
+        "finance_support"
+      ],
+      "early_career_status": "worth_checking",
+      "early_career_reason": "Early-career title; full requirements not verified",
+      "pay_status": "not_verified",
+      "seniority_hint": "unspecified",
+      "url": "https://job-boards.greenhouse.io/canonical/jobs/4181031",
+      "description_excerpt": "The role of a Financial Analyst at Canonical As a Financial Analyst, you'll be a core member of the FP&A Team and wider finance team. You will play a key part in our monthly business reviews, quarterly forecasting, annual planning, financial modeling, and continuously drive cross-functional business alignment. Our ideal candidate is a highly analytical independent thinker, who has a desire to learn how to leverage business judgment, driven by data, to advise on critical financial, commercial and strategic decisions. Location: This is a remote role in Americas time zones. Key Responsibilities Generate insights into business operations by analy",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "greenhouse",
+      "last_checked_utc": "2026-11-24T16:37:56+00:00"
+    },
+    {
+      "id": "greenhouse:Canonical:6103331",
+      "company": "Canonical",
+      "title": "Graduate Customer Success Manager",
+      "location": "Home based - Worldwide",
+      "location_status": "remote_scope_unverified",
+      "provinces": [],
+      "workplace_type": "",
+      "categories": [
+        "customer_operations"
+      ],
+      "early_career_status": "excluded",
+      "early_career_reason": "Senior/management title",
+      "pay_status": "not_verified",
+      "seniority_hint": "senior_or_lead",
+      "url": "https://job-boards.greenhouse.io/canonical/jobs/6103331",
+      "description_excerpt": "The role of a Customer Success Manager at Canonical Customer success is a new and strategic department at Canonical, with the objective to reduce risk and churn, facilitate the adoption of new products or services and support expansion within existing accounts. Customer Success Managers (CSM) are responsible for developing trust with their assigned customers and providing them with the best possible experience navigating Canonical's vast offering. Through a clear understanding of their customer’s objectives, the CSM can activate a large range of internal and external capabilities to alleviate any pain point, align expectations, as well as hel",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "greenhouse",
+      "last_checked_utc": "2026-11-24T16:37:56+00:00"
+    },
+    {
+      "id": "greenhouse:Canonical:5924435",
+      "company": "Canonical",
+      "title": "Sales Operations Analyst",
+      "location": "Home Based - Americas; Home based - EMEA",
+      "location_status": "remote_scope_unverified",
+      "provinces": [],
+      "workplace_type": "",
+      "categories": [
+        "sales_operations"
+      ],
+      "early_career_status": "worth_checking",
+      "early_career_reason": "Early-career title; full requirements not verified",
+      "pay_status": "not_verified",
+      "seniority_hint": "unspecified",
+      "url": "https://job-boards.greenhouse.io/canonical/jobs/5924435",
+      "description_excerpt": "Canonical is a leading provider of open source software and operating systems to the global enterprise and technology markets. Our platform, Ubuntu, is very widely used in breakthrough enterprise initiatives such as public cloud, data science, AI, engineering innovation, and IoT. Our customers include the world's leading public cloud and silicon providers, and industry leaders in many sectors. The company is a pioneer of global distributed collaboration, with 1200+ colleagues in 75+ countries and very few office-based roles. Teams meet two to four times yearly in person, in interesting locations around the world, to align on strategy and exec",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "greenhouse",
+      "last_checked_utc": "2026-11-24T16:37:56+00:00"
+    },
+    {
+      "id": "greenhouse:Canonical:4122239",
+      "company": "Canonical",
+      "title": "Senior Sales Operations Analyst",
+      "location": "Home Based - Americas; Home based - EMEA",
+      "location_status": "remote_scope_unverified",
+      "provinces": [],
+      "workplace_type": "",
+      "categories": [
+        "sales_operations"
+      ],
+      "early_career_status": "excluded",
+      "early_career_reason": "Senior/management title",
+      "pay_status": "not_verified",
+      "seniority_hint": "senior_or_lead",
+      "url": "https://job-boards.greenhouse.io/canonical/jobs/4122239",
+      "description_excerpt": "Canonical is a leading provider of open source software and operating systems to the global enterprise and technology markets. Our platform, Ubuntu, is very widely used in breakthrough enterprise initiatives such as public cloud, data science, AI, engineering innovation, and IoT. Our customers include the world's leading public cloud and silicon providers, and industry leaders in many sectors. The company is a pioneer of global distributed collaboration, with 1200+ colleagues in 75+ countries and very few office-based roles. Teams meet two to four times yearly in person, in interesting locations around the world, to align on strategy and exec",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "greenhouse",
+      "last_checked_utc": "2026-11-24T16:37:56+00:00"
     },
     {
       "id": "greenhouse:Duetto:8120547",
@@ -243,7 +595,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-24T16:33:48+00:00"
+      "last_checked_utc": "2026-11-24T16:37:47+00:00"
     },
     {
       "id": "lever:Emburse:90653b75-e196-435d-8dfc-3b95568ed15a",
@@ -265,7 +617,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "lever",
-      "last_checked_utc": "2026-11-24T16:33:57+00:00"
+      "last_checked_utc": "2026-11-24T16:38:00+00:00"
     },
     {
       "id": "lever:Emburse:c8965c6d-4c42-4df4-8162-42a6287ff253",
@@ -287,7 +639,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "lever",
-      "last_checked_utc": "2026-11-24T16:33:57+00:00"
+      "last_checked_utc": "2026-11-24T16:38:00+00:00"
     },
     {
       "id": "lever:Emburse:47822d8f-21fb-4ae3-8dc2-40e4b5e24bab",
@@ -309,7 +661,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "lever",
-      "last_checked_utc": "2026-11-24T16:33:57+00:00"
+      "last_checked_utc": "2026-11-24T16:38:00+00:00"
     },
     {
       "id": "greenhouse:ExtraHop:6150808004",
@@ -331,7 +683,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-24T16:33:47+00:00"
+      "last_checked_utc": "2026-11-24T16:37:46+00:00"
     },
     {
       "id": "greenhouse:ExtraHop:6241540004",
@@ -353,7 +705,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-24T16:33:47+00:00"
+      "last_checked_utc": "2026-11-24T16:37:46+00:00"
     },
     {
       "id": "greenhouse:ExtraHop:6251522004",
@@ -375,7 +727,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-24T16:33:47+00:00"
+      "last_checked_utc": "2026-11-24T16:37:46+00:00"
     },
     {
       "id": "greenhouse:Fever:5016468101",
@@ -399,7 +751,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-24T16:33:53+00:00"
+      "last_checked_utc": "2026-11-24T16:37:52+00:00"
     },
     {
       "id": "greenhouse:Fever:4776396101",
@@ -421,7 +773,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-24T16:33:53+00:00"
+      "last_checked_utc": "2026-11-24T16:37:52+00:00"
     },
     {
       "id": "greenhouse:Fever:5008315101",
@@ -443,7 +795,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-24T16:33:53+00:00"
+      "last_checked_utc": "2026-11-24T16:37:52+00:00"
     },
     {
       "id": "greenhouse:Fever:5029054101",
@@ -467,7 +819,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-24T16:33:53+00:00"
+      "last_checked_utc": "2026-11-24T16:37:52+00:00"
     },
     {
       "id": "greenhouse:Fever:5033682101",
@@ -491,7 +843,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-24T16:33:53+00:00"
+      "last_checked_utc": "2026-11-24T16:37:52+00:00"
     },
     {
       "id": "greenhouse:Fever:5036103101",
@@ -515,7 +867,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-24T16:33:53+00:00"
+      "last_checked_utc": "2026-11-24T16:37:52+00:00"
     },
     {
       "id": "greenhouse:Fever:5041591101",
@@ -539,7 +891,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-24T16:33:53+00:00"
+      "last_checked_utc": "2026-11-24T16:37:52+00:00"
     },
     {
       "id": "greenhouse:Fever:5017204101",
@@ -563,7 +915,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-24T16:33:53+00:00"
+      "last_checked_utc": "2026-11-24T16:37:52+00:00"
     },
     {
       "id": "greenhouse:Fever:5001018101",
@@ -585,7 +937,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-24T16:33:53+00:00"
+      "last_checked_utc": "2026-11-24T16:37:52+00:00"
     },
     {
       "id": "greenhouse:Fever:4770862101",
@@ -607,7 +959,31 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-24T16:33:53+00:00"
+      "last_checked_utc": "2026-11-24T16:37:52+00:00"
+    },
+    {
+      "id": "greenhouse:Fever:4999370101",
+      "company": "Fever",
+      "title": "CRM Business Analyst",
+      "location": "Madrid",
+      "location_status": "spain_location_check_remote",
+      "provinces": [
+        "Madrid"
+      ],
+      "workplace_type": "",
+      "categories": [
+        "business_operations"
+      ],
+      "early_career_status": "worth_checking",
+      "early_career_reason": "Posting mentions 2 years of experience; verify requirements",
+      "pay_status": "not_verified",
+      "seniority_hint": "unspecified",
+      "url": "https://job-boards.eu.greenhouse.io/feverup/jobs/4999370101",
+      "description_excerpt": "Hey there! We’re Fever , the world’s leading tech platform for culture and live entertainment. Our mission? To democratize access to culture and entertainment. With our proprietary cutting-edge technology and data-driven approach, we’re revolutionizing the way people engage with live entertainment. Every month, our platform inspires over 300 million people in +55 countries (and counting) to discover unforgettable experiences while also empowering event creators with our data and technology, helping them scale, innovate, and enhance their events to reach new audiences. Our results? We’ve teamed up with major industry leaders like Netflix, F.C.",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "greenhouse",
+      "last_checked_utc": "2026-11-24T16:37:52+00:00"
     },
     {
       "id": "greenhouse:Fever:5028892101",
@@ -629,7 +1005,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-24T16:33:53+00:00"
+      "last_checked_utc": "2026-11-24T16:37:52+00:00"
     },
     {
       "id": "greenhouse:Fever:4999331101",
@@ -651,7 +1027,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-24T16:33:53+00:00"
+      "last_checked_utc": "2026-11-24T16:37:52+00:00"
     },
     {
       "id": "greenhouse:Fever:5009042101",
@@ -673,7 +1049,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-24T16:33:53+00:00"
+      "last_checked_utc": "2026-11-24T16:37:52+00:00"
     },
     {
       "id": "greenhouse:Fever:5028954101",
@@ -695,7 +1071,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-24T16:33:53+00:00"
+      "last_checked_utc": "2026-11-24T16:37:52+00:00"
     },
     {
       "id": "greenhouse:Fever:4999404101",
@@ -717,7 +1093,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-24T16:33:53+00:00"
+      "last_checked_utc": "2026-11-24T16:37:52+00:00"
     },
     {
       "id": "greenhouse:Fever:5041614101",
@@ -739,7 +1115,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-24T16:33:53+00:00"
+      "last_checked_utc": "2026-11-24T16:37:52+00:00"
     },
     {
       "id": "greenhouse:Fever:5036184101",
@@ -761,7 +1137,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-24T16:33:53+00:00"
+      "last_checked_utc": "2026-11-24T16:37:52+00:00"
     },
     {
       "id": "greenhouse:Fever:5029043101",
@@ -783,7 +1159,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-24T16:33:53+00:00"
+      "last_checked_utc": "2026-11-24T16:37:52+00:00"
     },
     {
       "id": "greenhouse:Fever:5041608101",
@@ -805,7 +1181,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-24T16:33:53+00:00"
+      "last_checked_utc": "2026-11-24T16:37:52+00:00"
     },
     {
       "id": "greenhouse:Fever:5028936101",
@@ -827,7 +1203,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-24T16:33:53+00:00"
+      "last_checked_utc": "2026-11-24T16:37:52+00:00"
     },
     {
       "id": "greenhouse:Fever:5036170101",
@@ -849,7 +1225,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-24T16:33:53+00:00"
+      "last_checked_utc": "2026-11-24T16:37:52+00:00"
     },
     {
       "id": "greenhouse:Fever:5047279101",
@@ -871,7 +1247,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-24T16:33:53+00:00"
+      "last_checked_utc": "2026-11-24T16:37:52+00:00"
     },
     {
       "id": "greenhouse:Fever:5027745101",
@@ -893,7 +1269,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-24T16:33:53+00:00"
+      "last_checked_utc": "2026-11-24T16:37:52+00:00"
     },
     {
       "id": "greenhouse:Fever:5033268101",
@@ -917,7 +1293,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-24T16:33:53+00:00"
+      "last_checked_utc": "2026-11-24T16:37:52+00:00"
     },
     {
       "id": "greenhouse:Fever:4118818101",
@@ -941,7 +1317,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-24T16:33:54+00:00"
+      "last_checked_utc": "2026-11-24T16:37:52+00:00"
     },
     {
       "id": "greenhouse:Fever:4982389101",
@@ -963,7 +1339,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-24T16:33:54+00:00"
+      "last_checked_utc": "2026-11-24T16:37:53+00:00"
     },
     {
       "id": "greenhouse:Grafana Labs:6221389004",
@@ -985,7 +1361,55 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-24T16:33:47+00:00"
+      "last_checked_utc": "2026-11-24T16:37:45+00:00"
+    },
+    {
+      "id": "lever:Job&Talent:8be8e2ad-7b23-4692-a05e-283aef26ad8f",
+      "company": "Job&Talent",
+      "title": "HQ - AI Business Analyst",
+      "location": "Madrid HQ, ES",
+      "location_status": "spain_location_check_remote",
+      "provinces": [
+        "Madrid"
+      ],
+      "workplace_type": "hybrid",
+      "categories": [
+        "business_operations"
+      ],
+      "early_career_status": "worth_checking",
+      "early_career_reason": "Early-career title; full requirements not verified",
+      "pay_status": "not_verified",
+      "seniority_hint": "unspecified",
+      "url": "https://jobs.lever.co/jobandtalent/8be8e2ad-7b23-4692-a05e-283aef26ad8f",
+      "description_excerpt": "Join us to shape the future of work: your next adventure awaits! About us Job&Talent is a world-leading, AI-powered workforce management platform for frontline industries. We help companies boost productivity and efficiency at scale, while giving workers the tools they need to thrive. Our mission is simple: to empower the people who make the world go round. Built on deep industry expertise, cutting-edge technology, and smart AI agents, our end-to-end platform covers the entire workforce lifecycle — from recruitment and planning to time and attendance, performance, cost management, and communication. It delivers measurable improvements in the ",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "lever",
+      "last_checked_utc": "2026-11-24T16:37:59+00:00"
+    },
+    {
+      "id": "lever:Job&Talent:f3a0f9dc-e563-42a0-8c2d-f2d7264ce3a3",
+      "company": "Job&Talent",
+      "title": "HQ - AI Business Analyst (German-speaking)",
+      "location": "Madrid HQ, ES",
+      "location_status": "remote_spain_explicit",
+      "provinces": [
+        "Madrid"
+      ],
+      "workplace_type": "remote",
+      "categories": [
+        "business_operations"
+      ],
+      "early_career_status": "worth_checking",
+      "early_career_reason": "Early-career title; full requirements not verified",
+      "pay_status": "not_verified",
+      "seniority_hint": "unspecified",
+      "url": "https://jobs.lever.co/jobandtalent/f3a0f9dc-e563-42a0-8c2d-f2d7264ce3a3",
+      "description_excerpt": "Join us to shape the future of work: your next adventure awaits! About us Job&Talent is a world-leading, AI-powered workforce management platform for frontline industries. We help companies boost productivity and efficiency at scale, while giving workers the tools they need to thrive. Our mission is simple: to empower the people who make the world go round. Built on deep industry expertise, cutting-edge technology, and smart AI agents, our end-to-end platform covers the entire workforce lifecycle — from recruitment and planning to time and attendance, performance, cost management, and communication. It delivers measurable improvements in the ",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "lever",
+      "last_checked_utc": "2026-11-24T16:37:59+00:00"
     },
     {
       "id": "greenhouse:Keyfactor:6207745004",
@@ -1009,7 +1433,55 @@
       ],
       "email_status": "found_in_posting_not_application_verified",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-24T16:33:51+00:00"
+      "last_checked_utc": "2026-11-24T16:37:50+00:00"
+    },
+    {
+      "id": "greenhouse:nCino:4515267009",
+      "company": "nCino",
+      "title": "Financial Analyst",
+      "location": "US - North Carolina - HQ",
+      "location_status": "location_unverified",
+      "provinces": [],
+      "workplace_type": "",
+      "categories": [
+        "finance_support"
+      ],
+      "early_career_status": "worth_checking",
+      "early_career_reason": "Posting mentions 2 years of experience; verify requirements",
+      "pay_status": "not_verified",
+      "seniority_hint": "unspecified",
+      "url": "https://job-boards.greenhouse.io/ncinoinc/jobs/4515267009",
+      "description_excerpt": "Curious Minds. Bold Ideas. Extraordinary Impact . We're transforming financial services through bold innovation and relentless execution. You bring the ideas and drive. We'll build what's next — together. We are seeking a highly motivated Financial Analyst to join our Financial Planning & Analysis team. As an Analyst on our team, you will play a crucial role in forecasting recurring revenue, bookings, churn, and cost of revenue, analyzing key data, and utilizing technology to enhance efficiency and effectiveness within the finance department. This is an excellent opportunity to kickstart your career in the technology industry while gaining va",
+      "published_emails": [
+        "recruiting@ncino.com"
+      ],
+      "email_status": "found_in_posting_not_application_verified",
+      "source": "greenhouse",
+      "last_checked_utc": "2026-11-24T16:37:55+00:00"
+    },
+    {
+      "id": "greenhouse:nCino:4485946009",
+      "company": "nCino",
+      "title": "Senior Customer Onboarding Implementation Officer",
+      "location": "Johannesburg, South Africa",
+      "location_status": "location_unverified",
+      "provinces": [],
+      "workplace_type": "",
+      "categories": [
+        "customer_operations"
+      ],
+      "early_career_status": "excluded",
+      "early_career_reason": "Senior/management title",
+      "pay_status": "not_verified",
+      "seniority_hint": "senior_or_lead",
+      "url": "https://job-boards.greenhouse.io/ncinoinc/jobs/4485946009",
+      "description_excerpt": "Curious Minds. Bold Ideas. Extraordinary Impact . We're transforming financial services through bold innovation and relentless execution. You bring the ideas and drive. We'll build what's next — together. Job Summary Independently sets up and installs technical systems, applications, or process designs for client’s purchased or outsourced technology and business process solutions. Senior member within team supporting clients with managing initial access, map and transfer data, create process documentation, and train or coordinate training for client users. Troubleshoot client issues as they arise. Responsibilities Demonstrates advanced unders",
+      "published_emails": [
+        "recruiting@ncino.com"
+      ],
+      "email_status": "found_in_posting_not_application_verified",
+      "source": "greenhouse",
+      "last_checked_utc": "2026-11-24T16:37:55+00:00"
     },
     {
       "id": "greenhouse:Nuitée:4896237101",
@@ -1031,7 +1503,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-24T16:33:50+00:00"
+      "last_checked_utc": "2026-11-24T16:37:49+00:00"
     },
     {
       "id": "greenhouse:Nuitée:4972807101",
@@ -1053,7 +1525,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-24T16:33:50+00:00"
+      "last_checked_utc": "2026-11-24T16:37:49+00:00"
     },
     {
       "id": "greenhouse:Nuitée:5040249101",
@@ -1077,7 +1549,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-24T16:33:50+00:00"
+      "last_checked_utc": "2026-11-24T16:37:49+00:00"
     },
     {
       "id": "greenhouse:Nuitée:4928787101",
@@ -1101,7 +1573,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-24T16:33:50+00:00"
+      "last_checked_utc": "2026-11-24T16:37:49+00:00"
     },
     {
       "id": "greenhouse:Nuitée:4941791101",
@@ -1125,7 +1597,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-24T16:33:50+00:00"
+      "last_checked_utc": "2026-11-24T16:37:49+00:00"
     },
     {
       "id": "greenhouse:Nuitée:4941831101",
@@ -1149,7 +1621,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-24T16:33:50+00:00"
+      "last_checked_utc": "2026-11-24T16:37:49+00:00"
     },
     {
       "id": "greenhouse:Nuitée:5015803101",
@@ -1171,7 +1643,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-24T16:33:50+00:00"
+      "last_checked_utc": "2026-11-24T16:37:49+00:00"
     },
     {
       "id": "greenhouse:Nuitée:5028949101",
@@ -1193,7 +1665,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-24T16:33:50+00:00"
+      "last_checked_utc": "2026-11-24T16:37:49+00:00"
     },
     {
       "id": "greenhouse:Pineca Group:4998265101",
@@ -1215,7 +1687,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-24T16:33:45+00:00"
+      "last_checked_utc": "2026-11-24T16:37:44+00:00"
     },
     {
       "id": "greenhouse:Pineca Group:4998238101",
@@ -1237,7 +1709,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-24T16:33:45+00:00"
+      "last_checked_utc": "2026-11-24T16:37:44+00:00"
     },
     {
       "id": "greenhouse:Ping Identity:8912619002",
@@ -1259,7 +1731,29 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-24T16:33:49+00:00"
+      "last_checked_utc": "2026-11-24T16:37:48+00:00"
+    },
+    {
+      "id": "greenhouse:Ping Identity:8827639002",
+      "company": "Ping Identity",
+      "title": "Financial Analyst",
+      "location": "USA - Denver, CO - Hybrid",
+      "location_status": "location_unverified",
+      "provinces": [],
+      "workplace_type": "",
+      "categories": [
+        "finance_support"
+      ],
+      "early_career_status": "worth_checking",
+      "early_career_reason": "Posting mentions 2 years of experience; verify requirements",
+      "pay_status": "not_verified",
+      "seniority_hint": "unspecified",
+      "url": "https://job-boards.greenhouse.io/pingidentity/jobs/8827639002",
+      "description_excerpt": "About Ping Identity: At Ping Identity, we believe in making digital experiences both secure and seamless for all users, without compromise. We call this digital freedom. And it's not just something we provide our customers. It's something that inspires our company. People don't come here to join a culture that's built on digital freedom. They come to cultivate it. Our intelligent, cloud identity platform lets people shop, work, bank, and interact wherever and however they want. Without friction. Without fear. While protecting digital identities is at the core of our technology, protecting individual identities is at the core of our culture. W",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "greenhouse",
+      "last_checked_utc": "2026-11-24T16:37:48+00:00"
     },
     {
       "id": "greenhouse:Ping Identity:8912988002",
@@ -1281,7 +1775,143 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-24T16:33:49+00:00"
+      "last_checked_utc": "2026-11-24T16:37:48+00:00"
+    },
+    {
+      "id": "greenhouse:Quince:5436459008",
+      "company": "Quince",
+      "title": "Customer Experience Specialist",
+      "location": "Toronto, Ontario, Canada",
+      "location_status": "location_unverified",
+      "provinces": [],
+      "workplace_type": "",
+      "categories": [
+        "customer_operations"
+      ],
+      "early_career_status": "worth_checking",
+      "early_career_reason": "Early-career title; full requirements not verified",
+      "pay_status": "not_verified",
+      "seniority_hint": "unspecified",
+      "url": "https://job-boards.greenhouse.io/quince/jobs/5436459008",
+      "description_excerpt": "ABOUT QUINCE Quince is a destination for builders, creators, innovators, and operators who want to come together and challenge the status quo. Our mission is simple: make really high quality essentials for really low prices, fairly and sustainably. We deliver on that mission through a unique manufacturer-to-consumer (M2C) model eliminating the layers of traditional retail that add cost and result in consumers paying more than they need to. We find, build relationships with, and work directly with the manufacturing partners behind some of the world’s finest products. From there, our teams design smart, efficient operational processes and build",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "greenhouse",
+      "last_checked_utc": "2026-11-24T16:37:48+00:00"
+    },
+    {
+      "id": "greenhouse:Quince:5478345008",
+      "company": "Quince",
+      "title": "Customer Experience Specialist",
+      "location": "Toronto, Ontario, Canada",
+      "location_status": "location_unverified",
+      "provinces": [],
+      "workplace_type": "",
+      "categories": [
+        "customer_operations"
+      ],
+      "early_career_status": "worth_checking",
+      "early_career_reason": "Early-career title; full requirements not verified",
+      "pay_status": "not_verified",
+      "seniority_hint": "unspecified",
+      "url": "https://job-boards.greenhouse.io/quince/jobs/5478345008",
+      "description_excerpt": "ABOUT QUINCE Quince is a destination for builders, creators, innovators, and operators who want to come together and challenge the status quo. Our mission is simple: make really high quality essentials for really low prices, fairly and sustainably. We deliver on that mission through a unique manufacturer-to-consumer (M2C) model eliminating the layers of traditional retail that add cost and result in consumers paying more than they need to. We find, build relationships with, and work directly with the manufacturing partners behind some of the world’s finest products. From there, our teams design smart, efficient operational processes and build",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "greenhouse",
+      "last_checked_utc": "2026-11-24T16:37:48+00:00"
+    },
+    {
+      "id": "greenhouse:Quince:5478361008",
+      "company": "Quince",
+      "title": "Customer Experience Specialist - French Bilingual",
+      "location": "Canada, Remote",
+      "location_status": "remote_scope_unverified",
+      "provinces": [],
+      "workplace_type": "",
+      "categories": [
+        "customer_operations"
+      ],
+      "early_career_status": "worth_checking",
+      "early_career_reason": "Early-career title; full requirements not verified",
+      "pay_status": "not_verified",
+      "seniority_hint": "unspecified",
+      "url": "https://job-boards.greenhouse.io/quince/jobs/5478361008",
+      "description_excerpt": "ABOUT QUINCE Quince is a destination for builders, creators, innovators, and operators who want to come together and challenge the status quo. Our mission is simple: make really high quality essentials for really low prices, fairly and sustainably. We deliver on that mission through a unique manufacturer-to-consumer (M2C) model eliminating the layers of traditional retail that add cost and result in consumers paying more than they need to. We find, build relationships with, and work directly with the manufacturing partners behind some of the world’s finest products. From there, our teams design smart, efficient operational processes and build",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "greenhouse",
+      "last_checked_utc": "2026-11-24T16:37:48+00:00"
+    },
+    {
+      "id": "greenhouse:Quince:5422665008",
+      "company": "Quince",
+      "title": "Customer Experience Specialist - French Bilingual",
+      "location": "Canada, Remote",
+      "location_status": "remote_scope_unverified",
+      "provinces": [],
+      "workplace_type": "",
+      "categories": [
+        "customer_operations"
+      ],
+      "early_career_status": "worth_checking",
+      "early_career_reason": "Early-career title; full requirements not verified",
+      "pay_status": "not_verified",
+      "seniority_hint": "unspecified",
+      "url": "https://job-boards.greenhouse.io/quince/jobs/5422665008",
+      "description_excerpt": "ABOUT QUINCE Quince is a destination for builders, creators, innovators, and operators who want to come together and challenge the status quo. Our mission is simple: make really high quality essentials for really low prices, fairly and sustainably. We deliver on that mission through a unique manufacturer-to-consumer (M2C) model eliminating the layers of traditional retail that add cost and result in consumers paying more than they need to. We find, build relationships with, and work directly with the manufacturing partners behind some of the world’s finest products. From there, our teams design smart, efficient operational processes and build",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "greenhouse",
+      "last_checked_utc": "2026-11-24T16:37:48+00:00"
+    },
+    {
+      "id": "greenhouse:Quince:5441071008",
+      "company": "Quince",
+      "title": "Customer Experience Specialist - French Bilingual",
+      "location": "Spain - Barcelona",
+      "location_status": "spain_location_check_remote",
+      "provinces": [
+        "Barcelona"
+      ],
+      "workplace_type": "",
+      "categories": [
+        "customer_operations"
+      ],
+      "early_career_status": "worth_checking",
+      "early_career_reason": "Early-career title; full requirements not verified",
+      "pay_status": "not_verified",
+      "seniority_hint": "unspecified",
+      "url": "https://job-boards.greenhouse.io/quince/jobs/5441071008",
+      "description_excerpt": "ABOUT QUINCE Quince is a destination for builders, creators, innovators, and operators who want to come together and challenge the status quo. Our mission is simple: make really high quality essentials for really low prices, fairly and sustainably. We deliver on that mission through a unique manufacturer-to-consumer (M2C) model eliminating the layers of traditional retail that add cost and result in consumers paying more than they need to. We find, build relationships with, and work directly with the manufacturing partners behind some of the world’s finest products. From there, our teams design smart, efficient operational processes and build",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "greenhouse",
+      "last_checked_utc": "2026-11-24T16:37:48+00:00"
+    },
+    {
+      "id": "greenhouse:Quince:5363879008",
+      "company": "Quince",
+      "title": "Customer Experience Specialist - German",
+      "location": "Spain - Barcelona",
+      "location_status": "spain_location_check_remote",
+      "provinces": [
+        "Barcelona"
+      ],
+      "workplace_type": "",
+      "categories": [
+        "customer_operations"
+      ],
+      "early_career_status": "worth_checking",
+      "early_career_reason": "Early-career title; full requirements not verified",
+      "pay_status": "not_verified",
+      "seniority_hint": "unspecified",
+      "url": "https://job-boards.greenhouse.io/quince/jobs/5363879008",
+      "description_excerpt": "ABOUT QUINCE Quince is a destination for builders, creators, innovators, and operators who want to come together and challenge the status quo. Our mission is simple: make really high quality essentials for really low prices, fairly and sustainably. We deliver on that mission through a unique manufacturer-to-consumer (M2C) model eliminating the layers of traditional retail that add cost and result in consumers paying more than they need to. We find, build relationships with, and work directly with the manufacturing partners behind some of the world’s finest products. From there, our teams design smart, efficient operational processes and build",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "greenhouse",
+      "last_checked_utc": "2026-11-24T16:37:48+00:00"
     },
     {
       "id": "greenhouse:Quince:5459505008",
@@ -1305,7 +1935,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-24T16:33:49+00:00"
+      "last_checked_utc": "2026-11-24T16:37:48+00:00"
     },
     {
       "id": "greenhouse:Quince:5475660008",
@@ -1329,7 +1959,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-24T16:33:49+00:00"
+      "last_checked_utc": "2026-11-24T16:37:48+00:00"
     },
     {
       "id": "greenhouse:Quince:5419920008",
@@ -1353,7 +1983,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-24T16:33:49+00:00"
+      "last_checked_utc": "2026-11-24T16:37:48+00:00"
     },
     {
       "id": "greenhouse:Quince:5434794008",
@@ -1375,7 +2005,73 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-24T16:33:50+00:00"
+      "last_checked_utc": "2026-11-24T16:37:48+00:00"
+    },
+    {
+      "id": "lever:Rover:30ccddec-5437-4eb3-9294-5ecd86996281",
+      "company": "Rover",
+      "title": "Business Analyst, Finance Analytics",
+      "location": "Seattle",
+      "location_status": "location_unverified",
+      "provinces": [],
+      "workplace_type": "hybrid",
+      "categories": [
+        "business_operations"
+      ],
+      "early_career_status": "worth_checking",
+      "early_career_reason": "Early-career title; full requirements not verified",
+      "pay_status": "not_verified",
+      "seniority_hint": "unspecified",
+      "url": "https://jobs.lever.co/rover/30ccddec-5437-4eb3-9294-5ecd86996281",
+      "description_excerpt": "Who we are: At Rover, pets and their people are at the heart of everything we do. We connect pet parents with trusted pet care across the U.S., Canada, Europe, and Australia. Headquartered in Seattle and Barcelona, we’re a values driven, fast-growing tech company focused on building safe and personalized experiences tailored to the needs of each unique pet. We’re investing in AI as a business accelerator and provide every team member access to AI tools in service of creating better experiences for our community. We are proud to be recognized as a great place to work, having been named among the 100 Best Companies to Work For in Seattle Busine",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "lever",
+      "last_checked_utc": "2026-11-24T16:38:00+00:00"
+    },
+    {
+      "id": "greenhouse:SumUp:8907441002",
+      "company": "SumUp",
+      "title": "Business Analyst (Mid-level)",
+      "location": "São Paulo, São Paulo, Brazil",
+      "location_status": "location_unverified",
+      "provinces": [],
+      "workplace_type": "",
+      "categories": [
+        "business_operations"
+      ],
+      "early_career_status": "worth_checking",
+      "early_career_reason": "Early-career title; full requirements not verified",
+      "pay_status": "not_verified",
+      "seniority_hint": "unspecified",
+      "url": "https://sumup.com/careers/positions/8907441002?gh_jid=8907441002",
+      "description_excerpt": "Business Analyst (Mid-level) – São Paulo, Brazil We're hiring for several Business Analyst positions across different areas of the business. As you move through the process, we'll work together to understand which team and opportunity are the best fit for your profile and interests. Team description SumUp's Business Analyst community turns operational and commercial challenges into clear, data backed decisions. As a Business Analyst, you'll partner with stakeholders across sales, operations and finance, building the dashboards, projects and insights that support better decisions every day. This opening covers five Business Analyst positions a",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "greenhouse",
+      "last_checked_utc": "2026-11-24T16:37:50+00:00"
+    },
+    {
+      "id": "greenhouse:SumUp:8917598002",
+      "company": "SumUp",
+      "title": "Business Analyst (Senior)",
+      "location": "São Paulo, São Paulo, Brazil",
+      "location_status": "location_unverified",
+      "provinces": [],
+      "workplace_type": "",
+      "categories": [
+        "business_operations"
+      ],
+      "early_career_status": "excluded",
+      "early_career_reason": "Senior/management title",
+      "pay_status": "not_verified",
+      "seniority_hint": "senior_or_lead",
+      "url": "https://sumup.com/careers/positions/8917598002?gh_jid=8917598002",
+      "description_excerpt": "Business Analyst (Senior) – São Paulo, Brazil We're hiring for several Business Analyst positions across different areas of the business. As you move through the process, we'll work together to understand which team and opportunity are the best fit for your profile and interests. Team description SumUp's Business Analyst community turns operational and commercial complexity into decisions that shape how the business grows. As a Senior Business Analyst, you'll take ownership of ambiguous, high impact problems, build the frameworks and insights senior stakeholders rely on, and influence decisions across sales, operations and finance. This openi",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "greenhouse",
+      "last_checked_utc": "2026-11-24T16:37:50+00:00"
     },
     {
       "id": "greenhouse:SumUp:8908730002",
@@ -1397,7 +2093,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-24T16:33:52+00:00"
+      "last_checked_utc": "2026-11-24T16:37:50+00:00"
     },
     {
       "id": "greenhouse:SumUp:8573120002",
@@ -1419,7 +2115,51 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-24T16:33:52+00:00"
+      "last_checked_utc": "2026-11-24T16:37:50+00:00"
+    },
+    {
+      "id": "greenhouse:SumUp:8860089002",
+      "company": "SumUp",
+      "title": "Senior Business Analyst (Reconciliation)",
+      "location": "São Paulo, São Paulo, Brazil",
+      "location_status": "location_unverified",
+      "provinces": [],
+      "workplace_type": "",
+      "categories": [
+        "business_operations"
+      ],
+      "early_career_status": "excluded",
+      "early_career_reason": "Senior/management title",
+      "pay_status": "not_verified",
+      "seniority_hint": "senior_or_lead",
+      "url": "https://sumup.com/careers/positions/8860089002?gh_jid=8860089002",
+      "description_excerpt": "Senior Business Analyst (Reconciliation) Location: São Paulo, Brazil (office based, full time, permanent) Take a look inside our São Paulo office Team description SumUp's Acquiring Operations team keeps Brazil's complex payments engine running, where every card swipe, instalment and deferred settlement has to reconcile perfectly across processors, card schemes and the Central Bank. As a full acquirer that processes a high volume of instalment transactions, SumUp relies on this team to catch the gaps between what's expected and what actually lands, before they turn into financial or regulatory risk. This role takes full ownership of reconcilia",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "greenhouse",
+      "last_checked_utc": "2026-11-24T16:37:50+00:00"
+    },
+    {
+      "id": "greenhouse:SumUp:8729773002",
+      "company": "SumUp",
+      "title": "​​Senior Financial Analyst – Revenue Streams",
+      "location": "Sofia, Bulgaria",
+      "location_status": "location_unverified",
+      "provinces": [],
+      "workplace_type": "",
+      "categories": [
+        "finance_support"
+      ],
+      "early_career_status": "excluded",
+      "early_career_reason": "Senior/management title",
+      "pay_status": "not_verified",
+      "seniority_hint": "senior_or_lead",
+      "url": "https://sumup.com/careers/positions/8729773002?gh_jid=8729773002",
+      "description_excerpt": "Senior Financial Analyst – Revenue Streams Finance, FGL – Financial General Ledger | Sofia, Bulgaria (office first) About the team The Financial General Ledger (FGL) team sits at the strategic core of SumUp's financial operations. We're not your typical accounting team , we own the financial integrity of SumUp's core business, ensuring every euro of revenue and cost from our lending, payments, and merchant banking products is accurately captured and analyzed. As SumUp scales exponentially, lending volumes growing, our work has evolved into a highly analytical, data-driven function. We combine deep accounting knowledge with SQL queries, AI-ass",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "greenhouse",
+      "last_checked_utc": "2026-11-24T16:37:50+00:00"
     },
     {
       "id": "greenhouse:TheFork:8405524",
@@ -1441,7 +2181,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-24T16:33:52+00:00"
+      "last_checked_utc": "2026-11-24T16:37:51+00:00"
     },
     {
       "id": "greenhouse:TheFork:8210847",
@@ -1465,7 +2205,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-24T16:33:52+00:00"
+      "last_checked_utc": "2026-11-24T16:37:51+00:00"
     },
     {
       "id": "lever:Veeva Systems:7c8fdf32-e8e0-4c0f-a996-4f20851a04f0",
@@ -1487,7 +2227,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "lever",
-      "last_checked_utc": "2026-11-24T16:33:56+00:00"
+      "last_checked_utc": "2026-11-24T16:37:58+00:00"
     },
     {
       "id": "lever:Veeva Systems:c7b81fa6-01f2-418f-b57b-561aa007516e",
@@ -1509,7 +2249,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "lever",
-      "last_checked_utc": "2026-11-24T16:33:56+00:00"
+      "last_checked_utc": "2026-11-24T16:37:58+00:00"
     },
     {
       "id": "lever:Veeva Systems:6d479321-f2ec-4b30-98dd-d40b2dfc652c",
@@ -1531,7 +2271,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "lever",
-      "last_checked_utc": "2026-11-24T16:33:56+00:00"
+      "last_checked_utc": "2026-11-24T16:37:58+00:00"
     },
     {
       "id": "lever:Veeva Systems:87e81ce9-4bf0-44d1-9b2a-e5cce65e239c",
@@ -1555,7 +2295,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "lever",
-      "last_checked_utc": "2026-11-24T16:33:56+00:00"
+      "last_checked_utc": "2026-11-24T16:37:58+00:00"
     },
     {
       "id": "lever:Veeva Systems:8e0c5693-f17d-46fc-8c8f-f68421561e2f",
@@ -1577,7 +2317,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "lever",
-      "last_checked_utc": "2026-11-24T16:33:56+00:00"
+      "last_checked_utc": "2026-11-24T16:37:58+00:00"
     },
     {
       "id": "lever:Veeva Systems:e4ac318e-ab36-4b28-9d20-c8be9c51ae96",
@@ -1599,7 +2339,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "lever",
-      "last_checked_utc": "2026-11-24T16:33:56+00:00"
+      "last_checked_utc": "2026-11-24T16:37:58+00:00"
     },
     {
       "id": "lever:Veeva Systems:579e0618-1cf5-46d7-a6cd-3360c66103f9",
@@ -1621,7 +2361,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "lever",
-      "last_checked_utc": "2026-11-24T16:33:56+00:00"
+      "last_checked_utc": "2026-11-24T16:37:58+00:00"
     },
     {
       "id": "lever:Veeva Systems:bf77c839-0073-4fe8-957b-1572f746a6ab",
@@ -1643,7 +2383,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "lever",
-      "last_checked_utc": "2026-11-24T16:33:56+00:00"
+      "last_checked_utc": "2026-11-24T16:37:58+00:00"
     },
     {
       "id": "lever:Veeva Systems:d0cc2938-21fa-43dd-9d55-12dddad5a10e",
@@ -1665,7 +2405,75 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "lever",
-      "last_checked_utc": "2026-11-24T16:33:56+00:00"
+      "last_checked_utc": "2026-11-24T16:37:58+00:00"
+    },
+    {
+      "id": "lever:Veeva Systems:4466824f-707e-4f08-b943-5c3c1ce4c2ce",
+      "company": "Veeva Systems",
+      "title": "Data Operations Lead - OpenData (Remote)",
+      "location": "Portugal - Lisbon",
+      "location_status": "remote_scope_unverified",
+      "provinces": [],
+      "workplace_type": "remote",
+      "categories": [
+        "business_operations"
+      ],
+      "early_career_status": "excluded",
+      "early_career_reason": "Senior/management title",
+      "pay_status": "not_verified",
+      "seniority_hint": "senior_or_lead",
+      "url": "https://jobs.lever.co/veeva/4466824f-707e-4f08-b943-5c3c1ce4c2ce",
+      "description_excerpt": "Veeva Systems is a mission-driven organization and pioneer in industry cloud, helping life sciences companies bring therapies to patients faster. As one of the fastest-growing SaaS companies in history, we surpassed $3B in revenue in our last fiscal year with extensive growth potential ahead. At the heart of Veeva are our values: Do the Right Thing, Customer Success, Employee Success, and Speed. We're not just any public company – we made history in 2021 by becoming a public benefit corporation (PBC), legally bound to balancing the interests of customers, employees, society, and investors. As a Work Anywhere company, we support your flexibili",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "lever",
+      "last_checked_utc": "2026-11-24T16:37:58+00:00"
+    },
+    {
+      "id": "lever:Veeva Systems:f3e6e094-cd1e-4bbb-b923-08215e747df4",
+      "company": "Veeva Systems",
+      "title": "Data Operations Lead - OpenData (Remote)",
+      "location": "Spain - Barcelona",
+      "location_status": "remote_spain_explicit",
+      "provinces": [
+        "Barcelona"
+      ],
+      "workplace_type": "remote",
+      "categories": [
+        "business_operations"
+      ],
+      "early_career_status": "excluded",
+      "early_career_reason": "Senior/management title",
+      "pay_status": "not_verified",
+      "seniority_hint": "senior_or_lead",
+      "url": "https://jobs.lever.co/veeva/f3e6e094-cd1e-4bbb-b923-08215e747df4",
+      "description_excerpt": "Veeva Systems is a mission-driven organization and pioneer in industry cloud, helping life sciences companies bring therapies to patients faster. As one of the fastest-growing SaaS companies in history, we surpassed $3B in revenue in our last fiscal year with extensive growth potential ahead. At the heart of Veeva are our values: Do the Right Thing, Customer Success, Employee Success, and Speed. We're not just any public company – we made history in 2021 by becoming a public benefit corporation (PBC), legally bound to balancing the interests of customers, employees, society, and investors. As a Work Anywhere company, we support your flexibili",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "lever",
+      "last_checked_utc": "2026-11-24T16:37:58+00:00"
+    },
+    {
+      "id": "lever:Veeva Systems:b7621a21-b062-4d87-868b-3b3de7952280",
+      "company": "Veeva Systems",
+      "title": "Financial Analyst",
+      "location": "New Jersey - Lyndhurst",
+      "location_status": "location_unverified",
+      "provinces": [],
+      "workplace_type": "onsite",
+      "categories": [
+        "finance_support"
+      ],
+      "early_career_status": "worth_checking",
+      "early_career_reason": "Early-career title; full requirements not verified",
+      "pay_status": "not_verified",
+      "seniority_hint": "unspecified",
+      "url": "https://jobs.lever.co/veeva/b7621a21-b062-4d87-868b-3b3de7952280",
+      "description_excerpt": "Veeva Systems is a mission-driven organization and pioneer in industry cloud, helping life sciences companies bring therapies to patients faster. As one of the fastest-growing SaaS companies in history, we surpassed $3B in revenue in our last fiscal year with extensive growth potential ahead. At the heart of Veeva are our values: Do the Right Thing, Customer Success, Employee Success, and Speed. We're not just any public company – we made history in 2021 by becoming a public benefit corporation (PBC), legally bound to balancing the interests of customers, employees, society, and investors. Join us in transforming the life sciences industry, c",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "lever",
+      "last_checked_utc": "2026-11-24T16:37:58+00:00"
     },
     {
       "id": "lever:Veeva Systems:57b392bc-6918-43f3-b1e2-b5be94f72947",
@@ -1687,7 +2495,53 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "lever",
-      "last_checked_utc": "2026-11-24T16:33:56+00:00"
+      "last_checked_utc": "2026-11-24T16:37:58+00:00"
+    },
+    {
+      "id": "lever:Veeva Systems:447f1638-3fd3-4e1b-ba2b-07c8a14e1add",
+      "company": "Veeva Systems",
+      "title": "Manager Data Operations",
+      "location": "Spain - Barcelona",
+      "location_status": "remote_spain_explicit",
+      "provinces": [
+        "Barcelona"
+      ],
+      "workplace_type": "remote",
+      "categories": [
+        "business_operations"
+      ],
+      "early_career_status": "excluded",
+      "early_career_reason": "Senior/management title",
+      "pay_status": "not_verified",
+      "seniority_hint": "senior_or_lead",
+      "url": "https://jobs.lever.co/veeva/447f1638-3fd3-4e1b-ba2b-07c8a14e1add",
+      "description_excerpt": "Veeva Systems is a mission-driven organization and pioneer in industry cloud, helping life sciences companies bring therapies to patients faster. As one of the fastest-growing SaaS companies in history, we surpassed $3B in revenue in our last fiscal year with extensive growth potential ahead. At the heart of Veeva are our values: Do the Right Thing, Customer Success, Employee Success, and Speed. We're not just any public company – we made history in 2021 by becoming a public benefit corporation (PBC), legally bound to balancing the interests of customers, employees, society, and investors. As a Work Anywhere company, we support your flexibili",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "lever",
+      "last_checked_utc": "2026-11-24T16:37:58+00:00"
+    },
+    {
+      "id": "lever:Veeva Systems:a19dfc8b-d40c-42b0-a2c2-f3844954df4d",
+      "company": "Veeva Systems",
+      "title": "Manager Data Operations",
+      "location": "Portugal - Lisbon",
+      "location_status": "remote_scope_unverified",
+      "provinces": [],
+      "workplace_type": "remote",
+      "categories": [
+        "business_operations"
+      ],
+      "early_career_status": "excluded",
+      "early_career_reason": "Senior/management title",
+      "pay_status": "not_verified",
+      "seniority_hint": "senior_or_lead",
+      "url": "https://jobs.lever.co/veeva/a19dfc8b-d40c-42b0-a2c2-f3844954df4d",
+      "description_excerpt": "Veeva Systems is a mission-driven organization and pioneer in industry cloud, helping life sciences companies bring therapies to patients faster. As one of the fastest-growing SaaS companies in history, we surpassed $3B in revenue in our last fiscal year with extensive growth potential ahead. At the heart of Veeva are our values: Do the Right Thing, Customer Success, Employee Success, and Speed. We're not just any public company – we made history in 2021 by becoming a public benefit corporation (PBC), legally bound to balancing the interests of customers, employees, society, and investors. As a Work Anywhere company, we support your flexibili",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "lever",
+      "last_checked_utc": "2026-11-24T16:37:58+00:00"
     },
     {
       "id": "lever:Veeva Systems:039516d3-491e-4ef3-b15a-75f18bca8e7f",
@@ -1709,7 +2563,53 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "lever",
-      "last_checked_utc": "2026-11-24T16:33:56+00:00"
+      "last_checked_utc": "2026-11-24T16:37:58+00:00"
+    },
+    {
+      "id": "lever:Veeva Systems:0d70d80f-3edc-409c-9d21-7c3ffafd1f9e",
+      "company": "Veeva Systems",
+      "title": "Process Expert Data Operations",
+      "location": "Spain - Barcelona",
+      "location_status": "remote_spain_explicit",
+      "provinces": [
+        "Barcelona"
+      ],
+      "workplace_type": "remote",
+      "categories": [
+        "business_operations"
+      ],
+      "early_career_status": "excluded",
+      "early_career_reason": "Senior/management title",
+      "pay_status": "not_verified",
+      "seniority_hint": "unspecified",
+      "url": "https://jobs.lever.co/veeva/0d70d80f-3edc-409c-9d21-7c3ffafd1f9e",
+      "description_excerpt": "Veeva Systems is a mission-driven organization and pioneer in industry cloud, helping life sciences companies bring therapies to patients faster. As one of the fastest-growing SaaS companies in history, we surpassed $3B in revenue in our last fiscal year with extensive growth potential ahead. At the heart of Veeva are our values: Do the Right Thing, Customer Success, Employee Success, and Speed. We're not just any public company – we made history in 2021 by becoming a public benefit corporation (PBC), legally bound to balancing the interests of customers, employees, society, and investors. As a Work Anywhere company, we support your flexibili",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "lever",
+      "last_checked_utc": "2026-11-24T16:37:58+00:00"
+    },
+    {
+      "id": "lever:Veeva Systems:f3582788-9f38-4178-aa7a-eca6b53ce5db",
+      "company": "Veeva Systems",
+      "title": "Process Expert Data Operations",
+      "location": "Portugal - Lisbon",
+      "location_status": "remote_scope_unverified",
+      "provinces": [],
+      "workplace_type": "remote",
+      "categories": [
+        "business_operations"
+      ],
+      "early_career_status": "excluded",
+      "early_career_reason": "Senior/management title",
+      "pay_status": "not_verified",
+      "seniority_hint": "unspecified",
+      "url": "https://jobs.lever.co/veeva/f3582788-9f38-4178-aa7a-eca6b53ce5db",
+      "description_excerpt": "Veeva Systems is a mission-driven organization and pioneer in industry cloud, helping life sciences companies bring therapies to patients faster. As one of the fastest-growing SaaS companies in history, we surpassed $3B in revenue in our last fiscal year with extensive growth potential ahead. At the heart of Veeva are our values: Do the Right Thing, Customer Success, Employee Success, and Speed. We're not just any public company – we made history in 2021 by becoming a public benefit corporation (PBC), legally bound to balancing the interests of customers, employees, society, and investors. As a Work Anywhere company, we support your flexibili",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "lever",
+      "last_checked_utc": "2026-11-24T16:37:58+00:00"
     },
     {
       "id": "lever:Veeva Systems:5ff3db43-cc72-40b1-a618-7d90aecfe12c",
@@ -1731,7 +2631,29 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "lever",
-      "last_checked_utc": "2026-11-24T16:33:56+00:00"
+      "last_checked_utc": "2026-11-24T16:37:58+00:00"
+    },
+    {
+      "id": "lever:Veeva Systems:acf11e01-ce6e-4748-b543-f4a79a942ea7",
+      "company": "Veeva Systems",
+      "title": "Senior Manager Data Operations - Link Key People",
+      "location": "Germany - Berlin",
+      "location_status": "remote_scope_unverified",
+      "provinces": [],
+      "workplace_type": "remote",
+      "categories": [
+        "business_operations"
+      ],
+      "early_career_status": "excluded",
+      "early_career_reason": "Senior/management title",
+      "pay_status": "not_verified",
+      "seniority_hint": "senior_or_lead",
+      "url": "https://jobs.lever.co/veeva/acf11e01-ce6e-4748-b543-f4a79a942ea7",
+      "description_excerpt": "Veeva Systems is a mission-driven organization and pioneer in industry cloud, helping life sciences companies bring therapies to patients faster. As one of the fastest-growing SaaS companies in history, we surpassed $3B in revenue in our last fiscal year with extensive growth potential ahead. At the heart of Veeva are our values: Do the Right Thing, Customer Success, Employee Success, and Speed. We're not just any public company – we made history in 2021 by becoming a public benefit corporation (PBC), legally bound to balancing the interests of customers, employees, society, and investors. As a Work Anywhere company, we support your flexibili",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "lever",
+      "last_checked_utc": "2026-11-24T16:37:58+00:00"
     },
     {
       "id": "lever:Veeva Systems:0287a2b0-5972-4bff-89c2-36e2a36dc4a8",
@@ -1753,7 +2675,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "lever",
-      "last_checked_utc": "2026-11-24T16:33:56+00:00"
+      "last_checked_utc": "2026-11-24T16:37:58+00:00"
     },
     {
       "id": "lever:Veeva Systems:17198a0e-8a38-4bd1-b103-c347887983ac",
@@ -1775,7 +2697,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "lever",
-      "last_checked_utc": "2026-11-24T16:33:56+00:00"
+      "last_checked_utc": "2026-11-24T16:37:58+00:00"
     },
     {
       "id": "lever:Veeva Systems:4e962ef7-7d6f-4962-a344-7a2740b99aa1",
@@ -1797,7 +2719,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "lever",
-      "last_checked_utc": "2026-11-24T16:33:56+00:00"
+      "last_checked_utc": "2026-11-24T16:37:58+00:00"
     },
     {
       "id": "lever:Veeva Systems:707ce008-54be-4476-9816-34dee0f8f248",
@@ -1819,7 +2741,185 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "lever",
-      "last_checked_utc": "2026-11-24T16:33:56+00:00"
+      "last_checked_utc": "2026-11-24T16:37:58+00:00"
+    },
+    {
+      "id": "greenhouse:Vonage:8528707002",
+      "company": "Vonage",
+      "title": "Junior Customer Success Manager (API)",
+      "location": "Work from Home - Japan",
+      "location_status": "remote_scope_unverified",
+      "provinces": [],
+      "workplace_type": "",
+      "categories": [
+        "customer_operations"
+      ],
+      "early_career_status": "excluded",
+      "early_career_reason": "Senior/management title",
+      "pay_status": "not_verified",
+      "seniority_hint": "senior_or_lead",
+      "url": "https://job-boards.greenhouse.io/vonage/jobs/8528707002",
+      "description_excerpt": "Join Vonage and help us innovate cloud communications for businesses worldwide! About Vonage API Vonage API is a global leader in Communications Platform as a Service (CPaaS), enabling businesses to seamlessly integrate messaging, voice, video, and authentication capabilities into their applications. Our mission is to power meaningful conversations and connections through innovative cloud communications solutions. Why this role matters: As a Customer Success Manager (CSM) at Vonage API, you will play a critical role in ensuring our customers achieve their business objectives through our API solutions. You will be responsible for driving adopt",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "greenhouse",
+      "last_checked_utc": "2026-11-24T16:37:54+00:00"
+    },
+    {
+      "id": "greenhouse:Vonage:8922157002",
+      "company": "Vonage",
+      "title": "Senior Business Operations Specialist",
+      "location": "Poland",
+      "location_status": "location_unverified",
+      "provinces": [],
+      "workplace_type": "",
+      "categories": [
+        "business_operations"
+      ],
+      "early_career_status": "excluded",
+      "early_career_reason": "Senior/management title",
+      "pay_status": "not_verified",
+      "seniority_hint": "senior_or_lead",
+      "url": "https://job-boards.greenhouse.io/vonage/jobs/8922157002",
+      "description_excerpt": "Join Vonage and help us innovate cloud communications for businesses worldwide! Why This Role Matters: We are seeking a highly skilled and outcome-driven Senior Business Operations Specialist to support our Engineering team. In this role, you will drive operational excellence, enable team efficiency, and support key strategic initiatives. Success requires strong ownership, sound judgment, rigorous attention to detail, and dependable follow-through. You will work cross-functionally, communicate risks early, maintain clear documentation, and ensure commitments translate into measurable results. Your key responsibilities: Lead Engineering financ",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "greenhouse",
+      "last_checked_utc": "2026-11-24T16:37:54+00:00"
+    },
+    {
+      "id": "greenhouse:Wellhub:8922095002",
+      "company": "Wellhub",
+      "title": "Senior Customer Success Manager (Digital / High-Volume)",
+      "location": "Brazil (São Paulo - Hybrid)",
+      "location_status": "location_unverified",
+      "provinces": [],
+      "workplace_type": "",
+      "categories": [
+        "customer_operations"
+      ],
+      "early_career_status": "excluded",
+      "early_career_reason": "Senior/management title",
+      "pay_status": "not_verified",
+      "seniority_hint": "senior_or_lead",
+      "url": "https://job-boards.greenhouse.io/gympass/jobs/8922095002",
+      "description_excerpt": "Your wellbeing, our mission. Join a company shaping a healthier world. GET TO KNOW US At Wellhub we're revolutionizing workplace wellness. Our platform connects employees worldwide to the best partners for fitness, mindfulness, therapy, nutrition, and sleep—all in one simple subscription. Headquartered in NYC with team members in Europe, North America and South America, we’re on a mission to make every company a wellness company. We believe work should be fulfilling, inspiring, and balanced. Here, you’ll find a team that values wellbeing, collaboration, and different perspectives, where passion and creativity push boundaries to create real im",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "greenhouse",
+      "last_checked_utc": "2026-11-24T16:37:55+00:00"
+    },
+    {
+      "id": "greenhouse:WPP:8946718002",
+      "company": "WPP",
+      "title": "Analyst - Accounts Payable (Temp Role)",
+      "location": "Mumbai",
+      "location_status": "location_unverified",
+      "provinces": [],
+      "workplace_type": "",
+      "categories": [
+        "finance_support"
+      ],
+      "early_career_status": "excluded",
+      "early_career_reason": "Unpaid work indicated in posting",
+      "pay_status": "unpaid_indicated",
+      "seniority_hint": "unspecified",
+      "url": "https://job-boards.greenhouse.io/wpp/jobs/8946718002",
+      "description_excerpt": "WPP is the trusted growth partner for the world’s leading brands. We unite cutting-edge media intelligence and data solutions, world-class creativity, next-generation production, transformative enterprise solutions and expert strategic counsel in a single company – powered by exceptional talent and our agentic marketing platform, WPP Open, to help our clients navigate change, capture opportunity and deliver transformational growth. We work with the world's most valuable brands and have global reach across 100+ markets, with deep local expertise. Our people are the key to our success. We're committed to fostering a culture of creativity, belon",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "greenhouse",
+      "last_checked_utc": "2026-11-24T16:37:54+00:00"
+    },
+    {
+      "id": "greenhouse:WPP:8484909002",
+      "company": "WPP",
+      "title": "Data Operations Lead",
+      "location": "Chennai, Tamil Nadu, India",
+      "location_status": "location_unverified",
+      "provinces": [],
+      "workplace_type": "",
+      "categories": [
+        "business_operations"
+      ],
+      "early_career_status": "excluded",
+      "early_career_reason": "Senior/management title",
+      "pay_status": "not_verified",
+      "seniority_hint": "senior_or_lead",
+      "url": "https://job-boards.greenhouse.io/wpp/jobs/8484909002",
+      "description_excerpt": "WPP is the trusted growth partner for the world’s leading brands. We unite cutting-edge media intelligence and data solutions, world-class creativity, next-generation production, transformative enterprise solutions and expert strategic counsel in a single company – powered by exceptional talent and our agentic marketing platform, WPP Open, to help our clients navigate change, capture opportunity and deliver transformational growth. We work with the world's most valuable brands and have global reach across 100+ markets, with deep local expertise. Our people are the key to our success. We're committed to fostering a culture of creativity, belon",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "greenhouse",
+      "last_checked_utc": "2026-11-24T16:37:54+00:00"
+    },
+    {
+      "id": "greenhouse:WPP:8504923002",
+      "company": "WPP",
+      "title": "GL Reporting Analyst",
+      "location": "Madrid",
+      "location_status": "spain_location_check_remote",
+      "provinces": [
+        "Madrid"
+      ],
+      "workplace_type": "",
+      "categories": [
+        "finance_support"
+      ],
+      "early_career_status": "worth_checking",
+      "early_career_reason": "Early-career title; full requirements not verified",
+      "pay_status": "not_verified",
+      "seniority_hint": "unspecified",
+      "url": "https://job-boards.greenhouse.io/wpp/jobs/8504923002",
+      "description_excerpt": "WPP is the trusted growth partner for the world’s leading brands. We unite cutting-edge media intelligence and data solutions, world-class creativity, next-generation production, transformative enterprise solutions and expert strategic counsel in a single company – powered by exceptional talent and our agentic marketing platform, WPP Open, to help our clients navigate change, capture opportunity and deliver transformational growth. We work with the world's most valuable brands and have global reach across 100+ markets, with deep local expertise. Our people are the key to our success. We're committed to fostering a culture of creativity, belon",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "greenhouse",
+      "last_checked_utc": "2026-11-24T16:37:54+00:00"
+    },
+    {
+      "id": "greenhouse:WPP:8857788002",
+      "company": "WPP",
+      "title": "GL Reporting Analyst",
+      "location": "Spain",
+      "location_status": "spain_location_check_remote",
+      "provinces": [],
+      "workplace_type": "",
+      "categories": [
+        "finance_support"
+      ],
+      "early_career_status": "worth_checking",
+      "early_career_reason": "Early-career title; full requirements not verified",
+      "pay_status": "not_verified",
+      "seniority_hint": "unspecified",
+      "url": "https://job-boards.greenhouse.io/wpp/jobs/8857788002",
+      "description_excerpt": "WPP is the trusted growth partner for the world’s leading brands. We unite cutting-edge media intelligence and data solutions, world-class creativity, next-generation production, transformative enterprise solutions and expert strategic counsel in a single company – powered by exceptional talent and our agentic marketing platform, WPP Open, to help our clients navigate change, capture opportunity and deliver transformational growth. We work with the world's most valuable brands and have global reach across 100+ markets, with deep local expertise. Our people are the key to our success. We're committed to fostering a culture of creativity, belon",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "greenhouse",
+      "last_checked_utc": "2026-11-24T16:37:54+00:00"
+    },
+    {
+      "id": "greenhouse:WPP:8628120002",
+      "company": "WPP",
+      "title": "Senior Analyst - Accounts Payable - US",
+      "location": "Mumbai",
+      "location_status": "location_unverified",
+      "provinces": [],
+      "workplace_type": "",
+      "categories": [
+        "finance_support"
+      ],
+      "early_career_status": "excluded",
+      "early_career_reason": "Unpaid work indicated in posting",
+      "pay_status": "unpaid_indicated",
+      "seniority_hint": "senior_or_lead",
+      "url": "https://job-boards.greenhouse.io/wpp/jobs/8628120002",
+      "description_excerpt": "WPP is the trusted growth partner for the world’s leading brands. We unite cutting-edge media intelligence and data solutions, world-class creativity, next-generation production, transformative enterprise solutions and expert strategic counsel in a single company – powered by exceptional talent and our agentic marketing platform, WPP Open, to help our clients navigate change, capture opportunity and deliver transformational growth. We work with the world's most valuable brands and have global reach across 100+ markets, with deep local expertise. Our people are the key to our success. We're committed to fostering a culture of creativity, belon",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "greenhouse",
+      "last_checked_utc": "2026-11-24T16:37:54+00:00"
     }
   ]
 }

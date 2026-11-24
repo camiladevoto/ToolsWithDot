@@ -114,10 +114,10 @@ def application_emails(description):
 
 def classify(text):
     s=text.lower()
-    terms={'customer_operations':['customer support','customer service','customer operations','customer success','onboarding'],
-           'business_operations':['operations associate','business operations','operations assistant','operations coordinator','business support'],
-           'finance_support':['accounts payable','finance assistant','accounting assistant','finance operations','billing specialist'],
-           'sales_operations':['sales support','sales operations','order management','crm specialist'],
+    terms={'customer_operations':['customer support','customer service','customer operations','customer success','customer experience specialist','onboarding'],
+           'business_operations':['operations associate','business operations','operations assistant','operations coordinator','business support','business analyst','data operations'],
+           'finance_support':['accounts payable','finance assistant','accounting assistant','finance operations','billing specialist','financial analyst','reporting analyst','credit analyst'],
+           'sales_operations':['sales support','sales operations','order management','crm specialist','deal desk analyst'],
            'project_support':['project assistant','project administrator','project coordinator']}
     return [key for key,words in terms.items() if any(w in s for w in words)]
 

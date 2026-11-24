@@ -71,6 +71,30 @@
     {
       "slug": "feverup",
       "company": "Fever"
+    },
+    {
+      "slug": "appfire",
+      "company": "Appfire"
+    },
+    {
+      "slug": "wpp",
+      "company": "WPP"
+    },
+    {
+      "slug": "vonage",
+      "company": "Vonage"
+    },
+    {
+      "slug": "ncinoinc",
+      "company": "nCino"
+    },
+    {
+      "slug": "gympass",
+      "company": "Wellhub"
+    },
+    {
+      "slug": "canonical",
+      "company": "Canonical"
     }
   ],
   "lever": [
@@ -101,6 +125,10 @@
     {
       "slug": "rover",
       "company": "Rover"
+    },
+    {
+      "slug": "moonpay",
+      "company": "MoonPay"
     }
   ]
 }

@@ -122,15 +122,16 @@ button:hover { background: #ff7467; }
 .local-dashboard{margin-top:20px;border:2px solid var(--border);border-radius:14px;padding:18px;background:var(--card);box-shadow:3px 3px 0 var(--border)}.local-dashboard h3{margin:0 0 12px;font-size:1.4rem}.dashboard-counts{display:flex;flex-wrap:wrap;gap:10px}.dashboard-counts button{background:var(--periwinkle);min-height:42px}.dashboard-counts button:first-child{background:var(--lime)}.local-dashboard .actions button{background:var(--card);font-size:.85rem;min-height:40px}.match-coverage{font-size:.82rem;font-weight:700;color:var(--muted)}
 .result-summary{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;background:var(--lime);border:2px solid var(--border);box-shadow:3px 3px 0 var(--border);border-radius:14px;padding:18px;margin:20px 0;scroll-margin-top:22px}.result-summary h3{margin:0;font-size:clamp(1.25rem,3vw,1.8rem);letter-spacing:-.035em}.result-summary #status{margin:5px 0 0;color:var(--ink)}.result-summary-copy{flex:1;min-width:220px}.result-summary button{background:var(--card);font-size:.85rem;min-height:40px}.result-summary:focus-visible{outline:3px solid var(--border);outline-offset:5px}.search-feedback{margin:12px 0 0;font-weight:750;color:var(--ink)}
 .site-head a:focus-visible { outline-color: #fffdf8; }
+.tool-brands{display:flex;align-items:center;gap:24px;flex-wrap:wrap}.sibling-brand{color:#fffdf8;font-weight:850;font-size:1.55rem;letter-spacing:-.035em;text-decoration:none;white-space:nowrap}.sibling-brand span{color:#ff38b8}.sibling-brand:hover{color:#ff38b8}.nav:has(.brand[style*="z-index"]) .sibling-brand{visibility:hidden}@media(max-width:640px){.tool-brands{gap:12px}.sibling-brand{font-size:1.2rem}.tool-brands .brand{font-size:1.2rem}}
 </style>
 </head>
 <body>
 <header class="site-head">
   <nav class="wrap nav" aria-label="Main navigation">
-    <a href="./" class="brand" aria-label="JobMatch home">JobMatch<span aria-hidden="true"></span></a>
+    <div class="tool-brands"><a href="./" class="brand" aria-label="JobMatch home">JobMatch<span aria-hidden="true"></span></a><a href="../cvfit/" class="sibling-brand">CVFit<span>.</span></a></div>
     <div class="nav-right">
       <a href="#search-jobs">Find jobs</a>
-      <a href="../cvfit/">CVFit<span style="color:#ff38b8">.</span></a>
+      
       <a href="https://camiladevoto.github.io/portafolio/job-hunter.html" target="_blank" rel="noopener noreferrer">How it works ↗</a>
     </div>
   </nav>

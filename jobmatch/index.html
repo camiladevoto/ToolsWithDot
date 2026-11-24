@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#d7ff3f">
+<meta name="description" content="JobMatch helps you explore vacancies from employer career pages with transparent location and application details.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2214%22%20fill%3D%22%239b8cff%22%2F%3E%3Cpath%20d%3D%22M24%2025v-5a3%203%200%200%201%203-3h10a3%203%200%200%201%203%203v5M20%2025h24a5%205%200%200%201%205%205v13a5%205%200%200%201-5%205H20a5%205%200%200%201-5-5V30a5%205%200%200%201%205-5Z%22%20fill%3D%22none%22%20stroke%3D%22%2317141f%22%20stroke-width%3D%224%22%20stroke-linejoin%3D%22round%22%2F%3E%3Cpath%20d%3D%22m25%2036%205%205%209-10%22%20fill%3D%22none%22%20stroke%3D%22%23ff4938%22%20stroke-width%3D%224%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E">
+<title>JobMatch | Find work that fits</title>
+<style>
+:root {
+  --periwinkle: #9b8cff;
+  --lime: #d7ff3f;
+  --tomato: #ff4938;
+  --ink: #17141f;
+  --border: #100e14;
+  --muted: #494253;
+  --paper: #f4f0ff;
+  --card: #fffdf8;
+  --line: var(--border);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 16px/1.55 system-ui, sans-serif; }
+a { color: inherit; }
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, summary:focus-visible {
+  outline: 3px solid var(--border);
+  outline-offset: 4px;
+}
+[hidden] { display: none !important; }
+.wrap { width: min(1120px, calc(100% - 48px)); margin-inline: auto; }
+.intro-backdrop { position: fixed; inset: 0; z-index: 1; background: var(--periwinkle); pointer-events: none; }
+.site-head { background: var(--lime); color: var(--ink); border-bottom: 2px solid var(--border); }
+.nav { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.brand {
+  color: var(--ink);
+  font-weight: 850;
+  font-size: 1.55rem;
+  letter-spacing: -.035em;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.brand span {
+  display: inline-block;
+  width: .14em;
+  height: .14em;
+  margin-left: .09em;
+  vertical-align: .055em;
+  border-radius: 50%;
+  background: var(--tomato);
+  outline: .025em solid var(--border);
+  font-size: inherit;
+  color: transparent;
+  overflow: hidden;
+}
+.hero em { color: var(--ink); }
+.nav-right { display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: center; font-size: .88rem; }
+.nav-right a { text-decoration: none; font-weight: 650; }
+.nav-right a:hover { text-decoration: underline; text-underline-offset: 5px; }
+.hero {
+  color: var(--ink);
+  background: var(--periwinkle);
+  border-bottom: 3px solid var(--border);
+  padding: clamp(52px, 8vw, 105px) 0 clamp(80px, 10vw, 124px);
+}
+h1, h2 { margin: 0; line-height: 1.07; letter-spacing: -.055em; }
+h1 { font-size: clamp(3rem, 8vw, 6.8rem); font-weight: 800; }
+h1 > span, h1 em { display: block; }
+h1 em { font-style: normal; }
+.lead { font-size: clamp(1.02rem, 2.2vw, 1.18rem); max-width: 44ch; color: var(--ink); margin: 24px 0 0; }
+.hero-note { margin: 18px 0 0; font-size: .87rem; color: var(--ink); }
+.search-card { position: relative; margin-top: -45px; border: 3px solid var(--border); border-radius: 20px; background: var(--card); padding: clamp(20px, 4vw, 38px); box-shadow: 6px 6px 0 var(--border); scroll-margin-top: 20px; }
+.section-top { margin-bottom: 24px; }
+.section-top h2, .results-head h2 { font-size: clamp(1.75rem, 4vw, 2.6rem); }
+.grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.field:first-child { grid-column: 1 / -1; }
+label { display: block; font-size: .86rem; font-weight: 700; margin-bottom: 7px; }
+input, select { display: block; width: 100%; min-width: 0; height: 50px; padding: 0 13px; border: 2px solid var(--border); border-radius: 9px; background: #f8fafc; color: var(--ink); font: inherit; }
+input::placeholder { color: var(--muted); }
+.options-line { margin-top: 19px; }
+.options-line label { display: flex; align-items: flex-start; gap: 10px; font-weight: 550; margin: 0; cursor: pointer; }
+.options-line input { flex: 0 0 18px; width: 18px; height: 18px; margin: 2px 0 0; accent-color: var(--lime); }
+.actions { display: flex; align-items: center; flex-wrap: wrap; gap: 12px 18px; margin-top: 24px; }
+button { border: 2px solid var(--border); border-radius: 999px; background: var(--tomato); color: var(--ink); box-shadow: 3px 3px 0 var(--border); min-height: 48px; padding: 10px 22px; font: inherit; font-weight: 750; cursor: pointer; }
+button:hover { background: #ff7467; }
+#load-more { background: var(--periwinkle); color: var(--ink); }
+#load-more:hover { background: #b9adff; }
+.privacy, .note, #status { color: var(--muted); font-size: .88rem; }
+.privacy { margin: 0; }
+.note { border-top: 1px solid var(--line); padding-top: 14px; margin-top: 20px; }
+.note summary { font-weight: 700; width: fit-content; cursor: pointer; color: var(--ink); }
+.note p { margin-bottom: 0; }
+.section-results { padding: clamp(44px, 8vw, 80px) 0; }
+.results-head { border-bottom: 1px solid var(--line); padding-bottom: 16px; }
+#status { margin: 15px 0 20px; }
+#results { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.empty-state { grid-column: 1 / -1; padding: 26px; margin: 0; border: 2px dashed var(--border); border-radius: 14px; background: var(--card); color: var(--muted); }
+.job { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; min-width: 0; padding: clamp(18px, 3vw, 26px); border: 2px solid var(--border); box-shadow: 3px 3px 0 var(--border); border-radius: 14px; background: var(--card); overflow-wrap: anywhere; }
+.job h2 { font-size: clamp(1.25rem, 2.3vw, 1.6rem); }
+.job p { margin: 0; }
+.job .company { color: var(--muted); font-weight: 650; }
+.job .location { align-self: flex-start; padding: 4px 9px; border-radius: 8px; color: var(--ink); background: var(--lime); border: 1px solid var(--border); font-weight: 650; font-size: .81rem; }
+.job .status, .muted { color: var(--muted); font-size: .86rem; }
+.job .apply { margin-top: auto; padding-top: 5px; font-weight: 750; text-underline-offset: 4px; }
+.job .apply:hover { color: #91251c; }
+.site-foot { background: var(--ink); color: #fffdf8; border-top: 3px solid var(--border); padding: 26px 0; }
+.foot { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; align-items: center; font-size: .85rem; }
+.foot a { color: var(--lime); font-weight: 650; text-underline-offset: 4px; }
+.foot p { margin: 0; }
+@media (max-width: 640px) {
+  .wrap { width: calc(100% - 32px); }
+  .nav { min-height: 64px; }
+  .nav-right { gap: 8px 13px; font-size: .79rem; justify-content: flex-end; }
+  .grid, #results { grid-template-columns: 1fr; }
+  .actions button { width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+.match-panel{margin-top:24px;padding:20px;border:2px solid var(--border);border-radius:14px;background:var(--paper)}.match-panel summary{cursor:pointer;font-weight:800;font-size:1.15rem}.match-panel .grid{margin-top:16px}.match-panel #match-run{background:var(--lime)}.match-panel #match-reset{background:var(--card)}.match-score{font-weight:850;font-size:1.25rem;background:var(--tomato);border:2px solid var(--border);border-radius:10px;padding:5px 10px}.match-keywords{font-size:.82rem;color:var(--muted)}
+.match-panel textarea{width:100%;border:2px solid var(--border);border-radius:9px;padding:10px;font:inherit;background:var(--card);color:var(--ink)}.result-filters{margin-top:18px}.job-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}.job-actions button{min-height:36px;font-size:.8rem;padding:5px 12px;background:var(--card)}.job-actions button[aria-pressed="true"]{background:var(--lime)}
+.local-dashboard{margin-top:20px;border:2px solid var(--border);border-radius:14px;padding:18px;background:var(--card);box-shadow:3px 3px 0 var(--border)}.local-dashboard h3{margin:0 0 12px;font-size:1.4rem}.dashboard-counts{display:flex;flex-wrap:wrap;gap:10px}.dashboard-counts button{background:var(--periwinkle);min-height:42px}.dashboard-counts button:first-child{background:var(--lime)}.local-dashboard .actions button{background:var(--card);font-size:.85rem;min-height:40px}.match-coverage{font-size:.82rem;font-weight:700;color:var(--muted)}
+</style>
+</head>
+<body>
+<header class="site-head">
+  <nav class="wrap nav" aria-label="Main navigation">
+    <a href="./" class="brand" aria-label="JobMatch home">JobMatch<span aria-hidden="true"></span></a>
+    <div class="nav-right">
+      <a href="#search-jobs">Find jobs</a>
+      <a href="https://camiladevoto.github.io/portafolio/job-hunter.html" target="_blank" rel="noopener noreferrer">How it works ↗</a>
+    </div>
+  </nav>
+</header>
+<main>
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap">
+      <h1 id="hero-title"><span>Find work</span><em>that fits.</em></h1>
+      <p class="lead">Browse direct employer listings. Filter by location and experience level to find roles worth a closer look.</p>
+      <p class="hero-note">Remote, hybrid and on-site roles from selected employer boards</p>
+    </div>
+  </section>
+  <div class="wrap">
+  <section class="search-card" id="search-jobs" aria-labelledby="search-title">
+    <div class="section-top"><h2 id="search-title">Find a vacancy</h2></div>
+    <div class="grid">
+      <div class="field"><label for="query">Job title or keyword</label><input id="query" placeholder="e.g. Operations, finance, support"></div>
+      <div class="field"><label for="location">Work location</label><select id="location"><option value="remote">Remote from Spain</option><option value="worldwide">Worldwide remote</option><option value="eu">Europe / EU remote (check country eligibility)</option><option value="ambiguous">Remote — eligibility uncertain</option><option value="province">On-site or hybrid — choose province</option><option value="spain">All jobs based in Spain</option><option value="all">All countries (explore feed)</option></select></div>
+      <div class="field" id="provinceWrap" hidden><label for="province">Province</label><select id="province"><option value="">Choose province</option><option value="Álava">Álava</option><option value="Albacete">Albacete</option><option value="Alicante">Alicante</option><option value="Almería">Almería</option><option value="Asturias">Asturias</option><option value="Ávila">Ávila</option><option value="Badajoz">Badajoz</option><option value="Barcelona">Barcelona</option><option value="Bizkaia">Bizkaia</option><option value="Burgos">Burgos</option><option value="Cáceres">Cáceres</option><option value="Cádiz">Cádiz</option><option value="Cantabria">Cantabria</option><option value="Castellón">Castellón</option><option value="Ceuta">Ceuta</option><option value="Ciudad Real">Ciudad Real</option><option value="Córdoba">Córdoba</option><option value="A Coruña">A Coruña</option><option value="Cuenca">Cuenca</option><option value="Gipuzkoa">Gipuzkoa</option><option value="Girona">Girona</option><option value="Granada">Granada</option><option value="Guadalajara">Guadalajara</option><option value="Huelva">Huelva</option><option value="Huesca">Huesca</option><option value="Illes Balears">Illes Balears</option><option value="Jaén">Jaén</option><option value="León">León</option><option value="Lleida">Lleida</option><option value="Lugo">Lugo</option><option value="Madrid">Madrid</option><option value="Málaga">Málaga</option><option value="Melilla">Melilla</option><option value="Murcia">Murcia</option><option value="Navarra">Navarra</option><option value="Ourense">Ourense</option><option value="Palencia">Palencia</option><option value="Las Palmas">Las Palmas</option><option value="Pontevedra">Pontevedra</option><option value="La Rioja">La Rioja</option><option value="Salamanca">Salamanca</option><option value="Santa Cruz de Tenerife">Santa Cruz de Tenerife</option><option value="Segovia">Segovia</option><option value="Sevilla">Sevilla</option><option value="Soria">Soria</option><option value="Tarragona">Tarragona</option><option value="Teruel">Teruel</option><option value="Toledo">Toledo</option><option value="Valencia">Valencia</option><option value="Valladolid">Valladolid</option><option value="Zamora">Zamora</option><option value="Zaragoza">Zaragoza</option></select></div>
+      <div class="field"><label for="email">Application preference</label><select id="email"><option value="all">All application routes</option><option value="published">Email mentioned in job posting</option></select></div>
+    </div>
+    <div class="options-line" role="group" aria-label="Additional filters">
+      <label for="junior"><input id="junior" type="checkbox" checked> Exclude internships, traineeships, unpaid work and senior roles</label>
+    </div>
+    <div class="actions">
+      <button type="button" id="search">Search vacancies</button>
+      <p class="privacy">Your filters and CV stay in this browser. Saved job statuses are stored locally; no account required.</p>
+    </div>
+    <details class="match-panel" id="match-panel">
+<summary>Match jobs to my profile</summary>
+<p class="muted">Optional: enter your skills, experience and preferred roles. Your profile is processed in this browser only and is not uploaded or saved.</p>
+<div class="field"><label for="cv-file">Import CV (PDF or TXT)</label><input id="cv-file" type="file" accept=".pdf,.txt,application/pdf,text/plain"><p id="cv-status" class="muted" role="status">Optional. Review suggested skills and languages before ranking. No CV is uploaded.</p><label for="cv-review">Education and experience notes (review locally)</label><textarea id="cv-review" rows="3" placeholder="Review CV evidence here"></textarea></div><div class="grid">
+<div class="field"><label for="match-skills">Skills (comma-separated)</label><input id="match-skills" placeholder="Excel, SQL, accounting, customer support"></div>
+<div class="field"><label for="match-years">Relevant years of experience</label><input id="match-years" type="number" min="0" max="60" step="0.5" placeholder="e.g. 1"></div>
+<div class="field"><label for="match-roles">Preferred roles (comma-separated)</label><input id="match-roles" placeholder="Business analyst, finance analyst"></div>
+<div class="field"><label for="match-languages">Working languages (comma-separated)</label><input id="match-languages" placeholder="English, Spanish"></div>
+</div>
+<details class="note"><summary>Customise matching weights</summary><div class="grid"><div><label for="weight-0">Skills</label><input id="weight-0" type="number" min="0" max="100" value="30"></div><div><label for="weight-1">Experience</label><input id="weight-1" type="number" min="0" max="100" value="25"></div><div><label for="weight-2">Location</label><input id="weight-2" type="number" min="0" max="100" value="20"></div><div><label for="weight-3">Roles</label><input id="weight-3" type="number" min="0" max="100" value="15"></div><div><label for="weight-4">Languages</label><input id="weight-4" type="number" min="0" max="100" value="10"></div></div><p class="muted">Weights are normalised to 100. Unknown criteria remain unscored.</p><button type="button" id="weights-reset">Restore defaults</button></details><div class="options-line"><label><input id="remember-profile" type="checkbox"> Remember my profile and preferences on this device (optional)</label></div><div class="actions"><button type="button" id="match-run">Rank my matches</button><button type="button" id="match-reset">Clear profile</button></div>
+<p class="muted">Scores are evidence-based estimates, not hiring probabilities. Unknown requirements are not treated as met. Location filters still apply.</p>
+</details>
+    <details class="note">
+      <summary>How location and application filters work</summary>
+      <p>Province matches use published city and province names. “Remote from Spain” includes roles that explicitly allow remote work from Spain or worldwide.</p>
+      <p>Check location eligibility and application instructions on the employer’s posting. An email mentioned in a listing may be for general enquiries.</p>
+    </details>
+  </section>
+  <section class="section-results" aria-labelledby="results-title">
+    <div class="results-head"><h2 id="results-title">Opportunities</h2></div><section class="local-dashboard" aria-labelledby="dashboard-title"><h3 id="dashboard-title">My activity.</h3><div id="dashboard-counts" class="dashboard-counts"></div><p class="muted">Private to this browser. Saved and applied vacancies are retained even if they disappear from the feed. Backups contain personal profile information if you opt to remember it; keep them private.</p><div class="actions"><button type="button" id="backup-export">Export my data</button><button type="button" id="backup-import">Import backup</button><input type="file" id="backup-file" accept=".json,application/json" hidden><button type="button" id="backup-clear">Clear local data</button></div></section><div class="grid result-filters"><div><label for="job-view">Vacancy status</label><select id="job-view"><option value="discover">Discover (hide dismissed and applied)</option><option value="saved">Saved jobs</option><option value="applied">Applied jobs</option><option value="dismissed">Dismissed jobs</option><option value="all">All statuses</option></select></div><div><label for="freshness">Date first discovered</label><select id="freshness"><option value="all">Any date / unknown</option><option value="1">Last 24 hours</option><option value="7">Last 7 days</option><option value="30">Last 30 days</option></select></div></div><p id="local-status" class="muted" role="status"></p>
+    <p id="status" role="status" aria-live="polite">Loading employer listings…</p>
+    <div id="results" aria-label="Job listings"></div>
+    <div class="actions"><button type="button" id="load-more" hidden>Show more listings</button></div>
+  </section>
+  </div>
+</main>
+<footer class="site-foot">
+  <div class="wrap foot">
+    <p>JobMatch is an independent portfolio project. Source information should be checked before applying.</p>
+    <a href="https://camiladevoto.github.io/portafolio/project-operations.html" target="_blank" rel="noopener noreferrer">Built by Camila · Portfolio ↗</a>
+  </div>
+</footer>
+<script>
+
+const brand = document.querySelector('.brand');
+const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+if (typeof brand.animate === 'function' && !motionPreference.matches && window.scrollY === 0) {
+  const bounds = brand.getBoundingClientRect();
+  const scale = Math.min(6, window.innerWidth * 0.86 / bounds.width);
+  const x = (window.innerWidth - bounds.width) / 2 - bounds.left;
+  const y = (window.innerHeight - bounds.height) / 2 - bounds.top;
+  const centered = `translate(${x}px, ${y}px)`;
+  brand.style.position = 'relative';
+  brand.style.zIndex = '2';
+
+  const holdDuration = 500;
+  const spinDuration = 1050;
+  const logoDuration = holdDuration + spinDuration + 450;
+  const backdrop = document.createElement('div');
+  backdrop.setAttribute('aria-hidden', 'true');
+  backdrop.className = 'intro-backdrop';
+  document.body.append(backdrop);
+  const reveal = backdrop.animate([{ opacity: 1 }, { opacity: 0 }], {
+    delay: holdDuration + spinDuration,
+    duration: logoDuration - holdDuration - spinDuration,
+    easing: 'ease-in-out',
+    fill: 'both'
+  });
+  reveal.onfinish = () => backdrop.remove();
+
+  const logo = brand.animate([
+    { transform: `${centered} scale(${scale}) rotateY(0deg)` },
+    { transform: `${centered} scale(${scale}) rotateY(0deg)`, offset: holdDuration / logoDuration, easing: 'ease-in-out' },
+    { transform: `${centered} scale(${scale}) rotateY(360deg)`, offset: (holdDuration + spinDuration) / logoDuration, easing: 'ease-in-out' },
+    { transform: 'translate(0, 0) scale(1) rotateY(360deg)' }
+  ], { duration: logoDuration });
+
+  const lines = [...document.querySelectorAll('#hero-title > *')].map((line, index) =>
+    line.animate([
+      { transform: 'translateX(-48px)', opacity: 0 },
+      { transform: 'translateX(0)', opacity: 1 }
+    ], { delay: logoDuration + index * 160, duration: 480, easing: 'ease-out', fill: 'backwards' })
+  );
+
+  function finishIntro() {
+    brand.style.removeProperty('position');
+    brand.style.removeProperty('z-index');
+    window.removeEventListener('resize', cancelIntro);
+    document.removeEventListener('focusin', cancelIntro);
+    motionPreference.removeEventListener('change', cancelIntro);
+  }
+
+  function cancelIntro() {
+    logo.cancel();
+    reveal.cancel();
+    backdrop.remove();
+    lines.forEach(line => line.cancel());
+    finishIntro();
+  }
+
+  lines[lines.length - 1].onfinish = finishIntro;
+  window.addEventListener('resize', cancelIntro, { once: true });
+  document.addEventListener('focusin', cancelIntro, { once: true });
+  motionPreference.addEventListener('change', cancelIntro);
+}
+
+
+const $=id=>document.getElementById(id);let feed=null;const clean=s=>String(s??'').toLowerCase();function el(tag,txt,cls){const n=document.createElement(tag);if(txt!==undefined)n.textContent=txt;if(cls)n.className=cls;return n;}
+function assessClient(j){
+  if(j.early_career_status)return {status:j.early_career_status,reason:j.early_career_reason||'Review full requirements'};
+  const title=clean(j.title), text=clean(j.description_excerpt||'');
+  if(/\b(intern(ship)?|prácticas?|becari[oa]|trainee(ship)?|apprentice(ship)?|graduate programm?e?)\b/.test(title))return {status:'excluded',reason:'Internship / trainee title'};
+  if(/\b(senior|lead|head|director|principal|staff|vp|chief|manager)\b/.test(title))return {status:'excluded',reason:'Senior or management title'};
+  if(/\b(unpaid|sin remuneración)\b/.test(text))return {status:'excluded',reason:'Unpaid role indicated'};
+  return {status:'worth_checking',reason:'Check full experience requirements and compensation'};
+}
+
+let matching=false;
+const fold=s=>String(s??'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+const canonical=s=>fold(s).replace(/[^a-z0-9+#]+/g,' ').trim();
+const contains=(text,term)=>{const a=' '+canonical(text)+' ',b=canonical(term);return !!b&&a.includes(' '+b+' ')};
+const splitTerms=s=>[...new Set(s.split(/[,;\n]+/).map(canonical).filter(Boolean))];
+const skillGroups={
+'Excel':['excel','spreadsheets','google sheets','spreadsheet modelling'],
+'SQL':['sql','postgresql','mysql','bigquery'],'Python':['python'],'R':['r programming','r language','rstudio','tidyverse'],
+'Data analysis':['data analysis','data analytics','analisis de datos','analytical skills'],'Power BI':['power bi'],'Tableau':['tableau'],
+'Accounting':['accounting','contabilidad','bookkeeping','general ledger'],'Financial modelling':['financial modeling','financial modelling','financial forecasting','financial planning','fp&a'],
+'Financial reporting':['financial reporting','management reporting','reporting financiero'],'Budgeting':['budgeting','budget management','presupuestos'],
+'Accounts payable':['accounts payable','cuentas a pagar'],'Accounts receivable':['accounts receivable','cuentas a cobrar'],
+'CRM':['crm','salesforce','hubspot'],'ERP':['erp','odoo','sap','netsuite'],'Customer support':['customer support','customer service','atencion al cliente'],
+'Customer success':['customer success','customer onboarding','client onboarding'],'Project management':['project management','project coordination','gestion de proyectos','jira','asana'],
+'Process improvement':['process improvement','continuous improvement','process optimization','mejora de procesos'],
+'Operations':['business operations','operations management','operational reporting'],'Sales':['sales','ventas','business development','lead generation'],
+'Communication':['communication skills','stakeholder management','comunicacion'],'Research':['market research','user research','research methods'],
+'Marketing':['digital marketing','marketing analytics','seo','sem'],'JavaScript':['javascript','typescript'],'HTML/CSS':['html','css'],
+'Cloud':['aws','azure','google cloud'],'Cybersecurity':['cybersecurity','information security'],'Data engineering':['data engineering','etl','data pipelines'],
+'Machine learning':['machine learning','deep learning'],'Automation':['automation','workflow automation','automatisation'],'Negotiation':['negotiation','negociacion'],
+'Logistics':['logistics','supply chain','inventory management','logistica'],'Compliance':['compliance','risk management','regulatory compliance']};
+Object.assign(skillGroups,{'Business analysis':['business analysis','business analyst','requirements gathering','business requirements','analisis de negocio'],'Data visualisation':['data visualization','data visualisation','dashboards','dashboarding'],'Microsoft Office':['microsoft office','office 365','microsoft 365'],'Financial analysis':['financial analysis','financial analyst','analisis financiero'],'Reconciliation':['reconciliation','reconciliations','conciliacion bancaria'],'Customer onboarding':['onboarding','implementation specialist','customer implementation'],'Ticketing':['zendesk','intercom','ticketing systems'],'Git':['git','github','gitlab'],'Statistics':['statistics','statistical analysis','econometrics','regression'],'Purchasing':['procurement','purchasing','compras'],'B2B':['b2b','business to business'],'Presentation':['powerpoint','google slides','presentations']});
+const languageGroups={'English':['english','ingles'],'Spanish':['spanish','espanol','castellano'],'French':['french','frances'],'German':['german','aleman'],'Italian':['italian','italiano'],'Portuguese':['portuguese','portugues'],'Dutch':['dutch','neerlandes'],'Arabic':['arabic','arabe'],'Japanese':['japanese','japones'],'Mandarin':['mandarin','chinese','chino']};
+const stop=new Set('about above across after also among and are based been before being both can company could each employer experience first from have help into job join more must our over people position role team than that their them then there these they this those through time using very want were what when where which while will with work working would years your para como esta este desde sobre entre somos equipo puesto trabajo empresa experiencia con los las del una que por'.split(' '));
+function extract(j,p){
+ const text=[j.title,j.matching_text||j.description_excerpt||''].join(' ');
+ const qualificationText=j.requirements_text||text;
+ const skills=Object.entries(skillGroups).filter(([k,v])=>[k,...v].some(t=>contains(qualificationText,t))).map(([k])=>k);
+ const preferred=Object.entries(skillGroups).filter(([k,v])=>[k,...v].some(t=>contains(j.preferred_text||'',t))).map(([k])=>k);
+ const matched=skills.filter(k=>p.skills.some(s=>[k,...skillGroups[k]].some(t=>canonical(t)===s)));
+ const extra=p.skills.filter(s=>contains(text,s)&&!matched.some(k=>[k,...skillGroups[k]].some(t=>canonical(t)===s)));
+ const tokens=canonical(text).split(' ').filter(t=>t.length>=4&&!stop.has(t)&&!/\d/.test(t));const freq=new Map();for(const t of tokens)freq.set(t,(freq.get(t)||0)+1);
+ const keywords=[...new Set([...skills,...extra,...[...freq].sort((a,b)=>b[1]-a[1]).slice(0,10).map(x=>x[0])])];
+ const langText=fold(qualificationText);const languages=Object.entries(languageGroups).filter(([k,v])=>v.some(t=>{const e=t;return new RegExp('\\b(?:fluent|fluency|proficiency|proficient|native|business level|professional level|advanced|required|fluido|fluidez|nivel avanzado|dominio)\\s+(?:in\\s+|de\\s+)?'+e+'\\b|\\b'+e+'\\s+(?:language\\s+)?(?:fluency|proficiency|required|is required|is mandatory|c1|c2|b2)\\b','i').test(langText)})).map(([k])=>k);
+ const years=[...langText.matchAll(/\b(\d{1,2})(?:\s*[-–]\s*\d{1,2})?\s*\+?\s*(?:years?|anos)\s+(?:of\s+|de\s+)?(?:relevant\s+|professional\s+|prior\s+|work\s+)?(?:experience|experiencia)\b/g)].map(m=>+m[1]);
+ return {skills,matched,extra,keywords,languages,preferred,requirementsFound:!!j.requirements_text,years:years.length?Math.max(...years):null};
+}
+const defaults=[30,25,20,15,10];
+function weights(){const a=defaults.map((_,i)=>Math.max(0,Math.min(100,Number($('weight-'+i).value)||0)));const total=a.reduce((x,y)=>x+y,0);return total?a.map(x=>100*x/total):defaults;}
+$('weights-reset').addEventListener('click',()=>{defaults.forEach((v,i)=>$('weight-'+i).value=v);if(matching)search()});
+function remoteScope(j){const loc=fold(j.location), body=fold(j.matching_text||j.description_excerpt), remote=/\b(remote|remoto|teletrabajo|work from home)\b/.test(loc)||j.workplace_type==='remote'||/^remote_/.test(j.location_status||'');const region=loc+' '+body;
+const restrictions=(body.match(/[^.!?]{0,75}\b(?:time zone|timezone|time-zone|utc[+-]|gmt[+-]|cet hours|must (?:reside|be based|live)|only (?:in|within)|work authorization|right to work)\b[^.!?]{0,85}/gi)||[]).slice(0,3);
+let scope='unknown';if(remote){if(/\b(?:worldwide|anywhere in the world|globally remote)\b/.test(loc)||j.location_status==='remote_worldwide_explicit')scope='worldwide';else if(j.location_status==='remote_spain_explicit')scope='spain';else if(/\b(?:europe|eu|european union|emea)\b/.test(loc))scope='eu';else if(/\b(?:united states|usa|united kingdom|uk|canada|germany|france|india|australia|netherlands|poland|portugal|italy)\b/.test(loc))scope='country';else scope='ambiguous';}
+else if(j.workplace_type==='hybrid'||/\bhybrid\b/.test(loc))scope='hybrid';else if(j.workplace_type==='on-site'||j.workplace_type==='onsite')scope='onsite';
+return {scope,restrictions};}
+const stateKey='jobmatch.vacancy-status.v1';let saved={};try{const raw=JSON.parse(localStorage.getItem(stateKey)||'{}');if(raw&&typeof raw==='object'&&!Array.isArray(raw))saved=raw;}catch{}
+function jobKey(j){return String(j.id||j.url);}
+const archiveKey='jobmatch.archive.v1',profileKey='jobmatch.profile.v1';
+function readLocal(key){try{return JSON.parse(localStorage.getItem(key)||'null')}catch{return null}}
+let archive=readLocal(archiveKey)||{};
+const profileFields=['match-skills','match-years','match-roles','match-languages','query','location','province','email','freshness',...defaults.map((_,i)=>'weight-'+i)];
+function snapshot(j){return {id:jobKey(j),title:String(j.title||''),company:String(j.company||''),location:String(j.location||''),url:String(j.url||''),description_excerpt:String(j.description_excerpt||'').slice(0,650),location_status:j.location_status,workplace_type:j.workplace_type,provinces:j.provinces,first_seen_utc:j.first_seen_utc,published_utc:j.published_utc,last_checked_utc:j.last_checked_utc,tracked_utc:new Date().toISOString()}}
+function persistActivity(){try{localStorage.setItem(stateKey,JSON.stringify(saved));localStorage.setItem(archiveKey,JSON.stringify(archive));$('local-status').textContent='Activity saved in this browser.';}catch{$('local-status').textContent='Browser storage unavailable or full; activity may be retained only for this session.'}}
+function setJob(j,value){const k=jobKey(j);if(saved[k]===value){delete saved[k];delete archive[k]}else{saved[k]=value;archive[k]=snapshot(j)}persistActivity();render();}
+function captureProfile(){return {fields:Object.fromEntries(profileFields.map(id=>[id,$(id).value])),junior:$('junior').checked,matching};}
+function persistProfile(){try{if($('remember-profile').checked)localStorage.setItem(profileKey,JSON.stringify(captureProfile()));else localStorage.removeItem(profileKey);}catch{$('local-status').textContent='Profile could not be stored locally.'}}
+function restoreProfile(data){if(!data||typeof data.fields!=='object')return;for(const id of profileFields){const v=data.fields[id];if(typeof v==='string'&&v.length<=12000){const field=$(id);if(field.tagName!=='SELECT'||Array.from(field.options).some(o=>o.value===v))field.value=v;}}if(typeof data.junior==='boolean')$('junior').checked=data.junior;matching=data.matching===true;$('provinceWrap').hidden=$('location').value!=='province';$('remember-profile').checked=true;}
+function dashboard(){const root=$('dashboard-counts');root.replaceChildren();for(const [value,label] of [['saved','Saved'],['applied','Applied'],['dismissed','Dismissed']]){const b=el('button',label+' · '+Object.values(saved).filter(v=>v===value).length);b.type='button';b.addEventListener('click',()=>{$('job-view').value=value;search()});root.append(b)}}
+function validUrl(v){try{return new URL(v).protocol==='https:'}catch{return false}}
+function downloadBackup(){const data={version:1,exported_utc:new Date().toISOString(),statuses:saved,archive,profile:$('remember-profile').checked?captureProfile():null};const url=URL.createObjectURL(new Blob([JSON.stringify(data,null,2)],{type:'application/json'}));const a=el('a');a.href=url;a.download='jobmatch-backup.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
+$('backup-export').addEventListener('click',downloadBackup);$('backup-import').addEventListener('click',()=>$('backup-file').click());
+$('backup-file').addEventListener('change',async()=>{const f=$('backup-file').files[0];if(!f)return;try{if(f.size>5*1024*1024)throw Error('Backup exceeds 5 MB');const d=JSON.parse(await f.text());if(d.version!==1||!d.statuses||typeof d.statuses!=='object'||Array.isArray(d.statuses))throw Error('Invalid backup');const next=Object.create(null),records=Object.create(null);for(const [k,v] of Object.entries(d.statuses)){if(k.length>500||!['saved','applied','dismissed'].includes(v))continue;next[k]=v;const j=d.archive?.[k];if(j&&typeof j.title==='string'&&typeof j.company==='string'&&validUrl(j.url))records[k]=snapshot({...j,id:k});}if(!confirm('Replace local activity with this backup?'))return;saved=next;archive=records;if(d.profile&&confirm('Restore the remembered profile from this backup?'))restoreProfile(d.profile);persistActivity();persistProfile();search();}catch(e){$('local-status').textContent='Backup import failed: '+e.message;}finally{$('backup-file').value='';}});
+$('backup-clear').addEventListener('click',()=>{if(!confirm('Clear your locally stored profile and all saved, applied and dismissed jobs?'))return;saved={};archive={};$('remember-profile').checked=false;try{for(const k of [stateKey,archiveKey,profileKey])localStorage.removeItem(k)}catch{}$('match-reset').click();$('local-status').textContent='Local activity and profile cleared.';});
+$('remember-profile').addEventListener('change',persistProfile);for(const id of [...profileFields,'junior'])$(id).addEventListener('change',persistProfile);
+restoreProfile(readLocal(profileKey));dashboard();
+function dateValue(v){const t=Date.parse(v);return Number.isFinite(t)?t:null;}
+function freshnessMatch(j){const days=$('freshness').value;if(days==='all')return true;const t=dateValue(j.first_seen_utc);return t!==null&&Date.now()-t>=0&&Date.now()-t<=Number(days)*86400000;}
+function viewMatch(j){const v=$('job-view').value,s=saved[jobKey(j)];return v==='all'||(v==='discover'?!['applied','dismissed'].includes(s):s===v);}
+$('cv-file').addEventListener('change',async()=>{const f=$('cv-file').files[0];if(!f)return;const status=$('cv-status');if(f.size>10*1024*1024){status.textContent='Choose a file under 10 MB.';return;}status.textContent='Reading CV locally…';try{let text='';if(f.name.toLowerCase().endsWith('.txt'))text=await f.text();else if(f.name.toLowerCase().endsWith('.pdf')){const pdf=await import('https://cdn.jsdelivr.net/npm/pdfjs-dist@4.10.38/build/pdf.mjs');pdf.GlobalWorkerOptions.workerSrc='https://cdn.jsdelivr.net/npm/pdfjs-dist@4.10.38/build/pdf.worker.mjs';const doc=await pdf.getDocument({data:new Uint8Array(await f.arrayBuffer()),isEvalSupported:false}).promise;for(let i=1;i<=Math.min(doc.numPages,30);i++){const page=await doc.getPage(i);const content=await page.getTextContent();text+=content.items.map(x=>x.str||'').join(' ')+'\n';}await doc.destroy();}else throw Error('Choose PDF or TXT');if(!text.trim())throw Error('No selectable text found; paste skills manually (scans require OCR).');const detected=Object.entries(skillGroups).filter(([k,v])=>[k,...v].some(t=>contains(text,t))).map(([k])=>k);const langs=Object.entries(languageGroups).filter(([k,v])=>v.some(t=>contains(text,t))).map(([k])=>k);const merge=(id,items)=>{$(id).value=[...new Set([...$(id).value.split(',').map(s=>s.trim()).filter(Boolean),...items])].join(', ')};merge('match-skills',detected);merge('match-languages',langs);$('cv-review').value=text.slice(0,12000);status.textContent='Suggested '+detected.length+' skills and '+langs.length+' languages. Review proficiency, education, roles and relevant years manually before ranking.';}catch(e){status.textContent='CV could not be read: '+e.message+' You can enter your profile manually.';}});
+function profile(){return {skills:splitTerms($('match-skills').value),years:$('match-years').value===''?null:Math.max(0,Number($('match-years').value)),roles:splitTerms($('match-roles').value),languages:splitTerms($('match-languages').value)}}
+function rank(j,p,loc){
+ const x=extract(j,p), parts=[],notes=[],gaps=[],missing=[];let points=0,known=0;const wts=weights();
+ function add(label,w,value){w=wts[[30,25,20,15,10].indexOf(w)];parts.push(label+': '+(value===null?'not assessable':Math.round(value*100)+'%'));if(value!==null){points+=w*value;known+=w;}else if(w>0)missing.push(label);}
+ add('Skills',30,x.skills.length&&p.skills.length?x.matched.length/x.skills.length:null);
+ if(!x.skills.length)notes.push('No recognised skill requirements found in listing text.');else if(!p.skills.length)notes.push('Add your skills to assess this criterion.');if(x.skills.length&&p.skills.length)gaps.push(...x.skills.filter(k=>!x.matched.includes(k)).map(k=>(x.requirementsFound?'Qualification signal (verify): ':'Skill mentioned: ')+k));
+ add('Experience',25,x.years!==null&&p.years!==null?Math.min(1,p.years/Math.max(1,x.years)):null);
+ if(x.years===null)notes.push('No explicit years-of-experience requirement detected.');else if(p.years===null)notes.push('Add your relevant years of experience.');if(x.years!==null&&p.years!==null&&p.years<x.years)gaps.push('Posting mentions '+x.years+' years; verify whether required');
+ const scope=remoteScope(j);const verified=(scope.scope==='worldwide'||(loc==='remote'&&scope.scope==='spain')||(['spain','province'].includes(loc)&&['remote_spain_explicit','spain_location_check_remote'].includes(j.location_status)))&&!scope.restrictions.length;
+ add('Location',20,verified?1:null);
+ if(!verified)notes.push('Location eligibility needs confirmation');
+ const roles=p.roles.filter(t=>contains(j.title,t));const roleTokens=s=>canonical(s).split(' ').filter(t=>t.length>2&&!['junior','senior','associate','specialist','assistant','the','and'].includes(t));const jt=new Set(roleTokens(j.title));const roleFit=p.roles.reduce((best,t)=>{const a=roleTokens(t);return Math.max(best,a.length?a.filter(x=>jt.has(x)).length/a.length:0)},0);if(!p.roles.length)notes.push('Add preferred roles to assess title fit.');
+ add('Preferred roles',15,p.roles.length?(roles.length?1:roleFit):null);
+ const langs=x.languages.filter(k=>p.languages.some(s=>[k,...languageGroups[k]].some(t=>canonical(t)===s)));
+ add('Languages',10,x.languages.length&&p.languages.length?langs.length/x.languages.length:null);
+ if(!x.languages.length)notes.push('No explicit language requirement detected.');else if(!p.languages.length)notes.push('Add your working languages.');if(x.languages.length&&p.languages.length)gaps.push(...x.languages.filter(k=>!langs.includes(k)).map(k=>'Language requirement signal: '+k));
+ if(!j.matching_text||j.matching_text_truncated)notes.push('Incomplete listing text; review original posting');if(!x.requirementsFound)notes.push('No distinct qualification section detected; skill mentions may not be requirements.');if(x.preferred.length)notes.push('Preferred skill signals (not mandatory): '+x.preferred.join(', '));
+ const score=known?Math.round(100*points/known):null;const coverage=Math.round(known);return {...x,score,coverage,rankScore:score===null?-1:score*(0.4+0.6*known/100),parts,notes,gaps,missing};
+}
+$('match-run').addEventListener('click',()=>{const p=profile();if(!p.skills.length&&!p.roles.length&&p.years===null&&!p.languages.length){$('match-skills').focus();return;}matching=true;persistProfile();search()});
+$('match-reset').addEventListener('click',()=>{for(const id of ['match-skills','match-years','match-roles','match-languages'])$(id).value='';$('cv-file').value='';$('cv-review').value='';$('cv-status').textContent='Optional. Review suggested skills and languages before ranking. No CV is uploaded.';matching=false;persistProfile();search()});
+
+const PAGE_SIZE = 50;
+let visibleCount = PAGE_SIZE;
+function render(){
+  dashboard();if(!feed&&$('job-view').value==='discover')return;
+  const q=clean($('query').value).trim(),loc=$('location').value,contact=$('email').value;
+  const junior=$('junior').checked, province=$('province').value;
+  const normalize=s=>String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+  const provinceMatch=j=>Array.isArray(j.provinces)&&j.provinces.some(p=>normalize(p)===normalize(province));
+  const spainBased=j=>j.location_status==='remote_spain_explicit'||j.location_status==='spain_location_check_remote';
+  const locationMatch=j=>{
+    if(loc==='all')return true;
+    if(loc==='remote')return ['spain','worldwide'].includes(remoteScope(j).scope);
+    if(loc==='worldwide')return remoteScope(j).scope==='worldwide';
+    if(loc==='eu')return remoteScope(j).scope==='eu';
+    if(loc==='ambiguous')return ['ambiguous','country'].includes(remoteScope(j).scope);
+    if(loc==='spain')return spainBased(j);
+    if(loc==='province')return spainBased(j)&&j.location_status!=='remote_spain_explicit'&&provinceMatch(j);
+    return false;
+  };
+  const current=feed?.jobs||[];const ids=new Set(current.map(jobKey));let archiveChanged=false;for(const j of current){const k=jobKey(j);if(saved[k]&&!archive[k]){archive[k]=snapshot(j);archiveChanged=true;}}if(archiveChanged)persistActivity();const view=$('job-view').value;const source=view==='discover'?current:[...current,...Object.values(archive).filter(j=>!ids.has(jobKey(j)))];let matches=source.filter(j=>{
+    const fit=assessClient(j);
+    if(['saved','applied','dismissed'].includes(view))return viewMatch(j);
+    return (!q||clean(j.title+' '+j.company+' '+(j.matching_text||j.description_excerpt)).includes(q))
+    &&locationMatch(j)&&viewMatch(j)&&freshnessMatch(j)
+    &&(contact==='all'||j.published_emails?.length)
+    &&(!junior||fit.status!=='excluded');
+  });
+  const ranked=new Map(); if(matching){const p=profile();for(const j of matches)ranked.set(j,rank(j,p,loc));matches.sort((a,b)=>ranked.get(b).rankScore-ranked.get(a).rankScore||ranked.get(b).coverage-ranked.get(a).coverage);}
+  const shown = matches.slice(0, visibleCount);
+  $('load-more').hidden = shown.length === matches.length;
+  const root=$('results');root.replaceChildren();
+  $('status').textContent=`Showing ${shown.length} of ${matches.length} matching listings · ${feed?'Feed checked '+new Date(feed.updated_utc).toLocaleString()+' · '+feed.sources_checked+' employer boards checked ('+feed.source_errors+' source errors).':'Live feed unavailable.'} ${matching?"Match uses assessable criteria only; ranking also favours higher evidence coverage.":"These are not verified personal matches."}`;
+  if(!matches.length)root.append(el('p',loc==='province'&&!province?'Choose a province to see local vacancies.':'No listings match these filters. Try another keyword, location or experience setting.','empty-state'));
+  for(const j of shown){
+    const a=el('article',undefined,'job');const fit=assessClient(j);
+    a.append(el('h2',j.title),el('p',j.company+' · '+(j.location||'Location unspecified'),'company'));if(!ids.has(jobKey(j)))a.append(el('p','Archived locally — not in the current feed; availability unknown.','status'));
+    const locLabel=({remote_worldwide_explicit:'Worldwide remote — verify terms with employer',remote_spain_explicit:'Remote from Spain — verify full posting',spain_location_check_remote:'Spain location — remote status unverified',remote_scope_unverified:'Remote scope ambiguous — Spain eligibility unverified',location_unverified:'Work location/eligibility unverified'})[j.location_status]||'Eligibility unverified';
+    const scope=remoteScope(j);a.append(el('p',({worldwide:'Worldwide remote — confirm restrictions',spain:'Spain remote — confirm restrictions',eu:'Regional remote — country eligibility unverified',country:'Country-specific remote — verify eligibility',ambiguous:'Remote scope unclear',hybrid:'Hybrid',onsite:'On-site'})[scope.scope]||locLabel,'location'));if(scope.restrictions.length)a.append(el('p','Location / time-zone signals: '+scope.restrictions.join(' · '),'status'));a.append(el('p','First discovered: '+(dateValue(j.first_seen_utc)!==null?new Date(j.first_seen_utc).toLocaleDateString():'Unknown')+' · Published: '+(dateValue(j.published_utc)!==null?new Date(j.published_utc).toLocaleDateString():'Unknown'),'status'));const actions=el('div',undefined,'job-actions');for(const [value,label] of [['saved','Save'],['applied','Applied'],['dismissed','Dismiss']]){const b=el('button',saved[jobKey(j)]===value?label+' ✓':label);b.type='button';b.setAttribute('aria-pressed',String(saved[jobKey(j)]===value));b.addEventListener('click',()=>setJob(j,value));actions.append(b);}a.append(actions);
+    a.append(el('p',(fit.status==='excluded'?'Excluded by default: ':'Needs review: ')+fit.reason,'status'));
+    a.append(el('p',j.employment_terms||'Compensation and contract type: not independently verified.','muted'));
+    if(matching){const m=ranked.get(j);a.append(el('p',m.score===null?'Match not assessable':m.score+'% profile match','match-score'));a.append(el('p',m.coverage+'% evidence coverage'+(m.coverage<50?' · limited evidence':''),'match-coverage'));a.append(el('p','Matched skills: '+([...m.matched,...m.extra].join(', ')||'None identified'),'status'));a.append(el('p','Listing keywords: '+(m.keywords.join(', ')||'None identified'),'match-keywords'));const detail=el('details');detail.append(el('summary','Score breakdown and gaps'),el('p',m.parts.join(' · '),'status'),el('p','Not assessable: '+(m.missing.join(', ')||'None'),'status'),el('p','Potential gaps: '+(m.gaps.join(' · ')||'None identified from assessable criteria'),'status'),el('p',m.notes.join(' · '),'status'));a.append(detail);}
+    const desc=String(j.description_excerpt||'');a.append(el('p',desc.slice(0,320)+(desc.length>320?'…':'')));
+    const link=el('a','View employer posting ↗','apply');link.href=validUrl(j.url)?j.url:'#';link.target='_blank';link.rel='noopener noreferrer';a.append(link);
+    if(j.published_emails?.length)a.append(el('p','Email found in posting (not verified for CV applications): '+j.published_emails.join(', '),'status'));
+    root.append(a);
+  }
+}
+function search(){visibleCount=PAGE_SIZE;render();}
+$('load-more').addEventListener('click',()=>{visibleCount+=PAGE_SIZE;render()});
+$('search').addEventListener('click',search);
+for(const field of ['junior','province','email','job-view','freshness'])$(field).addEventListener('change',search);
+$('location').addEventListener('change',()=>{$('provinceWrap').hidden=$('location').value!=='province';search()});
+$('query').addEventListener('keydown',e=>{if(e.key==='Enter')search()});fetch('../live-jobs.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error(`HTTP ${r.status}`);return r.json()}).then(j=>{if(!Array.isArray(j.jobs))throw Error('Invalid feed');feed=j;render()}).catch(e=>{$('status').textContent='The live feed has not been published yet or is temporarily unavailable.';$('results').append(el('p','Live listings are unavailable. Your saved and applied vacancies remain accessible through My activity.','empty-state'))});
+
+</script>
+</body>
+</html>

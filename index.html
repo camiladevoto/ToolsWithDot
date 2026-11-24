@@ -164,17 +164,18 @@ if (typeof brand.animate === 'function' && !motionPreference.matches && window.s
   brand.style.position = 'relative';
   brand.style.zIndex = '2';
 
+  const logoDuration = 1500;
   const logo = brand.animate([
     { transform: `${centered} scale(${scale}) rotateY(0deg)` },
-    { transform: `${centered} scale(${scale}) rotateY(360deg)`, offset: .58 },
+    { transform: `${centered} scale(${scale}) rotateY(360deg)`, offset: .7 },
     { transform: 'translate(0, 0) scale(1) rotateY(360deg)' }
-  ], { duration: 900, easing: 'ease-in-out' });
+  ], { duration: logoDuration, easing: 'ease-in-out' });
 
   const lines = [...document.querySelectorAll('#hero-title > *')].map((line, index) =>
     line.animate([
       { transform: 'translateX(-48px)', opacity: 0 },
       { transform: 'translateX(0)', opacity: 1 }
-    ], { delay: 900 + index * 160, duration: 480, easing: 'ease-out', fill: 'backwards' })
+    ], { delay: logoDuration + index * 160, duration: 480, easing: 'ease-out', fill: 'backwards' })
   );
 
   function finishIntro() {

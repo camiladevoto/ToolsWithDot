@@ -290,14 +290,16 @@ const languageGroups={'English':['english','ingles'],'Spanish':['spanish','espan
 const stop=new Set('about above across after also among and are based been before being both can company could each employer experience first from have help into job join more must our over people position role team than that their them then there these they this those through time using very want were what when where which while will with work working would years your para como esta este desde sobre entre somos equipo puesto trabajo empresa experiencia con los las del una que por'.split(' '));
 function extract(j,p){
  const text=[j.title,j.matching_text||j.description_excerpt||''].join(' ');
- const skills=Object.entries(skillGroups).filter(([k,v])=>[k,...v].some(t=>contains(text,t))).map(([k])=>k);
+ const qualificationText=j.requirements_text||text;
+ const skills=Object.entries(skillGroups).filter(([k,v])=>[k,...v].some(t=>contains(qualificationText,t))).map(([k])=>k);
+ const preferred=Object.entries(skillGroups).filter(([k,v])=>[k,...v].some(t=>contains(j.preferred_text||'',t))).map(([k])=>k);
  const matched=skills.filter(k=>p.skills.some(s=>[k,...skillGroups[k]].some(t=>canonical(t)===s)));
  const extra=p.skills.filter(s=>contains(text,s)&&!matched.some(k=>[k,...skillGroups[k]].some(t=>canonical(t)===s)));
  const tokens=canonical(text).split(' ').filter(t=>t.length>=4&&!stop.has(t)&&!/\d/.test(t));const freq=new Map();for(const t of tokens)freq.set(t,(freq.get(t)||0)+1);
  const keywords=[...new Set([...skills,...extra,...[...freq].sort((a,b)=>b[1]-a[1]).slice(0,10).map(x=>x[0])])];
- const langText=fold(text);const languages=Object.entries(languageGroups).filter(([k,v])=>v.some(t=>{const e=t;return new RegExp('\\b(?:fluent|fluency|proficiency|proficient|native|business level|professional level|advanced|required|fluido|fluidez|nivel avanzado|dominio)\\s+(?:in\\s+|de\\s+)?'+e+'\\b|\\b'+e+'\\s+(?:language\\s+)?(?:fluency|proficiency|required|is required|is mandatory|c1|c2|b2)\\b','i').test(langText)})).map(([k])=>k);
+ const langText=fold(qualificationText);const languages=Object.entries(languageGroups).filter(([k,v])=>v.some(t=>{const e=t;return new RegExp('\\b(?:fluent|fluency|proficiency|proficient|native|business level|professional level|advanced|required|fluido|fluidez|nivel avanzado|dominio)\\s+(?:in\\s+|de\\s+)?'+e+'\\b|\\b'+e+'\\s+(?:language\\s+)?(?:fluency|proficiency|required|is required|is mandatory|c1|c2|b2)\\b','i').test(langText)})).map(([k])=>k);
  const years=[...langText.matchAll(/\b(\d{1,2})(?:\s*[-–]\s*\d{1,2})?\s*\+?\s*(?:years?|anos)\s+(?:of\s+|de\s+)?(?:relevant\s+|professional\s+|prior\s+|work\s+)?(?:experience|experiencia)\b/g)].map(m=>+m[1]);
- return {skills,matched,extra,keywords,languages,years:years.length?Math.max(...years):null};
+ return {skills,matched,extra,keywords,languages,preferred,requirementsFound:!!j.requirements_text,years:years.length?Math.max(...years):null};
 }
 const defaults=[30,25,20,15,10];
 function weights(){const a=defaults.map((_,i)=>Math.max(0,Math.min(100,Number($('weight-'+i).value)||0)));const total=a.reduce((x,y)=>x+y,0);return total?a.map(x=>100*x/total):defaults;}
@@ -336,18 +338,18 @@ function rank(j,p,loc){
  const x=extract(j,p), parts=[],notes=[],gaps=[],missing=[];let points=0,known=0;const wts=weights();
  function add(label,w,value){w=wts[[30,25,20,15,10].indexOf(w)];parts.push(label+': '+(value===null?'not assessable':Math.round(value*100)+'%'));if(value!==null){points+=w*value;known+=w;}else if(w>0)missing.push(label);}
  add('Skills',30,x.skills.length&&p.skills.length?x.matched.length/x.skills.length:null);
- if(!x.skills.length)notes.push('No recognised skill requirements found in listing text.');else if(!p.skills.length)notes.push('Add your skills to assess this criterion.');if(x.skills.length&&p.skills.length)gaps.push(...x.skills.filter(k=>!x.matched.includes(k)).map(k=>'Skill mentioned: '+k));
+ if(!x.skills.length)notes.push('No recognised skill requirements found in listing text.');else if(!p.skills.length)notes.push('Add your skills to assess this criterion.');if(x.skills.length&&p.skills.length)gaps.push(...x.skills.filter(k=>!x.matched.includes(k)).map(k=>(x.requirementsFound?'Qualification signal (verify): ':'Skill mentioned: ')+k));
  add('Experience',25,x.years!==null&&p.years!==null?Math.min(1,p.years/Math.max(1,x.years)):null);
  if(x.years===null)notes.push('No explicit years-of-experience requirement detected.');else if(p.years===null)notes.push('Add your relevant years of experience.');if(x.years!==null&&p.years!==null&&p.years<x.years)gaps.push('Posting mentions '+x.years+' years; verify whether required');
- const verified=j.location_status==='remote_worldwide_explicit'||(loc==='remote'&&j.location_status==='remote_spain_explicit')||(['spain','province'].includes(loc)&&['remote_spain_explicit','spain_location_check_remote'].includes(j.location_status));
+ const scope=remoteScope(j);const verified=(scope.scope==='worldwide'||(loc==='remote'&&scope.scope==='spain')||(['spain','province'].includes(loc)&&['remote_spain_explicit','spain_location_check_remote'].includes(j.location_status)))&&!scope.restrictions.length;
  add('Location',20,verified?1:null);
  if(!verified)notes.push('Location eligibility needs confirmation');
- const roles=p.roles.filter(t=>contains(j.title,t));if(!p.roles.length)notes.push('Add preferred roles to assess title fit.');
- add('Preferred roles',15,p.roles.length?(roles.length?1:0):null);
+ const roles=p.roles.filter(t=>contains(j.title,t));const roleTokens=s=>canonical(s).split(' ').filter(t=>t.length>2&&!['junior','senior','associate','specialist','assistant','the','and'].includes(t));const jt=new Set(roleTokens(j.title));const roleFit=p.roles.reduce((best,t)=>{const a=roleTokens(t);return Math.max(best,a.length?a.filter(x=>jt.has(x)).length/a.length:0)},0);if(!p.roles.length)notes.push('Add preferred roles to assess title fit.');
+ add('Preferred roles',15,p.roles.length?(roles.length?1:roleFit):null);
  const langs=x.languages.filter(k=>p.languages.some(s=>[k,...languageGroups[k]].some(t=>canonical(t)===s)));
  add('Languages',10,x.languages.length&&p.languages.length?langs.length/x.languages.length:null);
  if(!x.languages.length)notes.push('No explicit language requirement detected.');else if(!p.languages.length)notes.push('Add your working languages.');if(x.languages.length&&p.languages.length)gaps.push(...x.languages.filter(k=>!langs.includes(k)).map(k=>'Language requirement signal: '+k));
- if(!j.matching_text||j.matching_text_truncated)notes.push('Incomplete listing text; review original posting');
+ if(!j.matching_text||j.matching_text_truncated)notes.push('Incomplete listing text; review original posting');if(!x.requirementsFound)notes.push('No distinct qualification section detected; skill mentions may not be requirements.');if(x.preferred.length)notes.push('Preferred skill signals (not mandatory): '+x.preferred.join(', '));
  const score=known?Math.round(100*points/known):null;const coverage=Math.round(known);return {...x,score,coverage,rankScore:score===null?-1:score*(0.4+0.6*known/100),parts,notes,gaps,missing};
 }
 $('match-run').addEventListener('click',()=>{const p=profile();if(!p.skills.length&&!p.roles.length&&p.years===null&&!p.languages.length){$('match-skills').focus();return;}matching=true;persistProfile();search()});

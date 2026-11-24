@@ -124,12 +124,13 @@ button:hover { background: #ff7467; }
 .site-head a:focus-visible { outline-color: #fffdf8; }
 .tool-brands{display:flex;align-items:center;gap:24px;flex-wrap:wrap}.sibling-brand{color:#fffdf8;font-weight:850;font-size:1.55rem;letter-spacing:-.035em;text-decoration:none;white-space:nowrap}.sibling-brand span{color:#ff38b8}.sibling-brand:hover{color:#ff38b8}.nav:has(.brand[style*="z-index"]) .sibling-brand{visibility:hidden}@media(max-width:640px){.tool-brands{gap:12px}.sibling-brand{font-size:1.2rem}.tool-brands .brand{font-size:1.2rem}}
 .tool-brands{align-items:baseline}.tool-brands .brand,.sibling-brand{font-size:1.55rem;font-weight:850;line-height:1.2;letter-spacing:-.035em}.sibling-brand span{display:inline-block;width:.14em;height:.14em;margin-left:.09em;vertical-align:.055em;border-radius:50%;background:#ff38b8;outline:.025em solid var(--border)}@media(max-width:640px){.tool-brands .brand,.sibling-brand{font-size:1.2rem}}
+.tool-brands{gap:18px;align-items:center;flex-wrap:nowrap}.tool-brands .brand,.sibling-brand{display:inline-flex;align-items:baseline;line-height:1.15}.tool-brands .brand span,.sibling-brand span{flex:none;align-self:flex-end;margin-bottom:.11em;margin-left:.09em;vertical-align:initial}.sibling-brand{border-left:1px solid #66636e;padding-left:18px;font-weight:700;font-size:1.25rem;color:#fffdf8}.sibling-brand:hover{color:#ff38b8}@media(max-width:640px){.tool-brands{gap:10px}.sibling-brand{padding-left:10px;font-size:1rem}.tool-brands .brand{font-size:1.2rem}}
 </style>
 </head>
 <body>
 <header class="site-head">
   <nav class="wrap nav" aria-label="Main navigation">
-    <div class="tool-brands"><a href="./" class="brand" aria-label="JobMatch home">JobMatch<span aria-hidden="true"></span></a><a href="../cvfit/" class="sibling-brand">CVFit<span aria-hidden="true"></span></a></div>
+    <div class="tool-brands"><a href="./" class="brand" aria-current="page" aria-label="JobMatch home">JobMatch<span aria-hidden="true"></span></a><a href="../cvfit/" class="sibling-brand" aria-label="CVFit">CVFit<span aria-hidden="true"></span></a></div>
     <div class="nav-right">
       <a href="#search-jobs">Find jobs</a>
       

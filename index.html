@@ -28,6 +28,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 }
 [hidden] { display: none !important; }
 .wrap { width: min(1120px, calc(100% - 48px)); margin-inline: auto; }
+.intro-backdrop { position: fixed; inset: 0; z-index: 1; background: var(--navy); pointer-events: none; }
 .site-head { background: var(--navy); color: #f9fafc; border-bottom: 1px solid #ffffff26; }
 .nav { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
 .brand { font-weight: 850; font-size: 1.55rem; letter-spacing: -.06em; text-decoration: none; }
@@ -167,6 +168,18 @@ if (typeof brand.animate === 'function' && !motionPreference.matches && window.s
   const holdDuration = 1500;
   const spinDuration = 1050;
   const logoDuration = holdDuration + spinDuration + 450;
+  const backdrop = document.createElement('div');
+  backdrop.setAttribute('aria-hidden', 'true');
+  backdrop.className = 'intro-backdrop';
+  document.body.append(backdrop);
+  const reveal = backdrop.animate([{ opacity: 1 }, { opacity: 0 }], {
+    delay: holdDuration + spinDuration,
+    duration: logoDuration - holdDuration - spinDuration,
+    easing: 'ease-in-out',
+    fill: 'both'
+  });
+  reveal.onfinish = () => backdrop.remove();
+
   const logo = brand.animate([
     { transform: `${centered} scale(${scale}) rotateY(0deg)` },
     { transform: `${centered} scale(${scale}) rotateY(0deg)`, offset: holdDuration / logoDuration, easing: 'ease-in-out' },
@@ -185,17 +198,21 @@ if (typeof brand.animate === 'function' && !motionPreference.matches && window.s
     brand.style.removeProperty('position');
     brand.style.removeProperty('z-index');
     window.removeEventListener('resize', cancelIntro);
+    document.removeEventListener('focusin', cancelIntro);
     motionPreference.removeEventListener('change', cancelIntro);
   }
 
   function cancelIntro() {
     logo.cancel();
+    reveal.cancel();
+    backdrop.remove();
     lines.forEach(line => line.cancel());
     finishIntro();
   }
 
   lines[lines.length - 1].onfinish = finishIntro;
   window.addEventListener('resize', cancelIntro, { once: true });
+  document.addEventListener('focusin', cancelIntro, { once: true });
   motionPreference.addEventListener('change', cancelIntro);
 }
 

@@ -158,7 +158,7 @@ def normalise(provider, company, j):
         jid=str(j.get('id',''))
     else:
         title=clean(j.get('text')); loc=clean((j.get('categories') or {}).get('location',''))
-        desc=clean(' '.join([str(j.get('descriptionPlain','')),str(j.get('additionalPlain','')),str(j.get('description',''))]))
+        desc=clean(' '.join([str(j.get('descriptionPlain','')),str(j.get('additionalPlain','')),str(j.get('description','')), ' '.join(str(x.get('text',''))+' '+str(x.get('content','')) for x in (j.get('lists') or []) if isinstance(x,dict))]))
         url=j.get('hostedUrl') or j.get('applyUrl') or ''
         jid=str(j.get('id',''))
     workplace = (j.get('workplaceType','') if provider == 'lever' else '') or ''
@@ -171,7 +171,7 @@ def normalise(provider, company, j):
         fit_status,fit_reason='excluded','Unpaid work indicated in posting'
     return {'id':f'{provider}:{company}:{jid}', 'company':company, 'title':title, 'location':loc,
             'location_status':location_status,'provinces':provinces,'workplace_type':workplace,'categories':groups,'early_career_status':fit_status,'early_career_reason':fit_reason,'pay_status':pay_indicator(title,desc),'seniority_hint':('senior_or_lead' if re.search(r'\b(?:senior|sr\.?|lead|head|director|manager|principal|staff)\b',title,re.I) else 'unspecified'),
-            'url':url,'description_excerpt':desc[:650],
+            'url':url,'description_excerpt':desc[:650], 'matching_text':desc[:20000], 'matching_text_truncated':len(desc)>20000,
             'published_emails':application_emails(desc),
             'email_status':'found_in_posting_not_application_verified' if application_emails(desc) else 'none_found',
             'source':provider, 'last_checked_utc':dt.datetime.now(dt.timezone.utc).isoformat(timespec='seconds')}

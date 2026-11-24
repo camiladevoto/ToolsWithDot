@@ -1,52 +1,8 @@
 {
-  "updated_utc": "2026-11-24T08:45:15+00:00",
-  "sources_checked": 17,
-  "source_errors": 0,
+  "updated_utc": "2026-11-24T16:33:58+00:00",
+  "sources_checked": 24,
+  "source_errors": 1,
   "jobs": [
-    {
-      "id": "lever:360Learning:9d1ee4da-6fba-426b-bc40-71e87b22bb8f",
-      "company": "360Learning",
-      "title": "Customer Success Partner, Enterprise",
-      "location": "Canada, Remote",
-      "location_status": "remote_scope_unverified",
-      "provinces": [],
-      "workplace_type": "remote",
-      "categories": [
-        "customer_operations"
-      ],
-      "early_career_status": "worth_checking",
-      "early_career_reason": "Seniority not established from available information",
-      "pay_status": "not_verified",
-      "seniority_hint": "unspecified",
-      "url": "https://jobs.lever.co/360learning/9d1ee4da-6fba-426b-bc40-71e87b22bb8f",
-      "description_excerpt": "Introduction to the Team & Role As a Customer Success Partner, you will partner with our clients to achieve their digital training strategy through the 360Learning platform. The relationship you create with your customers will allow you to map your customer’s key business objectives, audit and analyze platform usage to identify opportunities, review benchmarks and best practices, create action plans to capitalize on those opportunities. You will ensure the renewal of contracts by helping our customers achieve their desired outcomes, which in many cases includes coordinating different resources to address customer requirements (technical, educ",
-      "published_emails": [],
-      "email_status": "none_found",
-      "source": "lever",
-      "last_checked_utc": "2026-11-24T08:45:06+00:00"
-    },
-    {
-      "id": "lever:360Learning:ce475b7e-540a-4b5e-8035-795c89b20926",
-      "company": "360Learning",
-      "title": "Strategic Customer Success Partner Coach - France",
-      "location": "Paris, Remote",
-      "location_status": "remote_scope_unverified",
-      "provinces": [],
-      "workplace_type": "remote",
-      "categories": [
-        "customer_operations"
-      ],
-      "early_career_status": "worth_checking",
-      "early_career_reason": "Seniority not established from available information",
-      "pay_status": "not_verified",
-      "seniority_hint": "unspecified",
-      "url": "https://jobs.lever.co/360learning/ce475b7e-540a-4b5e-8035-795c89b20926",
-      "description_excerpt": "Introduction to the Team & Role As a Client Success Partner Coach (or CSP Coach), you will own the most critical customers in France and support, mentor and guide the CSPs that manage them. The Client Success Partners are guiding the learning and development strategies of our customers through the 360Learning platform. They develop a strong relationship with each client and make sure our customers are satisfied, our contracts are renewed and our customers expand. As a Coach, your role is fundamental for the team: you are responsible for the development of every team member and the achievement of renewal and expansion of clients, for the large",
-      "published_emails": [],
-      "email_status": "none_found",
-      "source": "lever",
-      "last_checked_utc": "2026-11-24T08:45:06+00:00"
-    },
     {
       "id": "greenhouse:Berlin Brands Group:6180324004",
       "company": "Berlin Brands Group",
@@ -67,7 +23,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-24T08:45:01+00:00"
+      "last_checked_utc": "2026-11-24T16:33:45+00:00"
     },
     {
       "id": "greenhouse:Berlin Brands Group:6248387004",
@@ -89,7 +45,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-24T08:45:01+00:00"
+      "last_checked_utc": "2026-11-24T16:33:45+00:00"
     },
     {
       "id": "greenhouse:Berlin Brands Group:6256096004",
@@ -111,7 +67,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-24T08:45:01+00:00"
+      "last_checked_utc": "2026-11-24T16:33:45+00:00"
     },
     {
       "id": "greenhouse:Berlin Brands Group:6256121004",
@@ -133,7 +89,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-24T08:45:01+00:00"
+      "last_checked_utc": "2026-11-24T16:33:45+00:00"
     },
     {
       "id": "greenhouse:Berlin Brands Group:6223013004",
@@ -155,7 +111,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-24T08:45:01+00:00"
+      "last_checked_utc": "2026-11-24T16:33:45+00:00"
     },
     {
       "id": "greenhouse:Berlin Brands Group:6254044004",
@@ -177,7 +133,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-24T08:45:01+00:00"
+      "last_checked_utc": "2026-11-24T16:33:45+00:00"
     },
     {
       "id": "greenhouse:Berlin Brands Group:6256087004",
@@ -199,7 +155,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-24T08:45:01+00:00"
+      "last_checked_utc": "2026-11-24T16:33:45+00:00"
     },
     {
       "id": "greenhouse:Berlin Brands Group:6256129004",
@@ -221,7 +177,51 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-24T08:45:01+00:00"
+      "last_checked_utc": "2026-11-24T16:33:45+00:00"
+    },
+    {
+      "id": "greenhouse:Cabify:8918217002",
+      "company": "Cabify",
+      "title": "CRM Specialist",
+      "location": "Bogotá",
+      "location_status": "location_unverified",
+      "provinces": [],
+      "workplace_type": "",
+      "categories": [
+        "sales_operations"
+      ],
+      "early_career_status": "worth_checking",
+      "early_career_reason": "Early-career title; full requirements not verified",
+      "pay_status": "not_verified",
+      "seniority_hint": "unspecified",
+      "url": "https://job-boards.greenhouse.io/cabify/jobs/8918217002",
+      "description_excerpt": "Marketing CRM Strategist Specialist En Cabify creemos que una nueva forma de movilidad urbana es posible. Un ecosistema que permita tener menos coches privados en las calles, vehículos más accesibles y rutas más eficientes. Ciudades en las que sus calles estén pensadas por y para las personas, y no para los coches. Productos y servicios que, mediante alternativas de movilidad accesibles y eficientes que aporten valor a las personas y a las ciudades donde operamos. Y no solo es que creamos en ello, sino que trabajamos la magia para hacerlo posible. Si compartes con nosotros el mismo propósito, sigue leyendo porque… ¡Este es tu sitio! Equipo de",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "greenhouse",
+      "last_checked_utc": "2026-11-24T16:33:51+00:00"
+    },
+    {
+      "id": "greenhouse:Cabify:8937520002",
+      "company": "Cabify",
+      "title": "Practicante de Ingeniería Industrial – Operaciones y Customer Support",
+      "location": "Bogotá",
+      "location_status": "location_unverified",
+      "provinces": [],
+      "workplace_type": "",
+      "categories": [
+        "customer_operations"
+      ],
+      "early_career_status": "worth_checking",
+      "early_career_reason": "Early-career title; full requirements not verified",
+      "pay_status": "not_verified",
+      "seniority_hint": "unspecified",
+      "url": "https://job-boards.greenhouse.io/cabify/jobs/8937520002",
+      "description_excerpt": "¿Quieres cambiar el mundo? Eso es lo que hacemos en Cabify. Nuestro objetivo es hacer de las ciudades mejores lugares para vivir, mejorando la movilidad de las personas que viven en ellas, conectando a pasajeros y conductores con tan sólo pulsar un botón. Es posible que algún día las ciudades sean lugares donde nadie necesite un coche privado, pero aún nos queda un largo camino por recorrer… ¿nos acompañas? Fundada en 2011, nos hemos convertido en el primer ‘unicornio’ español. Nuestra sede central está en Madrid pero actualmente nos encontramos en 38 ciudades de España y Latinoamérica. Y cada mes que pasa más gente se une a nuestro equipo in",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "greenhouse",
+      "last_checked_utc": "2026-11-24T16:33:51+00:00"
     },
     {
       "id": "greenhouse:Duetto:8120547",
@@ -243,7 +243,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-24T08:45:05+00:00"
+      "last_checked_utc": "2026-11-24T16:33:48+00:00"
     },
     {
       "id": "lever:Emburse:90653b75-e196-435d-8dfc-3b95568ed15a",
@@ -265,7 +265,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "lever",
-      "last_checked_utc": "2026-11-24T08:45:14+00:00"
+      "last_checked_utc": "2026-11-24T16:33:57+00:00"
     },
     {
       "id": "lever:Emburse:c8965c6d-4c42-4df4-8162-42a6287ff253",
@@ -287,7 +287,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "lever",
-      "last_checked_utc": "2026-11-24T08:45:14+00:00"
+      "last_checked_utc": "2026-11-24T16:33:57+00:00"
     },
     {
       "id": "lever:Emburse:47822d8f-21fb-4ae3-8dc2-40e4b5e24bab",
@@ -309,7 +309,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "lever",
-      "last_checked_utc": "2026-11-24T08:45:14+00:00"
+      "last_checked_utc": "2026-11-24T16:33:57+00:00"
     },
     {
       "id": "greenhouse:ExtraHop:6150808004",
@@ -331,7 +331,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-24T08:45:04+00:00"
+      "last_checked_utc": "2026-11-24T16:33:47+00:00"
     },
     {
       "id": "greenhouse:ExtraHop:6241540004",
@@ -353,7 +353,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-24T08:45:04+00:00"
+      "last_checked_utc": "2026-11-24T16:33:47+00:00"
     },
     {
       "id": "greenhouse:ExtraHop:6251522004",
@@ -375,7 +375,595 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-24T08:45:04+00:00"
+      "last_checked_utc": "2026-11-24T16:33:47+00:00"
+    },
+    {
+      "id": "greenhouse:Fever:5016468101",
+      "company": "Fever",
+      "title": "Accounts Payable Analyst",
+      "location": "Madrid",
+      "location_status": "spain_location_check_remote",
+      "provinces": [
+        "Madrid"
+      ],
+      "workplace_type": "",
+      "categories": [
+        "finance_support"
+      ],
+      "early_career_status": "worth_checking",
+      "early_career_reason": "Posting mentions 3 years of experience; verify requirements",
+      "pay_status": "not_verified",
+      "seniority_hint": "unspecified",
+      "url": "https://job-boards.eu.greenhouse.io/feverup/jobs/5016468101",
+      "description_excerpt": "Hey there! We’re Fever , the world’s leading tech platform for culture and live entertainment. Our mission? To democratize access to culture and entertainment. With our proprietary cutting-edge technology and data-driven approach, we’re revolutionizing the way people engage with live entertainment. Every month, our platform inspires over 300 million people in +55 countries (and counting) to discover unforgettable experiences while also empowering event creators with our data and technology, helping them scale, innovate, and enhance their events to reach new audiences. Our results? We’ve teamed up with major industry leaders like Netflix, F.C.",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "greenhouse",
+      "last_checked_utc": "2026-11-24T16:33:53+00:00"
+    },
+    {
+      "id": "greenhouse:Fever:4776396101",
+      "company": "Fever",
+      "title": "Administrative & Operations Assistant - DACH",
+      "location": "Spain",
+      "location_status": "spain_location_check_remote",
+      "provinces": [],
+      "workplace_type": "",
+      "categories": [
+        "business_operations"
+      ],
+      "early_career_status": "worth_checking",
+      "early_career_reason": "Early-career title; full requirements not verified",
+      "pay_status": "not_verified",
+      "seniority_hint": "unspecified",
+      "url": "https://job-boards.eu.greenhouse.io/feverup/jobs/4776396101",
+      "description_excerpt": "Hey there! We’re Fever , the world’s leading tech platform for culture and live entertainment. Our mission? To democratize access to culture and entertainment. With our proprietary cutting-edge technology and data-driven approach, we’re revolutionizing the way people engage with live entertainment. Every month, our platform inspires over 300 million people in +55 countries (and counting) to discover unforgettable experiences while also empowering event creators with our data and technology, helping them scale, innovate, and enhance their events to reach new audiences. Our results? We’ve teamed up with major industry leaders like Netflix, F.C.",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "greenhouse",
+      "last_checked_utc": "2026-11-24T16:33:53+00:00"
+    },
+    {
+      "id": "greenhouse:Fever:5008315101",
+      "company": "Fever",
+      "title": "Administrative & Operations Assistant - Japan",
+      "location": "Tokyo",
+      "location_status": "location_unverified",
+      "provinces": [],
+      "workplace_type": "",
+      "categories": [
+        "business_operations"
+      ],
+      "early_career_status": "worth_checking",
+      "early_career_reason": "Early-career title; full requirements not verified",
+      "pay_status": "not_verified",
+      "seniority_hint": "unspecified",
+      "url": "https://job-boards.eu.greenhouse.io/feverup/jobs/5008315101",
+      "description_excerpt": "Hey there! We’re Fever , the world’s leading tech platform for culture and live entertainment. Our mission? To democratize access to culture and entertainment. With our proprietary cutting-edge technology and data-driven approach, we’re revolutionizing the way people engage with live entertainment. Every month, our platform inspires over 300 million people in +55 countries (and counting) to discover unforgettable experiences while also empowering event creators with our data and technology, helping them scale, innovate, and enhance their events to reach new audiences. Our results? We’ve teamed up with major industry leaders like Netflix, F.C.",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "greenhouse",
+      "last_checked_utc": "2026-11-24T16:33:53+00:00"
+    },
+    {
+      "id": "greenhouse:Fever:5029054101",
+      "company": "Fever",
+      "title": "Administrative & Operations Assistant - Northern Europe",
+      "location": "Madrid",
+      "location_status": "spain_location_check_remote",
+      "provinces": [
+        "Madrid"
+      ],
+      "workplace_type": "",
+      "categories": [
+        "business_operations"
+      ],
+      "early_career_status": "worth_checking",
+      "early_career_reason": "Early-career title; full requirements not verified",
+      "pay_status": "not_verified",
+      "seniority_hint": "unspecified",
+      "url": "https://job-boards.eu.greenhouse.io/feverup/jobs/5029054101",
+      "description_excerpt": "Hey there! We’re Fever , the world’s leading tech platform for culture and live entertainment. Our mission? To democratize access to culture and entertainment. With our proprietary cutting-edge technology and data-driven approach, we’re revolutionizing the way people engage with live entertainment. Every month, our platform inspires over 300 million people in +55 countries (and counting) to discover unforgettable experiences while also empowering event creators with our data and technology, helping them scale, innovate, and enhance their events to reach new audiences. Our results? We’ve teamed up with major industry leaders like Netflix, F.C.",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "greenhouse",
+      "last_checked_utc": "2026-11-24T16:33:53+00:00"
+    },
+    {
+      "id": "greenhouse:Fever:5033682101",
+      "company": "Fever",
+      "title": "Billing Specialist",
+      "location": "Madrid",
+      "location_status": "spain_location_check_remote",
+      "provinces": [
+        "Madrid"
+      ],
+      "workplace_type": "",
+      "categories": [
+        "finance_support"
+      ],
+      "early_career_status": "worth_checking",
+      "early_career_reason": "Early-career title; full requirements not verified",
+      "pay_status": "not_verified",
+      "seniority_hint": "unspecified",
+      "url": "https://job-boards.eu.greenhouse.io/feverup/jobs/5033682101",
+      "description_excerpt": "Hey there! We’re Fever , the world’s leading tech platform for culture and live entertainment. Our mission? To democratize access to culture and entertainment. With our proprietary cutting-edge technology and data-driven approach, we’re revolutionizing the way people engage with live entertainment. Every month, our platform inspires over 300 million people in +55 countries (and counting) to discover unforgettable experiences while also empowering event creators with our data and technology, helping them scale, innovate, and enhance their events to reach new audiences. Our results? We’ve teamed up with major industry leaders like Netflix, F.C.",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "greenhouse",
+      "last_checked_utc": "2026-11-24T16:33:53+00:00"
+    },
+    {
+      "id": "greenhouse:Fever:5036103101",
+      "company": "Fever",
+      "title": "Business Operations Associate",
+      "location": "Madrid",
+      "location_status": "spain_location_check_remote",
+      "provinces": [
+        "Madrid"
+      ],
+      "workplace_type": "",
+      "categories": [
+        "business_operations"
+      ],
+      "early_career_status": "worth_checking",
+      "early_career_reason": "Posting mentions 3 years of experience; verify requirements",
+      "pay_status": "not_verified",
+      "seniority_hint": "unspecified",
+      "url": "https://job-boards.eu.greenhouse.io/feverup/jobs/5036103101",
+      "description_excerpt": "Hey there! We’re Fever , the world’s leading tech platform for culture and live entertainment. Our mission? To democratize access to culture and entertainment. With our proprietary cutting-edge technology and data-driven approach, we’re revolutionizing the way people engage with live entertainment. Every month, our platform inspires over 300 million people in +55 countries (and counting) to discover unforgettable experiences while also empowering event creators with our data and technology, helping them scale, innovate, and enhance their events to reach new audiences. Our results? We’ve teamed up with major industry leaders like Netflix, F.C.",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "greenhouse",
+      "last_checked_utc": "2026-11-24T16:33:53+00:00"
+    },
+    {
+      "id": "greenhouse:Fever:5041591101",
+      "company": "Fever",
+      "title": "Business Operations Associate - M&A",
+      "location": "Madrid",
+      "location_status": "spain_location_check_remote",
+      "provinces": [
+        "Madrid"
+      ],
+      "workplace_type": "",
+      "categories": [
+        "business_operations"
+      ],
+      "early_career_status": "worth_checking",
+      "early_career_reason": "Posting mentions 3 years of experience; verify requirements",
+      "pay_status": "not_verified",
+      "seniority_hint": "unspecified",
+      "url": "https://job-boards.eu.greenhouse.io/feverup/jobs/5041591101",
+      "description_excerpt": "Hey there! We’re Fever , the world’s leading tech platform for culture and live entertainment. Our mission? To democratize access to culture and entertainment. With our proprietary cutting-edge technology and data-driven approach, we’re revolutionizing the way people engage with live entertainment. Every month, our platform inspires over 300 million people in +55 countries (and counting) to discover unforgettable experiences while also empowering event creators with our data and technology, helping them scale, innovate, and enhance their events to reach new audiences. Our results? We’ve teamed up with major industry leaders like Netflix, F.C.",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "greenhouse",
+      "last_checked_utc": "2026-11-24T16:33:53+00:00"
+    },
+    {
+      "id": "greenhouse:Fever:5017204101",
+      "company": "Fever",
+      "title": "Business Operations Manager",
+      "location": "Madrid",
+      "location_status": "spain_location_check_remote",
+      "provinces": [
+        "Madrid"
+      ],
+      "workplace_type": "",
+      "categories": [
+        "business_operations"
+      ],
+      "early_career_status": "excluded",
+      "early_career_reason": "Senior/management title",
+      "pay_status": "not_verified",
+      "seniority_hint": "senior_or_lead",
+      "url": "https://job-boards.eu.greenhouse.io/feverup/jobs/5017204101",
+      "description_excerpt": "Hey there! We’re Fever , the world’s leading tech platform for culture and live entertainment. Our mission? To democratize access to culture and entertainment. With our proprietary cutting-edge technology and data-driven approach, we’re revolutionizing the way people engage with live entertainment. Every month, our platform inspires over 300 million people in +55 countries (and counting) to discover unforgettable experiences while also empowering event creators with our data and technology, helping them scale, innovate, and enhance their events to reach new audiences. Our results? We’ve teamed up with major industry leaders like Netflix, F.C.",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "greenhouse",
+      "last_checked_utc": "2026-11-24T16:33:53+00:00"
+    },
+    {
+      "id": "greenhouse:Fever:5001018101",
+      "company": "Fever",
+      "title": "Business Operations Team Lead",
+      "location": "Los Angeles",
+      "location_status": "location_unverified",
+      "provinces": [],
+      "workplace_type": "",
+      "categories": [
+        "business_operations"
+      ],
+      "early_career_status": "excluded",
+      "early_career_reason": "Senior/management title",
+      "pay_status": "not_verified",
+      "seniority_hint": "senior_or_lead",
+      "url": "https://job-boards.eu.greenhouse.io/feverup/jobs/5001018101",
+      "description_excerpt": "Hey there! We’re Fever , the world’s leading tech platform for culture and live entertainment. Our mission? To democratize access to culture and entertainment. With our proprietary cutting-edge technology and data-driven approach, we’re revolutionizing the way people engage with live entertainment. Every month, our platform inspires over 300 million people in +55 countries (and counting) to discover unforgettable experiences while also empowering event creators with our data and technology, helping them scale, innovate, and enhance their events to reach new audiences. Our results? We’ve teamed up with major industry leaders like Netflix, F.C.",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "greenhouse",
+      "last_checked_utc": "2026-11-24T16:33:53+00:00"
+    },
+    {
+      "id": "greenhouse:Fever:4770862101",
+      "company": "Fever",
+      "title": "Business Support Coordinator",
+      "location": "Istanbul",
+      "location_status": "location_unverified",
+      "provinces": [],
+      "workplace_type": "",
+      "categories": [
+        "business_operations"
+      ],
+      "early_career_status": "worth_checking",
+      "early_career_reason": "Early-career title; full requirements not verified",
+      "pay_status": "not_verified",
+      "seniority_hint": "unspecified",
+      "url": "https://job-boards.eu.greenhouse.io/feverup/jobs/4770862101",
+      "description_excerpt": "Hey there! We’re Fever , the world’s leading tech platform for culture and live entertainment. Our mission? To democratize access to culture and entertainment. With our proprietary cutting-edge technology and data-driven approach, we’re revolutionizing the way people engage with live entertainment. Every month, our platform inspires over 300 million people in +55 countries (and counting) to discover unforgettable experiences while also empowering event creators with our data and technology, helping them scale, innovate, and enhance their events to reach new audiences. Our results? We’ve teamed up with major industry leaders like Netflix, F.C.",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "greenhouse",
+      "last_checked_utc": "2026-11-24T16:33:53+00:00"
+    },
+    {
+      "id": "greenhouse:Fever:5028892101",
+      "company": "Fever",
+      "title": "Customer Service Agent: Dutch (12:00 - 21:00)",
+      "location": "Remote Brazil",
+      "location_status": "remote_scope_unverified",
+      "provinces": [],
+      "workplace_type": "",
+      "categories": [
+        "customer_operations"
+      ],
+      "early_career_status": "worth_checking",
+      "early_career_reason": "Seniority not established from available information",
+      "pay_status": "not_verified",
+      "seniority_hint": "unspecified",
+      "url": "https://job-boards.eu.greenhouse.io/feverup/jobs/5028892101",
+      "description_excerpt": "Hey there! We’re Fever , the world’s leading tech platform for culture and live entertainment. Our mission? To democratize access to culture and entertainment. With our proprietary cutting-edge technology and data-driven approach, we’re revolutionizing the way people engage with live entertainment. Every month, our platform inspires over 300 million people in +55 countries (and counting) to discover unforgettable experiences while also empowering event creators with our data and technology, helping them scale, innovate, and enhance their events to reach new audiences. Our results? We’ve teamed up with major industry leaders like Netflix, F.C.",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "greenhouse",
+      "last_checked_utc": "2026-11-24T16:33:53+00:00"
+    },
+    {
+      "id": "greenhouse:Fever:4999331101",
+      "company": "Fever",
+      "title": "Customer Service Agent: French (12:00 - 21:00)",
+      "location": "Remote Brazil",
+      "location_status": "remote_scope_unverified",
+      "provinces": [],
+      "workplace_type": "",
+      "categories": [
+        "customer_operations"
+      ],
+      "early_career_status": "worth_checking",
+      "early_career_reason": "Seniority not established from available information",
+      "pay_status": "not_verified",
+      "seniority_hint": "unspecified",
+      "url": "https://job-boards.eu.greenhouse.io/feverup/jobs/4999331101",
+      "description_excerpt": "Hey there! We’re Fever , the world’s leading tech platform for culture and live entertainment. Our mission? To democratize access to culture and entertainment. With our proprietary cutting-edge technology and data-driven approach, we’re revolutionizing the way people engage with live entertainment. Every month, our platform inspires over 300 million people in +55 countries (and counting) to discover unforgettable experiences while also empowering event creators with our data and technology, helping them scale, innovate, and enhance their events to reach new audiences. Our results? We’ve teamed up with major industry leaders like Netflix, F.C.",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "greenhouse",
+      "last_checked_utc": "2026-11-24T16:33:53+00:00"
+    },
+    {
+      "id": "greenhouse:Fever:5009042101",
+      "company": "Fever",
+      "title": "Customer Service Agent: German (12:00 - 21:00)",
+      "location": "Remote Brazil",
+      "location_status": "remote_scope_unverified",
+      "provinces": [],
+      "workplace_type": "",
+      "categories": [
+        "customer_operations"
+      ],
+      "early_career_status": "worth_checking",
+      "early_career_reason": "Seniority not established from available information",
+      "pay_status": "not_verified",
+      "seniority_hint": "unspecified",
+      "url": "https://job-boards.eu.greenhouse.io/feverup/jobs/5009042101",
+      "description_excerpt": "Hey there! We’re Fever , the world’s leading tech platform for culture and live entertainment. Our mission? To democratize access to culture and entertainment. With our proprietary cutting-edge technology and data-driven approach, we’re revolutionizing the way people engage with live entertainment. Every month, our platform inspires over 300 million people in +55 countries (and counting) to discover unforgettable experiences while also empowering event creators with our data and technology, helping them scale, innovate, and enhance their events to reach new audiences. Our results? We’ve teamed up with major industry leaders like Netflix, F.C.",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "greenhouse",
+      "last_checked_utc": "2026-11-24T16:33:53+00:00"
+    },
+    {
+      "id": "greenhouse:Fever:5028954101",
+      "company": "Fever",
+      "title": "Customer Service Agent: German (5:00am - 14:00pm)",
+      "location": "Remote Brazil",
+      "location_status": "remote_scope_unverified",
+      "provinces": [],
+      "workplace_type": "",
+      "categories": [
+        "customer_operations"
+      ],
+      "early_career_status": "worth_checking",
+      "early_career_reason": "Seniority not established from available information",
+      "pay_status": "not_verified",
+      "seniority_hint": "unspecified",
+      "url": "https://job-boards.eu.greenhouse.io/feverup/jobs/5028954101",
+      "description_excerpt": "Hey there! We’re Fever , the world’s leading tech platform for culture and live entertainment. Our mission? To democratize access to culture and entertainment. With our proprietary cutting-edge technology and data-driven approach, we’re revolutionizing the way people engage with live entertainment. Every month, our platform inspires over 300 million people in +55 countries (and counting) to discover unforgettable experiences while also empowering event creators with our data and technology, helping them scale, innovate, and enhance their events to reach new audiences. Our results? We’ve teamed up with major industry leaders like Netflix, F.C.",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "greenhouse",
+      "last_checked_utc": "2026-11-24T16:33:53+00:00"
+    },
+    {
+      "id": "greenhouse:Fever:4999404101",
+      "company": "Fever",
+      "title": "Customer Service Agent: Italian (12:00 - 21:00)",
+      "location": "Remote Brazil",
+      "location_status": "remote_scope_unverified",
+      "provinces": [],
+      "workplace_type": "",
+      "categories": [
+        "customer_operations"
+      ],
+      "early_career_status": "worth_checking",
+      "early_career_reason": "Seniority not established from available information",
+      "pay_status": "not_verified",
+      "seniority_hint": "unspecified",
+      "url": "https://job-boards.eu.greenhouse.io/feverup/jobs/4999404101",
+      "description_excerpt": "Hey there! We’re Fever , the world’s leading tech platform for culture and live entertainment. Our mission? To democratize access to culture and entertainment. With our proprietary cutting-edge technology and data-driven approach, we’re revolutionizing the way people engage with live entertainment. Every month, our platform inspires over 300 million people in +55 countries (and counting) to discover unforgettable experiences while also empowering event creators with our data and technology, helping them scale, innovate, and enhance their events to reach new audiences. Our results? We’ve teamed up with major industry leaders like Netflix, F.C.",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "greenhouse",
+      "last_checked_utc": "2026-11-24T16:33:53+00:00"
+    },
+    {
+      "id": "greenhouse:Fever:5041614101",
+      "company": "Fever",
+      "title": "Customer Service Agent: Korean (00:00 am- 8:00am)",
+      "location": "Remote Spain",
+      "location_status": "remote_spain_explicit",
+      "provinces": [],
+      "workplace_type": "",
+      "categories": [
+        "customer_operations"
+      ],
+      "early_career_status": "worth_checking",
+      "early_career_reason": "Seniority not established from available information",
+      "pay_status": "not_verified",
+      "seniority_hint": "unspecified",
+      "url": "https://job-boards.eu.greenhouse.io/feverup/jobs/5041614101",
+      "description_excerpt": "Hey there! We’re Fever , the world’s leading tech platform for culture and live entertainment. Our mission? To democratize access to culture and entertainment. With our proprietary cutting-edge technology and data-driven approach, we’re revolutionizing the way people engage with live entertainment. Every month, our platform inspires over 300 million people in +55 countries (and counting) to discover unforgettable experiences while also empowering event creators with our data and technology, helping them scale, innovate, and enhance their events to reach new audiences. Our results? We’ve teamed up with major industry leaders like Netflix, F.C.",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "greenhouse",
+      "last_checked_utc": "2026-11-24T16:33:53+00:00"
+    },
+    {
+      "id": "greenhouse:Fever:5036184101",
+      "company": "Fever",
+      "title": "Customer Service Agent: Korean (00:00 am- 8:00am)",
+      "location": "Remote Spain",
+      "location_status": "remote_spain_explicit",
+      "provinces": [],
+      "workplace_type": "",
+      "categories": [
+        "customer_operations"
+      ],
+      "early_career_status": "worth_checking",
+      "early_career_reason": "Seniority not established from available information",
+      "pay_status": "not_verified",
+      "seniority_hint": "unspecified",
+      "url": "https://job-boards.eu.greenhouse.io/feverup/jobs/5036184101",
+      "description_excerpt": "Hey there! We’re Fever , the world’s leading tech platform for culture and live entertainment. Our mission? To democratize access to culture and entertainment. With our proprietary cutting-edge technology and data-driven approach, we’re revolutionizing the way people engage with live entertainment. Every month, our platform inspires over 300 million people in +55 countries (and counting) to discover unforgettable experiences while also empowering event creators with our data and technology, helping them scale, innovate, and enhance their events to reach new audiences. Our results? We’ve teamed up with major industry leaders like Netflix, F.C.",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "greenhouse",
+      "last_checked_utc": "2026-11-24T16:33:53+00:00"
+    },
+    {
+      "id": "greenhouse:Fever:5029043101",
+      "company": "Fever",
+      "title": "Customer Service Agent: Korean (20:00pm - 5:00am)",
+      "location": "Remote Brazil",
+      "location_status": "remote_scope_unverified",
+      "provinces": [],
+      "workplace_type": "",
+      "categories": [
+        "customer_operations"
+      ],
+      "early_career_status": "worth_checking",
+      "early_career_reason": "Seniority not established from available information",
+      "pay_status": "not_verified",
+      "seniority_hint": "unspecified",
+      "url": "https://job-boards.eu.greenhouse.io/feverup/jobs/5029043101",
+      "description_excerpt": "Hey there! We’re Fever , the world’s leading tech platform for culture and live entertainment. Our mission? To democratize access to culture and entertainment. With our proprietary cutting-edge technology and data-driven approach, we’re revolutionizing the way people engage with live entertainment. Every month, our platform inspires over 300 million people in +55 countries (and counting) to discover unforgettable experiences while also empowering event creators with our data and technology, helping them scale, innovate, and enhance their events to reach new audiences. Our results? We’ve teamed up with major industry leaders like Netflix, F.C.",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "greenhouse",
+      "last_checked_utc": "2026-11-24T16:33:53+00:00"
+    },
+    {
+      "id": "greenhouse:Fever:5041608101",
+      "company": "Fever",
+      "title": "Customer Service Agent: Korean (8:00 am- 16:00pm)",
+      "location": "Remote Spain",
+      "location_status": "remote_spain_explicit",
+      "provinces": [],
+      "workplace_type": "",
+      "categories": [
+        "customer_operations"
+      ],
+      "early_career_status": "worth_checking",
+      "early_career_reason": "Seniority not established from available information",
+      "pay_status": "not_verified",
+      "seniority_hint": "unspecified",
+      "url": "https://job-boards.eu.greenhouse.io/feverup/jobs/5041608101",
+      "description_excerpt": "Hey there! We’re Fever , the world’s leading tech platform for culture and live entertainment. Our mission? To democratize access to culture and entertainment. With our proprietary cutting-edge technology and data-driven approach, we’re revolutionizing the way people engage with live entertainment. Every month, our platform inspires over 300 million people in +55 countries (and counting) to discover unforgettable experiences while also empowering event creators with our data and technology, helping them scale, innovate, and enhance their events to reach new audiences. Our results? We’ve teamed up with major industry leaders like Netflix, F.C.",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "greenhouse",
+      "last_checked_utc": "2026-11-24T16:33:53+00:00"
+    },
+    {
+      "id": "greenhouse:Fever:5028936101",
+      "company": "Fever",
+      "title": "Customer Service Agent: Korean (morning shift)",
+      "location": "Remote Brazil",
+      "location_status": "remote_scope_unverified",
+      "provinces": [],
+      "workplace_type": "",
+      "categories": [
+        "customer_operations"
+      ],
+      "early_career_status": "worth_checking",
+      "early_career_reason": "Seniority not established from available information",
+      "pay_status": "not_verified",
+      "seniority_hint": "unspecified",
+      "url": "https://job-boards.eu.greenhouse.io/feverup/jobs/5028936101",
+      "description_excerpt": "Hey there! We’re Fever , the world’s leading tech platform for culture and live entertainment. Our mission? To democratize access to culture and entertainment. With our proprietary cutting-edge technology and data-driven approach, we’re revolutionizing the way people engage with live entertainment. Every month, our platform inspires over 300 million people in +55 countries (and counting) to discover unforgettable experiences while also empowering event creators with our data and technology, helping them scale, innovate, and enhance their events to reach new audiences. Our results? We’ve teamed up with major industry leaders like Netflix, F.C.",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "greenhouse",
+      "last_checked_utc": "2026-11-24T16:33:53+00:00"
+    },
+    {
+      "id": "greenhouse:Fever:5036170101",
+      "company": "Fever",
+      "title": "Customer Service Agent: Spanish (12:00 - 21:00)",
+      "location": "Remote Brazil",
+      "location_status": "remote_scope_unverified",
+      "provinces": [],
+      "workplace_type": "",
+      "categories": [
+        "customer_operations"
+      ],
+      "early_career_status": "worth_checking",
+      "early_career_reason": "Seniority not established from available information",
+      "pay_status": "not_verified",
+      "seniority_hint": "unspecified",
+      "url": "https://job-boards.eu.greenhouse.io/feverup/jobs/5036170101",
+      "description_excerpt": "Hey there! We’re Fever , the world’s leading tech platform for culture and live entertainment. Our mission? To democratize access to culture and entertainment. With our proprietary cutting-edge technology and data-driven approach, we’re revolutionizing the way people engage with live entertainment. Every month, our platform inspires over 300 million people in +55 countries (and counting) to discover unforgettable experiences while also empowering event creators with our data and technology, helping them scale, innovate, and enhance their events to reach new audiences. Our results? We’ve teamed up with major industry leaders like Netflix, F.C.",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "greenhouse",
+      "last_checked_utc": "2026-11-24T16:33:53+00:00"
+    },
+    {
+      "id": "greenhouse:Fever:5047279101",
+      "company": "Fever",
+      "title": "Event Operations Coordinator",
+      "location": "Querétaro, Mexico",
+      "location_status": "location_unverified",
+      "provinces": [],
+      "workplace_type": "",
+      "categories": [
+        "business_operations"
+      ],
+      "early_career_status": "worth_checking",
+      "early_career_reason": "Early-career title; full requirements not verified",
+      "pay_status": "not_verified",
+      "seniority_hint": "unspecified",
+      "url": "https://job-boards.eu.greenhouse.io/feverup/jobs/5047279101",
+      "description_excerpt": "Hey there! We’re Fever , the world’s leading tech platform for culture and live entertainment. Our mission? To democratize access to culture and entertainment. With our proprietary cutting-edge technology and data-driven approach, we’re revolutionizing the way people engage with live entertainment. Every month, our platform inspires over 300 million people in +55 countries (and counting) to discover unforgettable experiences while also empowering event creators with our data and technology, helping them scale, innovate, and enhance their events to reach new audiences. Our results? We’ve teamed up with major industry leaders like Netflix, F.C.",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "greenhouse",
+      "last_checked_utc": "2026-11-24T16:33:53+00:00"
+    },
+    {
+      "id": "greenhouse:Fever:5027745101",
+      "company": "Fever",
+      "title": "Events Administrative & Operations Assistant - Japan",
+      "location": "Tokyo",
+      "location_status": "location_unverified",
+      "provinces": [],
+      "workplace_type": "",
+      "categories": [
+        "business_operations"
+      ],
+      "early_career_status": "worth_checking",
+      "early_career_reason": "Early-career title; full requirements not verified",
+      "pay_status": "not_verified",
+      "seniority_hint": "unspecified",
+      "url": "https://job-boards.eu.greenhouse.io/feverup/jobs/5027745101",
+      "description_excerpt": "Hey there! We’re Fever , the world’s leading tech platform for culture and live entertainment. Our mission? To democratize access to culture and entertainment. With our proprietary cutting-edge technology and data-driven approach, we’re revolutionizing the way people engage with live entertainment. Every month, our platform inspires over 300 million people in +55 countries (and counting) to discover unforgettable experiences while also empowering event creators with our data and technology, helping them scale, innovate, and enhance their events to reach new audiences. Our results? We’ve teamed up with major industry leaders like Netflix, F.C.",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "greenhouse",
+      "last_checked_utc": "2026-11-24T16:33:53+00:00"
+    },
+    {
+      "id": "greenhouse:Fever:5033268101",
+      "company": "Fever",
+      "title": "Finance Operations & ERP Specialist",
+      "location": "Madrid",
+      "location_status": "spain_location_check_remote",
+      "provinces": [
+        "Madrid"
+      ],
+      "workplace_type": "",
+      "categories": [
+        "finance_support"
+      ],
+      "early_career_status": "worth_checking",
+      "early_career_reason": "Posting mentions 2 years of experience; verify requirements",
+      "pay_status": "not_verified",
+      "seniority_hint": "unspecified",
+      "url": "https://job-boards.eu.greenhouse.io/feverup/jobs/5033268101",
+      "description_excerpt": "Hey there! We’re Fever , the world’s leading tech platform for culture and live entertainment. Our mission? To democratize access to culture and entertainment. With our proprietary cutting-edge technology and data-driven approach, we’re revolutionizing the way people engage with live entertainment. Every month, our platform inspires over 300 million people in +55 countries (and counting) to discover unforgettable experiences while also empowering event creators with our data and technology, helping them scale, innovate, and enhance their events to reach new audiences. Our results? We’ve teamed up with major industry leaders like Netflix, F.C.",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "greenhouse",
+      "last_checked_utc": "2026-11-24T16:33:53+00:00"
+    },
+    {
+      "id": "greenhouse:Fever:4118818101",
+      "company": "Fever",
+      "title": "Junior Accounts Payable",
+      "location": "Madrid",
+      "location_status": "spain_location_check_remote",
+      "provinces": [
+        "Madrid"
+      ],
+      "workplace_type": "",
+      "categories": [
+        "finance_support"
+      ],
+      "early_career_status": "worth_checking",
+      "early_career_reason": "Posting mentions 1 years of experience; verify requirements",
+      "pay_status": "not_verified",
+      "seniority_hint": "unspecified",
+      "url": "https://job-boards.eu.greenhouse.io/feverup/jobs/4118818101",
+      "description_excerpt": "Hey there! We’re Fever , the world’s leading tech platform for culture and live entertainment. Our mission? To democratize access to culture and entertainment. With our proprietary cutting-edge technology and data-driven approach, we’re revolutionizing the way people engage with live entertainment. Every month, our platform inspires over 300 million people in +55 countries (and counting) to discover unforgettable experiences while also empowering event creators with our data and technology, helping them scale, innovate, and enhance their events to reach new audiences. Our results? We’ve teamed up with major industry leaders like Netflix, F.C.",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "greenhouse",
+      "last_checked_utc": "2026-11-24T16:33:54+00:00"
+    },
+    {
+      "id": "greenhouse:Fever:4982389101",
+      "company": "Fever",
+      "title": "Product Operations Coordinator",
+      "location": "Mexico City",
+      "location_status": "location_unverified",
+      "provinces": [],
+      "workplace_type": "",
+      "categories": [
+        "business_operations"
+      ],
+      "early_career_status": "excluded",
+      "early_career_reason": "Posting mentions 4+ years of experience; verify context",
+      "pay_status": "not_verified",
+      "seniority_hint": "unspecified",
+      "url": "https://job-boards.eu.greenhouse.io/feverup/jobs/4982389101",
+      "description_excerpt": "Hey there! We’re Fever , the world’s leading tech platform for culture and live entertainment. Our mission? To democratize access to culture and entertainment. With our proprietary cutting-edge technology and data-driven approach, we’re revolutionizing the way people engage with live entertainment. Every month, our platform inspires over 300 million people in +55 countries (and counting) to discover unforgettable experiences while also empowering event creators with our data and technology, helping them scale, innovate, and enhance their events to reach new audiences. Our results? We’ve teamed up with major industry leaders like Netflix, F.C.",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "greenhouse",
+      "last_checked_utc": "2026-11-24T16:33:54+00:00"
     },
     {
       "id": "greenhouse:Grafana Labs:6221389004",
@@ -397,7 +985,215 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-24T08:45:03+00:00"
+      "last_checked_utc": "2026-11-24T16:33:47+00:00"
+    },
+    {
+      "id": "greenhouse:Keyfactor:6207745004",
+      "company": "Keyfactor",
+      "title": "Team Lead, Customer Support",
+      "location": "UK (Remote)",
+      "location_status": "remote_scope_unverified",
+      "provinces": [],
+      "workplace_type": "",
+      "categories": [
+        "customer_operations"
+      ],
+      "early_career_status": "excluded",
+      "early_career_reason": "Senior/management title",
+      "pay_status": "not_verified",
+      "seniority_hint": "senior_or_lead",
+      "url": "https://job-boards.greenhouse.io/keyfactorinc/jobs/6207745004",
+      "description_excerpt": "About Keyfactor Our mission is to securely connect the world: humans, machines, and AI. Keyfactor is the leader in trust infrastructure for AI and machines, helping the world's largest enterprises and government agencies take control of the cryptographic identities that safeguard every digital interaction. Behind the platform is a global team of people who care deeply about the work and each other. We move fast, think big, and show up for one another every day. If you're looking for work that matters and a team that brings out your best, we hope you'll trust your future with Keyfactor! Title: Team Lead, Customer Support Location: Remote, UK E",
+      "published_emails": [
+        "people@keyfactor.com"
+      ],
+      "email_status": "found_in_posting_not_application_verified",
+      "source": "greenhouse",
+      "last_checked_utc": "2026-11-24T16:33:51+00:00"
+    },
+    {
+      "id": "greenhouse:Nuitée:4896237101",
+      "company": "Nuitée",
+      "title": "Customer Service Representative (Asia Remote - Thai Speaker)",
+      "location": "Thailand",
+      "location_status": "location_unverified",
+      "provinces": [],
+      "workplace_type": "",
+      "categories": [
+        "customer_operations"
+      ],
+      "early_career_status": "worth_checking",
+      "early_career_reason": "Early-career title; full requirements not verified",
+      "pay_status": "not_verified",
+      "seniority_hint": "unspecified",
+      "url": "https://job-boards.eu.greenhouse.io/nuitee/jobs/4896237101",
+      "description_excerpt": "About the company Nuitée is the API infrastructure powering travel, inside banks, AI assistants, airlines, loyalty programs and hotel brands. Nuitée Connect gives businesses one API for 2.9M properties, 600+ airlines and 200K+ experiences, built for apps and AI agents alike. Nuitée Cloud lets hotels reach new demand and control pricing, payments and operations in one platform. Founded in 2017, Nuitée has 300 colleagues across 25 countries and a mission to make travel distribution simpler, faster and fairer for everyone in travel. We raised a $48M Series A led by Accel and work with companies such as Revolut, Grab, and Sabre. The role Nuitée i",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "greenhouse",
+      "last_checked_utc": "2026-11-24T16:33:50+00:00"
+    },
+    {
+      "id": "greenhouse:Nuitée:4972807101",
+      "company": "Nuitée",
+      "title": "Customer Service Representative (Casablanca - English/French/Arabic)",
+      "location": "Casablanca",
+      "location_status": "location_unverified",
+      "provinces": [],
+      "workplace_type": "",
+      "categories": [
+        "customer_operations"
+      ],
+      "early_career_status": "worth_checking",
+      "early_career_reason": "Posting mentions 1 years of experience; verify requirements",
+      "pay_status": "not_verified",
+      "seniority_hint": "unspecified",
+      "url": "https://job-boards.eu.greenhouse.io/nuitee/jobs/4972807101",
+      "description_excerpt": "About the company Nuitée is the API infrastructure powering travel, inside banks, AI assistants, airlines, loyalty programs and hotel brands. Nuitée Connect gives businesses one API for 2.9M properties, 600+ airlines and 200K+ experiences, built for apps and AI agents alike. Nuitée Cloud lets hotels reach new demand and control pricing, payments and operations in one platform. Founded in 2017, Nuitée has 300 colleagues across 25 countries and a mission to make travel distribution simpler, faster and fairer for everyone in travel. We raised a $48M Series A led by Accel and work with companies such as Revolut, Grab, and Sabre. Help Travelers Wh",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "greenhouse",
+      "last_checked_utc": "2026-11-24T16:33:50+00:00"
+    },
+    {
+      "id": "greenhouse:Nuitée:5040249101",
+      "company": "Nuitée",
+      "title": "Customer Service Representative (Hybrid Rotating) - English + Asian Languages",
+      "location": "Barcelona",
+      "location_status": "spain_location_check_remote",
+      "provinces": [
+        "Barcelona"
+      ],
+      "workplace_type": "",
+      "categories": [
+        "customer_operations"
+      ],
+      "early_career_status": "worth_checking",
+      "early_career_reason": "Early-career title; full requirements not verified",
+      "pay_status": "not_verified",
+      "seniority_hint": "unspecified",
+      "url": "https://job-boards.eu.greenhouse.io/nuitee/jobs/5040249101",
+      "description_excerpt": "About the company Nuitée is the API infrastructure powering travel, inside banks, AI assistants, airlines, loyalty programs and hotel brands. Nuitée Connect gives businesses one API for 2.9M properties, 600+ airlines and 200K+ experiences, built for apps and AI agents alike. Nuitée Cloud lets hotels reach new demand and control pricing, payments and operations in one platform. Founded in 2017, Nuitée has 300 colleagues across 25 countries and a mission to make travel distribution simpler, faster and fairer for everyone in travel. We raised a $48M Series A led by Accel and work with companies such as Revolut, Grab, and Sabre. Customer Service ",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "greenhouse",
+      "last_checked_utc": "2026-11-24T16:33:50+00:00"
+    },
+    {
+      "id": "greenhouse:Nuitée:4928787101",
+      "company": "Nuitée",
+      "title": "Customer Service Representative (Hybrid Rotating) - English + European Languages",
+      "location": "Barcelona",
+      "location_status": "spain_location_check_remote",
+      "provinces": [
+        "Barcelona"
+      ],
+      "workplace_type": "",
+      "categories": [
+        "customer_operations"
+      ],
+      "early_career_status": "worth_checking",
+      "early_career_reason": "Early-career title; full requirements not verified",
+      "pay_status": "not_verified",
+      "seniority_hint": "unspecified",
+      "url": "https://job-boards.eu.greenhouse.io/nuitee/jobs/4928787101",
+      "description_excerpt": "About the company Nuitée is the API infrastructure powering travel, inside banks, AI assistants, airlines, loyalty programs and hotel brands. Nuitée Connect gives businesses one API for 2.9M properties, 600+ airlines and 200K+ experiences, built for apps and AI agents alike. Nuitée Cloud lets hotels reach new demand and control pricing, payments and operations in one platform. Founded in 2017, Nuitée has 300 colleagues across 25 countries and a mission to make travel distribution simpler, faster and fairer for everyone in travel. We raised a $48M Series A led by Accel and work with companies such as Revolut, Grab, and Sabre. Barcelona, Catalo",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "greenhouse",
+      "last_checked_utc": "2026-11-24T16:33:50+00:00"
+    },
+    {
+      "id": "greenhouse:Nuitée:4941791101",
+      "company": "Nuitée",
+      "title": "Customer Service Representative (Night Shift) - English + European Languages",
+      "location": "Barcelona",
+      "location_status": "spain_location_check_remote",
+      "provinces": [
+        "Barcelona"
+      ],
+      "workplace_type": "",
+      "categories": [
+        "customer_operations"
+      ],
+      "early_career_status": "worth_checking",
+      "early_career_reason": "Early-career title; full requirements not verified",
+      "pay_status": "not_verified",
+      "seniority_hint": "unspecified",
+      "url": "https://job-boards.eu.greenhouse.io/nuitee/jobs/4941791101",
+      "description_excerpt": "About the company Nuitée is the API infrastructure powering travel, inside banks, AI assistants, airlines, loyalty programs and hotel brands. Nuitée Connect gives businesses one API for 2.9M properties, 600+ airlines and 200K+ experiences, built for apps and AI agents alike. Nuitée Cloud lets hotels reach new demand and control pricing, payments and operations in one platform. Founded in 2017, Nuitée has 300 colleagues across 25 countries and a mission to make travel distribution simpler, faster and fairer for everyone in travel. We raised a $48M Series A led by Accel and work with companies such as Revolut, Grab, and Sabre. Night owl? Earn e",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "greenhouse",
+      "last_checked_utc": "2026-11-24T16:33:50+00:00"
+    },
+    {
+      "id": "greenhouse:Nuitée:4941831101",
+      "company": "Nuitée",
+      "title": "Customer Service Representative (Weekend Shift) - English + European Languages",
+      "location": "Barcelona",
+      "location_status": "spain_location_check_remote",
+      "provinces": [
+        "Barcelona"
+      ],
+      "workplace_type": "",
+      "categories": [
+        "customer_operations"
+      ],
+      "early_career_status": "worth_checking",
+      "early_career_reason": "Early-career title; full requirements not verified",
+      "pay_status": "not_verified",
+      "seniority_hint": "unspecified",
+      "url": "https://job-boards.eu.greenhouse.io/nuitee/jobs/4941831101",
+      "description_excerpt": "About the company Nuitée is the API infrastructure powering travel, inside banks, AI assistants, airlines, loyalty programs and hotel brands. Nuitée Connect gives businesses one API for 2.9M properties, 600+ airlines and 200K+ experiences, built for apps and AI agents alike. Nuitée Cloud lets hotels reach new demand and control pricing, payments and operations in one platform. Founded in 2017, Nuitée has 300 colleagues across 25 countries and a mission to make travel distribution simpler, faster and fairer for everyone in travel. We raised a $48M Series A led by Accel and work with companies such as Revolut, Grab, and Sabre. Help travelers wh",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "greenhouse",
+      "last_checked_utc": "2026-11-24T16:33:50+00:00"
+    },
+    {
+      "id": "greenhouse:Nuitée:5015803101",
+      "company": "Nuitée",
+      "title": "Senior Product Manager, Customer Operations",
+      "location": "Europe (remote)",
+      "location_status": "remote_scope_unverified",
+      "provinces": [],
+      "workplace_type": "",
+      "categories": [
+        "customer_operations"
+      ],
+      "early_career_status": "excluded",
+      "early_career_reason": "Senior/management title",
+      "pay_status": "not_verified",
+      "seniority_hint": "senior_or_lead",
+      "url": "https://job-boards.eu.greenhouse.io/nuitee/jobs/5015803101",
+      "description_excerpt": "About the company Nuitée is the API infrastructure powering travel, inside banks, AI assistants, airlines, loyalty programs and hotel brands. Nuitée Connect gives businesses one API for 2.9M properties, 600+ airlines and 200K+ experiences, built for apps and AI agents alike. Nuitée Cloud lets hotels reach new demand and control pricing, payments and operations in one platform. Founded in 2017, Nuitée has 300 colleagues across 25 countries and a mission to make travel distribution simpler, faster and fairer for everyone in travel. We raised a $48M Series A led by Accel and work with companies such as Revolut, Grab, and Sabre. Senior Product Ma",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "greenhouse",
+      "last_checked_utc": "2026-11-24T16:33:50+00:00"
+    },
+    {
+      "id": "greenhouse:Nuitée:5028949101",
+      "company": "Nuitée",
+      "title": "Staff Product Manager, Hotel Onboarding & Connectivity",
+      "location": "EMEA",
+      "location_status": "remote_scope_unverified",
+      "provinces": [],
+      "workplace_type": "",
+      "categories": [
+        "customer_operations"
+      ],
+      "early_career_status": "excluded",
+      "early_career_reason": "Senior/management title",
+      "pay_status": "not_verified",
+      "seniority_hint": "senior_or_lead",
+      "url": "https://job-boards.eu.greenhouse.io/nuitee/jobs/5028949101",
+      "description_excerpt": "About the company Nuitée is the API infrastructure powering travel, inside banks, AI assistants, airlines, loyalty programs and hotel brands. Nuitée Connect gives businesses one API for 2.9M properties, 600+ airlines and 200K+ experiences, built for apps and AI agents alike. Nuitée Cloud lets hotels reach new demand and control pricing, payments and operations in one platform. Founded in 2017, Nuitée has 300 colleagues across 25 countries and a mission to make travel distribution simpler, faster and fairer for everyone in travel. We raised a $48M Series A led by Accel and work with companies such as Revolut, Grab, and Sabre. About the job Rem",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "greenhouse",
+      "last_checked_utc": "2026-11-24T16:33:50+00:00"
     },
     {
       "id": "greenhouse:Pineca Group:4998265101",
@@ -419,7 +1215,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-24T08:45:01+00:00"
+      "last_checked_utc": "2026-11-24T16:33:45+00:00"
     },
     {
       "id": "greenhouse:Pineca Group:4998238101",
@@ -441,7 +1237,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-24T08:45:01+00:00"
+      "last_checked_utc": "2026-11-24T16:33:45+00:00"
     },
     {
       "id": "greenhouse:Ping Identity:8912619002",
@@ -463,7 +1259,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-24T08:45:06+00:00"
+      "last_checked_utc": "2026-11-24T16:33:49+00:00"
     },
     {
       "id": "greenhouse:Ping Identity:8912988002",
@@ -485,7 +1281,191 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "greenhouse",
-      "last_checked_utc": "2026-11-24T08:45:06+00:00"
+      "last_checked_utc": "2026-11-24T16:33:49+00:00"
+    },
+    {
+      "id": "greenhouse:Quince:5459505008",
+      "company": "Quince",
+      "title": "Customer Service Team Manager - French Bilingual",
+      "location": "Spain - Barcelona",
+      "location_status": "spain_location_check_remote",
+      "provinces": [
+        "Barcelona"
+      ],
+      "workplace_type": "",
+      "categories": [
+        "customer_operations"
+      ],
+      "early_career_status": "excluded",
+      "early_career_reason": "Senior/management title",
+      "pay_status": "not_verified",
+      "seniority_hint": "senior_or_lead",
+      "url": "https://job-boards.greenhouse.io/quince/jobs/5459505008",
+      "description_excerpt": "ABOUT QUINCE Quince is a destination for builders, creators, innovators, and operators who want to come together and challenge the status quo. Our mission is simple: make really high quality essentials for really low prices, fairly and sustainably. We deliver on that mission through a unique manufacturer-to-consumer (M2C) model eliminating the layers of traditional retail that add cost and result in consumers paying more than they need to. We find, build relationships with, and work directly with the manufacturing partners behind some of the world’s finest products. From there, our teams design smart, efficient operational processes and build",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "greenhouse",
+      "last_checked_utc": "2026-11-24T16:33:49+00:00"
+    },
+    {
+      "id": "greenhouse:Quince:5475660008",
+      "company": "Quince",
+      "title": "Customer Service Team Manager - German bilingual",
+      "location": "Spain - Barcelona",
+      "location_status": "spain_location_check_remote",
+      "provinces": [
+        "Barcelona"
+      ],
+      "workplace_type": "",
+      "categories": [
+        "customer_operations"
+      ],
+      "early_career_status": "excluded",
+      "early_career_reason": "Senior/management title",
+      "pay_status": "not_verified",
+      "seniority_hint": "senior_or_lead",
+      "url": "https://job-boards.greenhouse.io/quince/jobs/5475660008",
+      "description_excerpt": "ABOUT QUINCE Quince is a destination for builders, creators, innovators, and operators who want to come together and challenge the status quo. Our mission is simple: make really high quality essentials for really low prices, fairly and sustainably. We deliver on that mission through a unique manufacturer-to-consumer (M2C) model eliminating the layers of traditional retail that add cost and result in consumers paying more than they need to. We find, build relationships with, and work directly with the manufacturing partners behind some of the world’s finest products. From there, our teams design smart, efficient operational processes and build",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "greenhouse",
+      "last_checked_utc": "2026-11-24T16:33:49+00:00"
+    },
+    {
+      "id": "greenhouse:Quince:5419920008",
+      "company": "Quince",
+      "title": "Customer Service Team Manager - German bilingual (Barcelona)",
+      "location": "Spain - Barcelona",
+      "location_status": "spain_location_check_remote",
+      "provinces": [
+        "Barcelona"
+      ],
+      "workplace_type": "",
+      "categories": [
+        "customer_operations"
+      ],
+      "early_career_status": "excluded",
+      "early_career_reason": "Senior/management title",
+      "pay_status": "not_verified",
+      "seniority_hint": "senior_or_lead",
+      "url": "https://job-boards.greenhouse.io/quince/jobs/5419920008",
+      "description_excerpt": "ABOUT QUINCE Quince is a destination for builders, creators, innovators, and operators who want to come together and challenge the status quo. Our mission is simple: make really high quality essentials for really low prices, fairly and sustainably. We deliver on that mission through a unique manufacturer-to-consumer (M2C) model eliminating the layers of traditional retail that add cost and result in consumers paying more than they need to. We find, build relationships with, and work directly with the manufacturing partners behind some of the world’s finest products. From there, our teams design smart, efficient operational processes and build",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "greenhouse",
+      "last_checked_utc": "2026-11-24T16:33:49+00:00"
+    },
+    {
+      "id": "greenhouse:Quince:5434794008",
+      "company": "Quince",
+      "title": "Senior Fraud Operations Coordinator",
+      "location": "London, England, United Kingdom",
+      "location_status": "location_unverified",
+      "provinces": [],
+      "workplace_type": "",
+      "categories": [
+        "business_operations"
+      ],
+      "early_career_status": "excluded",
+      "early_career_reason": "Senior/management title",
+      "pay_status": "not_verified",
+      "seniority_hint": "senior_or_lead",
+      "url": "https://job-boards.greenhouse.io/quince/jobs/5434794008",
+      "description_excerpt": "ABOUT QUINCE Quince is a destination for builders, creators, innovators, and operators who want to come together and challenge the status quo. Our mission is simple: make really high quality essentials for really low prices, fairly and sustainably. We deliver on that mission through a unique manufacturer-to-consumer (M2C) model eliminating the layers of traditional retail that add cost and result in consumers paying more than they need to. We find, build relationships with, and work directly with the manufacturing partners behind some of the world’s finest products. From there, our teams design smart, efficient operational processes and build",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "greenhouse",
+      "last_checked_utc": "2026-11-24T16:33:50+00:00"
+    },
+    {
+      "id": "greenhouse:SumUp:8908730002",
+      "company": "SumUp",
+      "title": "Customer Success Management Manager - LATAM",
+      "location": "Santiago, Chile",
+      "location_status": "location_unverified",
+      "provinces": [],
+      "workplace_type": "",
+      "categories": [
+        "customer_operations"
+      ],
+      "early_career_status": "excluded",
+      "early_career_reason": "Senior/management title",
+      "pay_status": "not_verified",
+      "seniority_hint": "senior_or_lead",
+      "url": "https://sumup.com/careers/positions/8908730002?gh_jid=8908730002",
+      "description_excerpt": "Team Description We believe in the everyday hero. Those who have the courage to follow their passion and who have the strength and determination to realize their dreams. Small business owners are at the heart of all we do, so we're creating powerful, easy-to-use financial solutions to help them run their businesses. With a founder's mentality and a 'team-first' attitude, our diverse teams across Europe, South America and the United States work together to ensure that small business owners can be successful doing what they love. As part of Operations in LATAM, the Customer Success Management (CSM) team is one of our main strategies to fight ch",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "greenhouse",
+      "last_checked_utc": "2026-11-24T16:33:52+00:00"
+    },
+    {
+      "id": "greenhouse:SumUp:8573120002",
+      "company": "SumUp",
+      "title": "Customer Support Agent- DE",
+      "location": "Berlin, Germany",
+      "location_status": "location_unverified",
+      "provinces": [],
+      "workplace_type": "",
+      "categories": [
+        "customer_operations"
+      ],
+      "early_career_status": "worth_checking",
+      "early_career_reason": "Early-career title; full requirements not verified",
+      "pay_status": "not_verified",
+      "seniority_hint": "unspecified",
+      "url": "https://sumup.com/careers/positions/8573120002?gh_jid=8573120002",
+      "description_excerpt": "Customer Support Agent - German Speaker (Berlin based, onsite) SumUp is a leading global fintech company committed to leveling the playing field for small businesses. Founded in 2012, we’re the trusted partner of over 4 million merchants in 37 markets worldwide, providing simple and affordable tools that enable them to manage payments, business finances and customer relationships. As a Customer Support Agent for the German market, you will be the voice of our company. What you’ll be doing in this position Supporting our German-speaking customers by phone, email, chat and social media channels Supporting our merchants for all questions and inq",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "greenhouse",
+      "last_checked_utc": "2026-11-24T16:33:52+00:00"
+    },
+    {
+      "id": "greenhouse:TheFork:8405524",
+      "company": "TheFork",
+      "title": "Customer Product Success Specialist – Restaurant Onboarding",
+      "location": "London",
+      "location_status": "location_unverified",
+      "provinces": [],
+      "workplace_type": "",
+      "categories": [
+        "customer_operations"
+      ],
+      "early_career_status": "worth_checking",
+      "early_career_reason": "Posting mentions 2 years of experience; verify requirements",
+      "pay_status": "not_verified",
+      "seniority_hint": "unspecified",
+      "url": "https://job-boards.greenhouse.io/thefork/jobs/8405524",
+      "description_excerpt": "Join our Movement and Champion Restaurant Culture! 💚 At TheFork we believe that the best things in life happen around the table. As the leading restaurant booking platform in Europe, we connect the broadest community of loyal diners with the world’s favorite restaurants. Powered by innovation and a deep passion for the restaurant industry, we create unique dining experiences across 11 countries. We’re proud to be building a diverse, people-first culture where “respect”, “ownership”, “growth” and “better together” values thrive. If you’re passionate about food, technology, and making a real impact, your seat at the table is ready. In the UK, w",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "greenhouse",
+      "last_checked_utc": "2026-11-24T16:33:52+00:00"
+    },
+    {
+      "id": "greenhouse:TheFork:8210847",
+      "company": "TheFork",
+      "title": "Senior Business Operations Analyst",
+      "location": "Barcelona",
+      "location_status": "spain_location_check_remote",
+      "provinces": [
+        "Barcelona"
+      ],
+      "workplace_type": "",
+      "categories": [
+        "business_operations"
+      ],
+      "early_career_status": "excluded",
+      "early_career_reason": "Senior/management title",
+      "pay_status": "not_verified",
+      "seniority_hint": "senior_or_lead",
+      "url": "https://job-boards.greenhouse.io/thefork/jobs/8210847",
+      "description_excerpt": "Join our Movement and Champion Restaurant Culture! 💚 At TheFork we believe that the best things in life happen around the table. As the leading restaurant booking platform in Europe, we connect the broadest community of loyal diners with the world’s favorite restaurants. Powered by innovation and a deep passion for the restaurant industry, we create unique dining experiences across 11 countries. We’re proud to be building a diverse, people-first culture where “respect”, “ownership”, “growth” and “better together” values thrive. If you’re passionate about food, technology, and making a real impact, your seat at the table is ready. 👉 Discover l",
+      "published_emails": [],
+      "email_status": "none_found",
+      "source": "greenhouse",
+      "last_checked_utc": "2026-11-24T16:33:52+00:00"
     },
     {
       "id": "lever:Veeva Systems:7c8fdf32-e8e0-4c0f-a996-4f20851a04f0",
@@ -507,7 +1487,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "lever",
-      "last_checked_utc": "2026-11-24T08:45:09+00:00"
+      "last_checked_utc": "2026-11-24T16:33:56+00:00"
     },
     {
       "id": "lever:Veeva Systems:c7b81fa6-01f2-418f-b57b-561aa007516e",
@@ -529,7 +1509,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "lever",
-      "last_checked_utc": "2026-11-24T08:45:09+00:00"
+      "last_checked_utc": "2026-11-24T16:33:56+00:00"
     },
     {
       "id": "lever:Veeva Systems:6d479321-f2ec-4b30-98dd-d40b2dfc652c",
@@ -551,7 +1531,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "lever",
-      "last_checked_utc": "2026-11-24T08:45:09+00:00"
+      "last_checked_utc": "2026-11-24T16:33:56+00:00"
     },
     {
       "id": "lever:Veeva Systems:87e81ce9-4bf0-44d1-9b2a-e5cce65e239c",
@@ -575,7 +1555,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "lever",
-      "last_checked_utc": "2026-11-24T08:45:09+00:00"
+      "last_checked_utc": "2026-11-24T16:33:56+00:00"
     },
     {
       "id": "lever:Veeva Systems:8e0c5693-f17d-46fc-8c8f-f68421561e2f",
@@ -597,7 +1577,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "lever",
-      "last_checked_utc": "2026-11-24T08:45:09+00:00"
+      "last_checked_utc": "2026-11-24T16:33:56+00:00"
     },
     {
       "id": "lever:Veeva Systems:e4ac318e-ab36-4b28-9d20-c8be9c51ae96",
@@ -619,7 +1599,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "lever",
-      "last_checked_utc": "2026-11-24T08:45:09+00:00"
+      "last_checked_utc": "2026-11-24T16:33:56+00:00"
     },
     {
       "id": "lever:Veeva Systems:579e0618-1cf5-46d7-a6cd-3360c66103f9",
@@ -641,7 +1621,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "lever",
-      "last_checked_utc": "2026-11-24T08:45:09+00:00"
+      "last_checked_utc": "2026-11-24T16:33:56+00:00"
     },
     {
       "id": "lever:Veeva Systems:bf77c839-0073-4fe8-957b-1572f746a6ab",
@@ -663,7 +1643,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "lever",
-      "last_checked_utc": "2026-11-24T08:45:09+00:00"
+      "last_checked_utc": "2026-11-24T16:33:56+00:00"
     },
     {
       "id": "lever:Veeva Systems:d0cc2938-21fa-43dd-9d55-12dddad5a10e",
@@ -685,7 +1665,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "lever",
-      "last_checked_utc": "2026-11-24T08:45:09+00:00"
+      "last_checked_utc": "2026-11-24T16:33:56+00:00"
     },
     {
       "id": "lever:Veeva Systems:57b392bc-6918-43f3-b1e2-b5be94f72947",
@@ -707,7 +1687,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "lever",
-      "last_checked_utc": "2026-11-24T08:45:10+00:00"
+      "last_checked_utc": "2026-11-24T16:33:56+00:00"
     },
     {
       "id": "lever:Veeva Systems:039516d3-491e-4ef3-b15a-75f18bca8e7f",
@@ -729,7 +1709,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "lever",
-      "last_checked_utc": "2026-11-24T08:45:10+00:00"
+      "last_checked_utc": "2026-11-24T16:33:56+00:00"
     },
     {
       "id": "lever:Veeva Systems:5ff3db43-cc72-40b1-a618-7d90aecfe12c",
@@ -751,7 +1731,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "lever",
-      "last_checked_utc": "2026-11-24T08:45:10+00:00"
+      "last_checked_utc": "2026-11-24T16:33:56+00:00"
     },
     {
       "id": "lever:Veeva Systems:0287a2b0-5972-4bff-89c2-36e2a36dc4a8",
@@ -773,7 +1753,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "lever",
-      "last_checked_utc": "2026-11-24T08:45:10+00:00"
+      "last_checked_utc": "2026-11-24T16:33:56+00:00"
     },
     {
       "id": "lever:Veeva Systems:17198a0e-8a38-4bd1-b103-c347887983ac",
@@ -795,7 +1775,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "lever",
-      "last_checked_utc": "2026-11-24T08:45:10+00:00"
+      "last_checked_utc": "2026-11-24T16:33:56+00:00"
     },
     {
       "id": "lever:Veeva Systems:4e962ef7-7d6f-4962-a344-7a2740b99aa1",
@@ -817,7 +1797,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "lever",
-      "last_checked_utc": "2026-11-24T08:45:10+00:00"
+      "last_checked_utc": "2026-11-24T16:33:56+00:00"
     },
     {
       "id": "lever:Veeva Systems:707ce008-54be-4476-9816-34dee0f8f248",
@@ -839,7 +1819,7 @@
       "published_emails": [],
       "email_status": "none_found",
       "source": "lever",
-      "last_checked_utc": "2026-11-24T08:45:10+00:00"
+      "last_checked_utc": "2026-11-24T16:33:56+00:00"
     }
   ]
 }

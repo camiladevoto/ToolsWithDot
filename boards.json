@@ -39,6 +39,38 @@
     {
       "slug": "pingidentity",
       "company": "Ping Identity"
+    },
+    {
+      "slug": "quince",
+      "company": "Quince"
+    },
+    {
+      "slug": "nuitee",
+      "company": "Nuitée"
+    },
+    {
+      "slug": "cabify",
+      "company": "Cabify"
+    },
+    {
+      "slug": "keyfactorinc",
+      "company": "Keyfactor"
+    },
+    {
+      "slug": "sumup",
+      "company": "SumUp"
+    },
+    {
+      "slug": "thefork",
+      "company": "TheFork"
+    },
+    {
+      "slug": "freenow",
+      "company": "FREENOW"
+    },
+    {
+      "slug": "feverup",
+      "company": "Fever"
     }
   ],
   "lever": [

@@ -16,7 +16,7 @@
 .site-head a:focus-visible{outline-color:#fffdf8}
 .intro-backdrop{position:fixed;inset:0;z-index:1;background:var(--border);pointer-events:none}
 .tool-brands:has(.sibling-brand.intro-active) .brand{visibility:hidden}
-.sibling-brand.intro-active{border-color:transparent}
+.sibling-brand.intro-active{border-color:transparent;transform-origin:center center}
 h1{font-size:clamp(3rem,8vw,6.8rem);font-weight:800;max-width:none;line-height:1.07;letter-spacing:-.055em}
 h1>span,h1 em{display:block}h1 em{font-style:normal}
 .lead{font-size:clamp(1.02rem,2.2vw,1.18rem);max-width:44ch;margin:24px 0 0}
@@ -38,8 +38,9 @@ const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
 
 if (typeof brand.animate === 'function' && !motionPreference.matches && window.scrollY === 0) {
   const bounds = brand.getBoundingClientRect();
-  const scale = Math.min(6, window.innerWidth * 0.86 / bounds.width);
-  const x = (window.innerWidth - bounds.width) / 2 - bounds.left;
+  const padding = parseFloat(getComputedStyle(brand).paddingLeft) + parseFloat(getComputedStyle(brand).borderLeftWidth);
+  const scale = Math.min(6, window.innerWidth * 0.86 / (bounds.width - padding));
+  const x = (window.innerWidth - bounds.width) / 2 - bounds.left - padding * scale / 2;
   const y = (window.innerHeight - bounds.height) / 2 - bounds.top;
   const centered = `translate(${x}px, ${y}px)`;
   brand.classList.add('intro-active');

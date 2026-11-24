@@ -35,6 +35,31 @@ def clean(value):
     raw=re.sub(r'(?i)<\s*br\s*/?\s*>|</\s*(?:p|div|li|h[1-6])\s*>', ' ', raw)
     return SPACES.sub(' ', TAGS.sub(' ', raw)).strip()
 
+def requirement_sections(value):
+    """Preserve source section headings and distinguish explicit preference signals."""
+    raw=str(value or '')
+    for _ in range(3):
+        raw=html.unescape(raw)
+    raw=re.sub(r'(?i)<(?:br\s*/?|/?(?:p|div|li|h[1-6]|ul|ol|section)(?:\s[^>]*)?)>', '\n', raw)
+    rows=[clean(s) for s in raw.splitlines() if clean(s)]
+    required=[]; preferred=[]; mode=None
+    for row in rows:
+        heading=folded(row).strip(' :.-')
+        if len(heading)<110 and re.match(r'^(?:preferred|desirable|nice to have|bonus points|deseable|se valorara|plus\b)',heading):
+            mode='preferred'
+        elif len(heading)<110 and re.match(r'^(?:requirements|qualifications|what you bring|what you.ll bring|what we.re looking for|must have|minimum qualifications|requisitos|perfil requerido|experiencia requerida)',heading):
+            mode='required'
+        elif len(heading)<100 and re.match(r'^(?:responsibilities|about us|benefits|what we offer|what you.ll do|your role|responsabilidades|ofrecemos|sobre nosotros)',heading):
+            mode=None
+        line=folded(row)
+        if re.search(r'\b(?:nice to have|preferred|desirable|not required|a plus|se valorara|deseable|no imprescindible)\b',line):
+            preferred.append(row)
+        elif mode=='preferred':
+            preferred.append(row)
+        elif mode=='required' or re.search(r'\b(?:must have|is required|required experience|minimum of|at least|imprescindible|requisito obligatorio)\b',line):
+            required.append(row)
+    return ' '.join(required)[:12000], ' '.join(preferred)[:8000]
+
 def get_json(url):
     req = urllib.request.Request(url, headers={'User-Agent':UA,'Accept':'application/json'})
     with urllib.request.urlopen(req, timeout=18) as resp:
@@ -153,12 +178,14 @@ def pay_indicator(title, desc):
 def normalise(provider, company, j):
     if provider=='greenhouse':
         title=clean(j.get('title')); loc=clean((j.get('location') or {}).get('name',''))
-        desc=clean(j.get('content',''))
+        raw_requirements=j.get('content','')
+        desc=clean(raw_requirements)
         url=j.get('absolute_url','')
         jid=str(j.get('id',''))
     else:
         title=clean(j.get('text')); loc=clean((j.get('categories') or {}).get('location',''))
         desc=clean(' '.join([str(j.get('descriptionPlain','')),str(j.get('additionalPlain','')),str(j.get('description','')), ' '.join(str(x.get('text',''))+' '+str(x.get('content','')) for x in (j.get('lists') or []) if isinstance(x,dict))]))
+        raw_requirements='\n'.join([str(j.get('description','') or j.get('descriptionPlain','')), *[str(x.get('text',''))+'\n'+str(x.get('content','')) for x in (j.get('lists') or []) if isinstance(x,dict)],str(j.get('additional','') or j.get('additionalPlain',''))])
         url=j.get('hostedUrl') or j.get('applyUrl') or ''
         jid=str(j.get('id',''))
     workplace = (j.get('workplaceType','') if provider == 'lever' else '') or ''
@@ -169,6 +196,7 @@ def normalise(provider, company, j):
     fit_status, fit_reason = assess_early_career(title, desc)
     if pay_indicator(title,desc)=='unpaid_indicated':
         fit_status,fit_reason='excluded','Unpaid work indicated in posting'
+    required_text, preferred_text = requirement_sections(raw_requirements)
     published = None
     if provider == 'lever' and isinstance(j.get('createdAt'), (int, float)):
         try:
@@ -177,7 +205,7 @@ def normalise(provider, company, j):
             pass
     return {'published_utc':published, 'id':f'{provider}:{company}:{jid}', 'company':company, 'title':title, 'location':loc,
             'location_status':location_status,'provinces':provinces,'workplace_type':workplace,'categories':groups,'early_career_status':fit_status,'early_career_reason':fit_reason,'pay_status':pay_indicator(title,desc),'seniority_hint':('senior_or_lead' if re.search(r'\b(?:senior|sr\.?|lead|head|director|manager|principal|staff)\b',title,re.I) else 'unspecified'),
-            'url':url,'description_excerpt':desc[:650], 'matching_text':desc[:20000], 'matching_text_truncated':len(desc)>20000,
+            'url':url,'description_excerpt':desc[:650], 'matching_text':desc[:20000], 'matching_text_truncated':len(desc)>20000, 'requirements_text':required_text, 'preferred_text':preferred_text,
             'published_emails':application_emails(desc),
             'email_status':'found_in_posting_not_application_verified' if application_emails(desc) else 'none_found',
             'source':provider, 'last_checked_utc':dt.datetime.now(dt.timezone.utc).isoformat(timespec='seconds')}

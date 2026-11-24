@@ -3,58 +3,96 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#f8f7f3">
+<meta name="theme-color" content="#0e1e30">
 <meta name="description" content="JobMatch helps you explore vacancies from employer career pages with transparent location and application details.">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2214%22%20fill%3D%22%2317675e%22%2F%3E%3Cpath%20d%3D%22M24%2025v-5a3%203%200%200%201%203-3h10a3%203%200%200%201%203%203v5M20%2025h24a5%205%200%200%201%205%205v13a5%205%200%200%201-5%205H20a5%205%200%200%201-5-5V30a5%205%200%200%201%205-5Z%22%20fill%3D%22none%22%20stroke%3D%22%23f8f7f3%22%20stroke-width%3D%224%22%20stroke-linejoin%3D%22round%22%2F%3E%3Cpath%20d%3D%22m25%2036%205%205%209-10%22%20fill%3D%22none%22%20stroke%3D%22%23ffd487%22%20stroke-width%3D%224%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2214%22%20fill%3D%22%230e1e30%22%2F%3E%3Cpath%20d%3D%22M24%2025v-5a3%203%200%200%201%203-3h10a3%203%200%200%201%203%203v5M20%2025h24a5%205%200%200%201%205%205v13a5%205%200%200%201-5%205H20a5%205%200%200%201-5-5V30a5%205%200%200%201%205-5Z%22%20fill%3D%22none%22%20stroke%3D%22%23f8f7f3%22%20stroke-width%3D%224%22%20stroke-linejoin%3D%22round%22%2F%3E%3Cpath%20d%3D%22m25%2036%205%205%209-10%22%20fill%3D%22none%22%20stroke%3D%22%23ffa96e%22%20stroke-width%3D%224%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E">
 <title>JobMatch | Find work that fits</title>
 <style>
-:root{--ink:#192e3b;--teal:#17675e;--bg:#f8f7f3;--line:#d9dfdb;--muted:#5b6a72;--card:#fff;--warm:#fbf2df}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
-a{color:var(--teal)}a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #d5ab55;outline-offset:3px}
-.wrap{width:min(1080px,calc(100% - 40px));margin-inline:auto}
-.site-head{border-bottom:1px solid var(--line);background:rgba(255,255,255,.6)}
-.nav{min-height:82px;display:flex;align-items:center;justify-content:space-between;gap:18px}
-.brand{font-weight:800;font-size:1.45rem;letter-spacing:-.06em;color:var(--ink);text-decoration:none}.brand span{color:var(--teal)}
-.nav-right{display:flex;gap:24px;align-items:center;font-size:.88rem}
-.nav-right a{text-decoration:none;font-weight:600}
-.nav-right a:hover{text-decoration:underline}
-.hero{padding:82px 0 48px;max-width:900px}
-.eyebrow{text-transform:uppercase;letter-spacing:.15em;color:var(--teal);font-size:.76rem;font-weight:750;margin:0 0 20px}
-h1,h2,h3{font-family:Georgia, "Times New Roman",serif;line-height:1.14;letter-spacing:-.035em}
-h1{font-size:clamp(2.8rem,6.5vw,5.1rem);max-width:840px;margin:0 0 22px}
-h1 em{color:var(--teal);font-style:italic}
-.lead{font-size:1.18rem;max-width:690px;color:var(--muted);margin:0}
-.hero-note{margin:28px 0 0;font-size:.88rem;color:var(--muted)}
-.mini-dot{display:inline-block;width:8px;height:8px;background:#c78c42;border-radius:50%;margin-right:7px}
-.search-card{background:var(--card);border:1px solid var(--line);padding:clamp(20px,4vw,38px);box-shadow:0 14px 36px #1a343908}
-.section-top{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;align-items:baseline;margin-bottom:20px}
-.section-top h2{font-size:1.55rem;margin:0}
-.section-top span{font-size:.8rem;color:var(--muted)}
-.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}.field:first-child{grid-column:1/-1}
-.field{min-width:0}
-label{display:block;font-size:.82rem;font-weight:700;margin:0 0 9px}
-input,select{display:block;width:100%;min-width:0;max-width:100%;padding:13px 12px;background:#fff;border:1px solid #9ca9a7;border-radius:3px;font:inherit;font-size:.92rem;color:var(--ink);height:49px}
-input::placeholder{color:#69767d}
-#provinceWrap[hidden]{display:none!important}.options-line{display:grid;gap:14px;margin-top:24px;padding:20px;background:#f7f9f7;border:1px solid var(--line);border-radius:4px}.options-line>p{font-size:.75rem;text-transform:uppercase;letter-spacing:.1em;font-weight:750;color:var(--teal);margin:0 0 2px}.options-line label{display:flex;align-items:flex-start;gap:12px;font-size:.9rem;font-weight:500;line-height:1.5;margin:0;cursor:pointer}.options-line input[type="checkbox"]{display:inline-block;appearance:auto;height:19px;width:19px;min-width:19px;max-width:19px;padding:0;flex:0 0 19px;margin:2px 0 0;accent-color:var(--teal)}.actions{display:flex;align-items:center;flex-wrap:wrap;gap:18px;margin-top:22px}
-button{background:var(--teal);color:white;border:1px solid var(--teal);padding:12px 24px;font:inherit;font-size:.9rem;font-weight:700;cursor:pointer;min-height:48px}
-button:hover{background:#0f5048}
-.privacy{font-size:.81rem;color:var(--muted);margin:0;max-width:670px}
-.section-results{padding:54px 0 95px}
-.results-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;border-bottom:1px solid var(--line);padding-bottom:18px}
-.results-head h2{font-size:1.85rem;margin:0}
-#status{font-size:.88rem;color:var(--muted);margin:20px 0}
-.empty-state{padding:30px;border:1px dashed #b8c7c1;background:#fff;color:var(--muted)}
-.job{background:var(--card);border:1px solid var(--line);padding:25px;margin:15px 0}
-.job h2{font-size:1.48rem;margin:0 0 8px}
-.job p{margin:10px 0}.job a{font-weight:700}
-.muted{color:var(--muted)}.status{color:#77551e;font-size:.85rem}
-.note{padding:16px 20px;background:var(--warm);border-left:3px solid #be8e40;font-size:.88rem;margin:18px 0 0}
-.note strong{font-weight:750}
-.site-foot{border-top:1px solid var(--line);background:#f2f1ed;padding:28px 0}
-.foot{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;align-items:center;font-size:.83rem;color:var(--muted)}
-.foot a{font-weight:600}.foot p{margin:0}
-@media(max-width:800px){.hero{padding-top:58px}}
-@media(max-width:560px){.wrap{width:min(100% - 28px,1080px)}.nav{min-height:70px}.brand{font-size:1.3rem}.nav-right{gap:12px;font-size:.76rem}.grid{grid-template-columns:1fr}.field:first-child{grid-column:1/-1}.hero{padding:48px 0 34px}h1{font-size:clamp(2.5rem,11vw,3.7rem)}.lead{font-size:1.05rem}.section-results{padding:40px 0 70px}.actions{align-items:stretch}.actions button{width:100%}}
+:root {
+  --navy: #0e1e30;
+  --navy-light: #172f49;
+  --orange: #ffa96e;
+  --ink: #132639;
+  --muted: #4f6072;
+  --paper: #f5f3ee;
+  --card: #fffefa;
+  --line: #d5dce2;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 16px/1.55 system-ui, sans-serif; }
+a { color: inherit; }
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, summary:focus-visible {
+  outline: 3px solid #c85117;
+  outline-offset: 4px;
+}
+[hidden] { display: none !important; }
+.wrap { width: min(1120px, calc(100% - 48px)); margin-inline: auto; }
+.site-head { background: var(--navy); color: #f9fafc; border-bottom: 1px solid #ffffff26; }
+.nav { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.brand { font-weight: 850; font-size: 1.55rem; letter-spacing: -.06em; text-decoration: none; }
+.brand span, .hero em { color: var(--orange); }
+.nav-right { display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: center; font-size: .88rem; }
+.nav-right a { text-decoration: none; font-weight: 650; }
+.nav-right a:hover { text-decoration: underline; text-underline-offset: 5px; }
+.hero {
+  color: #fff;
+  background: radial-gradient(ellipse at right bottom, #234768, transparent 68%), var(--navy);
+  padding: clamp(52px, 8vw, 105px) 0 clamp(80px, 10vw, 124px);
+}
+h1, h2 { margin: 0; line-height: 1.07; letter-spacing: -.055em; }
+h1 { font-size: clamp(3rem, 8vw, 6.8rem); font-weight: 800; }
+h1 em { font-style: normal; }
+.lead { font-size: clamp(1.02rem, 2.2vw, 1.18rem); max-width: 44ch; color: #dce6f1; margin: 24px 0 0; }
+.hero-note { margin: 18px 0 0; font-size: .87rem; color: #d1deed; }
+.search-card { position: relative; margin-top: -45px; border: 1px solid var(--line); border-top: 5px solid var(--orange); border-radius: 20px; background: var(--card); padding: clamp(20px, 4vw, 38px); box-shadow: 0 18px 45px #10273d13; scroll-margin-top: 20px; }
+.section-top { margin-bottom: 24px; }
+.section-top h2, .results-head h2 { font-size: clamp(1.75rem, 4vw, 2.6rem); }
+.grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.field:first-child { grid-column: 1 / -1; }
+label { display: block; font-size: .86rem; font-weight: 700; margin-bottom: 7px; }
+input, select { display: block; width: 100%; min-width: 0; height: 50px; padding: 0 13px; border: 1px solid #aebbc7; border-radius: 9px; background: #f8fafc; color: var(--ink); font: inherit; }
+input::placeholder { color: var(--muted); }
+.options-line { margin-top: 19px; }
+.options-line label { display: flex; align-items: flex-start; gap: 10px; font-weight: 550; margin: 0; cursor: pointer; }
+.options-line input { flex: 0 0 18px; width: 18px; height: 18px; margin: 2px 0 0; accent-color: var(--navy-light); }
+.actions { display: flex; align-items: center; flex-wrap: wrap; gap: 12px 18px; margin-top: 24px; }
+button { border: 1px solid transparent; border-radius: 999px; background: var(--orange); color: var(--navy); min-height: 48px; padding: 10px 22px; font: inherit; font-weight: 750; cursor: pointer; }
+button:hover { background: #ffc197; }
+#load-more { background: var(--navy); color: #fff; }
+#load-more:hover { background: #254768; }
+.privacy, .note, #status { color: var(--muted); font-size: .88rem; }
+.privacy { margin: 0; }
+.note { border-top: 1px solid var(--line); padding-top: 14px; margin-top: 20px; }
+.note summary { font-weight: 700; width: fit-content; cursor: pointer; color: var(--ink); }
+.note p { margin-bottom: 0; }
+.section-results { padding: clamp(44px, 8vw, 80px) 0; }
+.results-head { border-bottom: 1px solid var(--line); padding-bottom: 16px; }
+#status { margin: 15px 0 20px; }
+#results { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.empty-state { grid-column: 1 / -1; padding: 26px; margin: 0; border: 1px dashed #aebbc7; border-radius: 14px; background: var(--card); color: var(--muted); }
+.job { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; min-width: 0; padding: clamp(18px, 3vw, 26px); border: 1px solid var(--line); border-top: 3px solid var(--orange); border-radius: 14px; background: var(--card); overflow-wrap: anywhere; }
+.job h2 { font-size: clamp(1.25rem, 2.3vw, 1.6rem); }
+.job p { margin: 0; }
+.job .company { color: var(--muted); font-weight: 650; }
+.job .location { align-self: flex-start; padding: 4px 9px; border-radius: 8px; color: #70360f; background: #fff0e3; font-weight: 650; font-size: .81rem; }
+.job .status, .muted { color: var(--muted); font-size: .86rem; }
+.job .apply { margin-top: auto; padding-top: 5px; font-weight: 750; text-underline-offset: 4px; }
+.job .apply:hover { color: #9b3b0a; }
+.site-foot { background: var(--navy); color: #cddbef; padding: 26px 0; }
+.foot { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; align-items: center; font-size: .85rem; }
+.foot a { color: var(--orange); font-weight: 650; text-underline-offset: 4px; }
+.foot p { margin: 0; }
+@media (max-width: 640px) {
+  .wrap { width: calc(100% - 32px); }
+  .nav { min-height: 64px; }
+  .nav-right { gap: 8px 13px; font-size: .79rem; justify-content: flex-end; }
+  .grid, #results { grid-template-columns: 1fr; }
+  .actions button { width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
 </style>
 </head>
 <body>
@@ -67,15 +105,17 @@ button:hover{background:#0f5048}
     </div>
   </nav>
 </header>
-<main class="wrap">
-  <section class="hero">
-    <p class="eyebrow">Find relevant opportunities</p>
-    <h1>Less searching.<br><em>Better matches.</em></h1>
-    <p class="lead">Explore vacancies across roles and industries from employer career pages. Narrow your search by location and experience level.</p>
-    <p class="hero-note"><span class="mini-dot" aria-hidden="true"></span> Early beta · Selected employer boards · Not a complete search of all vacancies</p>
+<main>
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap">
+      <h1 id="hero-title">Find work<br><em>that fits.</em></h1>
+      <p class="lead">Browse direct employer listings. Filter by location and experience level to find roles worth a closer look.</p>
+      <p class="hero-note">Remote, hybrid and on-site roles from selected employer boards</p>
+    </div>
   </section>
+  <div class="wrap">
   <section class="search-card" id="search-jobs" aria-labelledby="search-title">
-    <div class="section-top"><h2 id="search-title">Find a vacancy</h2><span>Free to explore · No sign-up required</span></div>
+    <div class="section-top"><h2 id="search-title">Find a vacancy</h2></div>
     <div class="grid">
       <div class="field"><label for="query">Job title or keyword</label><input id="query" placeholder="e.g. Operations, finance, support"></div>
       <div class="field"><label for="location">Work location</label><select id="location"><option value="remote">Remote from Spain</option><option value="worldwide">Worldwide remote</option><option value="province">On-site or hybrid — choose province</option><option value="spain">All jobs based in Spain</option><option value="all">All countries (explore feed)</option></select></div>
@@ -83,14 +123,17 @@ button:hover{background:#0f5048}
       <div class="field"><label for="email">Application preference</label><select id="email"><option value="all">All application routes</option><option value="published">Email mentioned in job posting</option></select></div>
     </div>
     <div class="options-line" role="group" aria-label="Additional filters">
-      <p>Additional filters</p>
       <label for="junior"><input id="junior" type="checkbox" checked> Exclude internships, traineeships, unpaid work and senior roles</label>
     </div>
     <div class="actions">
       <button type="button" id="search">Search vacancies</button>
       <p class="privacy">Your filters stay in this browser. No CV or account is required.</p>
     </div>
-    <p class="note"><strong>Location accuracy:</strong> Province matches use verified city/province names from published location fields; unrecognised places remain unclassified. “Remote from Spain” includes roles that explicitly allow Spain or worldwide remote work. Always verify eligibility with the employer.<br><strong>Before applying:</strong> Always check work-location eligibility and requirements on the original employer posting. An email appearing in an advertisement is not necessarily a CV submission address.</p>
+    <details class="note">
+      <summary>How location and application filters work</summary>
+      <p>Province matches use published city and province names. “Remote from Spain” includes roles that explicitly allow remote work from Spain or worldwide.</p>
+      <p>Check location eligibility and application instructions on the employer’s posting. An email mentioned in a listing may be for general enquiries.</p>
+    </details>
   </section>
   <section class="section-results" aria-labelledby="results-title">
     <div class="results-head"><h2 id="results-title">Opportunities</h2></div>
@@ -98,6 +141,7 @@ button:hover{background:#0f5048}
     <div id="results" aria-label="Job listings"></div>
     <div class="actions"><button type="button" id="load-more" hidden>Show more listings</button></div>
   </section>
+  </div>
 </main>
 <footer class="site-foot">
   <div class="wrap foot">
@@ -147,13 +191,13 @@ function render(){
   if(!matches.length)root.append(el('p',loc==='province'&&!province?'Choose a province to see local vacancies.':'No listings match these filters. Try another keyword, location or experience setting.','empty-state'));
   for(const j of shown){
     const a=el('article',undefined,'job');const fit=assessClient(j);
-    a.append(el('h2',j.title),el('p',j.company+' · '+(j.location||'Location unspecified'),'muted'));
+    a.append(el('h2',j.title),el('p',j.company+' · '+(j.location||'Location unspecified'),'company'));
     const locLabel=({remote_worldwide_explicit:'Worldwide remote — verify terms with employer',remote_spain_explicit:'Remote from Spain — verify full posting',spain_location_check_remote:'Spain location — remote status unverified',remote_scope_unverified:'Remote scope ambiguous — Spain eligibility unverified',location_unverified:'Work location/eligibility unverified'})[j.location_status]||'Eligibility unverified';
-    a.append(el('p',locLabel,'status'));
+    a.append(el('p',locLabel,'location'));
     a.append(el('p',(fit.status==='excluded'?'Excluded by default: ':'Needs review: ')+fit.reason,'status'));
     a.append(el('p',j.employment_terms||'Compensation and contract type: not independently verified.','muted'));
     const desc=String(j.description_excerpt||'');a.append(el('p',desc.slice(0,320)+(desc.length>320?'…':'')));
-    const link=el('a','View original employer posting / Apply');link.href=j.url;link.target='_blank';link.rel='noopener noreferrer';a.append(link);
+    const link=el('a','View employer posting ↗','apply');link.href=j.url;link.target='_blank';link.rel='noopener noreferrer';a.append(link);
     if(j.published_emails?.length)a.append(el('p','Email found in posting (not verified for CV applications): '+j.published_emails.join(', '),'status'));
     root.append(a);
   }

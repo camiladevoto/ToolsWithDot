@@ -157,19 +157,22 @@ const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
 
 if (typeof brand.animate === 'function' && !motionPreference.matches && window.scrollY === 0) {
   const bounds = brand.getBoundingClientRect();
-  const scale = Math.min(4.2, window.innerWidth * 0.75 / bounds.width);
+  const scale = Math.min(6, window.innerWidth * 0.86 / bounds.width);
   const x = (window.innerWidth - bounds.width) / 2 - bounds.left;
   const y = (window.innerHeight - bounds.height) / 2 - bounds.top;
   const centered = `translate(${x}px, ${y}px)`;
   brand.style.position = 'relative';
   brand.style.zIndex = '2';
 
-  const logoDuration = 1500;
+  const holdDuration = 1500;
+  const spinDuration = 1050;
+  const logoDuration = holdDuration + spinDuration + 450;
   const logo = brand.animate([
     { transform: `${centered} scale(${scale}) rotateY(0deg)` },
-    { transform: `${centered} scale(${scale}) rotateY(360deg)`, offset: .7 },
+    { transform: `${centered} scale(${scale}) rotateY(0deg)`, offset: holdDuration / logoDuration, easing: 'ease-in-out' },
+    { transform: `${centered} scale(${scale}) rotateY(360deg)`, offset: (holdDuration + spinDuration) / logoDuration, easing: 'ease-in-out' },
     { transform: 'translate(0, 0) scale(1) rotateY(360deg)' }
-  ], { duration: logoDuration, easing: 'ease-in-out' });
+  ], { duration: logoDuration });
 
   const lines = [...document.querySelectorAll('#hero-title > *')].map((line, index) =>
     line.animate([

@@ -125,12 +125,30 @@ button:hover { background: #ff7467; }
 .tool-brands{display:flex;align-items:center;gap:24px;flex-wrap:wrap}.sibling-brand{color:#fffdf8;font-weight:850;font-size:1.55rem;letter-spacing:-.035em;text-decoration:none;white-space:nowrap}.sibling-brand span{color:#ff38b8}.sibling-brand:hover{color:#ff38b8}.nav:has(.brand[style*="z-index"]) .sibling-brand{visibility:hidden}@media(max-width:640px){.tool-brands{gap:12px}.sibling-brand{font-size:1.2rem}.tool-brands .brand{font-size:1.2rem}}
 .tool-brands{align-items:baseline}.tool-brands .brand,.sibling-brand{font-size:1.55rem;font-weight:850;line-height:1.2;letter-spacing:-.035em}.sibling-brand span{display:inline-block;width:.14em;height:.14em;margin-left:.09em;vertical-align:.055em;border-radius:50%;background:#ff38b8;outline:.025em solid var(--border)}@media(max-width:640px){.tool-brands .brand,.sibling-brand{font-size:1.2rem}}
 .tool-brands{gap:18px;align-items:center;flex-wrap:nowrap}.tool-brands .brand,.sibling-brand{display:inline-flex;align-items:baseline;line-height:1.15}.tool-brands .brand span,.sibling-brand span{flex:none;align-self:flex-end;margin-bottom:.11em;margin-left:.09em;vertical-align:initial}.sibling-brand{border-left:1px solid #66636e;padding-left:18px;font-weight:700;font-size:1.25rem;color:#fffdf8}.sibling-brand:hover{color:#ff38b8}@media(max-width:640px){.tool-brands{gap:10px}.sibling-brand{padding-left:10px;font-size:1rem}.tool-brands .brand{font-size:1.2rem}}
+
+.category-nav{gap:18px;align-items:center;flex-wrap:nowrap}
+.home-brand,.recruit-menu summary{color:#fffdf8;text-decoration:none;letter-spacing:-.035em;font-weight:850;font-size:1.25rem;line-height:1.2;white-space:nowrap}
+.home-brand span{color:#456cff}.recruit-menu{position:relative;border-left:1px solid #66636e;padding-left:18px;z-index:12}
+.recruit-menu summary{list-style:none;display:flex;align-items:center;cursor:pointer;gap:0}
+.recruit-menu summary::-webkit-details-marker{display:none}
+.recruit-menu summary span{color:#ff4938}.recruit-menu summary svg{margin-left:9px;transition:transform .15s}
+.recruit-menu[open] summary svg{transform:rotate(180deg)}
+.recruit-options{position:absolute;top:calc(100% + 17px);left:9px;min-width:185px;background:#100e14;border:2px solid #100e14;box-shadow:5px 5px 0 #ff4938;padding:6px;color:#fffdf8}
+.recruit-options a{display:block;padding:10px 13px;text-decoration:none;font-weight:800;font-size:1.1rem;white-space:nowrap}
+.recruit-options a:hover,.recruit-options a:focus-visible{background:#302e36}
+.recruit-options a[aria-current=page]{background:#25232c}
+.job-dot{color:#ff4938}.cv-dot{color:#ff38b8}
+.home-brand:focus-visible,.recruit-menu summary:focus-visible,.recruit-options a:focus-visible{outline:2px solid white;outline-offset:3px}
+.intro-screen{position:fixed;inset:0;background:#100e14;z-index:9998;pointer-events:none}
+.intro-wordmark{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);color:#fffdf8;z-index:9999;pointer-events:none;font-size:clamp(2rem,10vw,8rem);font-weight:850;letter-spacing:-.045em;line-height:1.15;white-space:nowrap}
+.intro-wordmark span{color:#ff4938}
+@media(max-width:640px){.category-nav{gap:9px}.home-brand,.recruit-menu summary{font-size:.95rem}.recruit-menu{padding-left:9px}.recruit-menu summary svg{width:10px;margin-left:5px}.recruit-options{left:0;min-width:145px}.nav{flex-wrap:wrap;padding-block:12px}}
 </style>
 </head>
 <body>
 <header class="site-head">
   <nav class="wrap nav" aria-label="Main navigation">
-    <div class="tool-brands"><a href="./" class="brand" aria-current="page" aria-label="JobMatch home">JobMatch<span aria-hidden="true"></span></a><a href="../cvfit/" class="sibling-brand" aria-label="CVFit">CVFit<span aria-hidden="true"></span></a></div>
+    <div class="tool-brands category-nav"><a class="home-brand" href="../">HOME<span>.</span></a><details class="recruit-menu"><summary id="recruit-target">RECRUITMENT<span>.</span><svg aria-hidden="true" width="13" height="9" viewBox="0 0 13 9"><path d="M1 1l5.5 6L12 1" fill="none" stroke="currentColor" stroke-width="2"/></svg></summary><div class="recruit-options"><a href="../jobmatch/" aria-current="page">JobMatch<span class="job-dot">.</span></a><a href="../cvfit/">CVFit<span class="cv-dot">.</span></a></div></details></div>
     <div class="nav-right">
       <a href="#search-jobs">Find jobs</a>
       
@@ -196,67 +214,33 @@ button:hover { background: #ff7467; }
 </footer>
 <script>
 
-const brand = document.querySelector('.brand');
-const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
 
-if (typeof brand.animate === 'function' && !motionPreference.matches && window.scrollY === 0) {
-  const bounds = brand.getBoundingClientRect();
-  const scale = Math.min(6, window.innerWidth * 0.86 / bounds.width);
-  const x = (window.innerWidth - bounds.width) / 2 - bounds.left;
-  const y = (window.innerHeight - bounds.height) / 2 - bounds.top;
-  const centered = `translate(${x}px, ${y}px)`;
-  brand.style.position = 'relative';
-  brand.style.zIndex = '2';
-
-  const holdDuration = 500;
-  const spinDuration = 1050;
-  const logoDuration = holdDuration + spinDuration + 450;
-  const backdrop = document.createElement('div');
-  backdrop.setAttribute('aria-hidden', 'true');
-  backdrop.className = 'intro-backdrop';
-  document.body.append(backdrop);
-  const reveal = backdrop.animate([{ opacity: 1 }, { opacity: 0 }], {
-    delay: holdDuration + spinDuration,
-    duration: logoDuration - holdDuration - spinDuration,
-    easing: 'ease-in-out',
-    fill: 'both'
-  });
-  reveal.onfinish = () => backdrop.remove();
-
-  const logo = brand.animate([
-    { transform: `${centered} scale(${scale}) rotateY(0deg)` },
-    { transform: `${centered} scale(${scale}) rotateY(0deg)`, offset: holdDuration / logoDuration, easing: 'ease-in-out' },
-    { transform: `${centered} scale(${scale}) rotateY(360deg)`, offset: (holdDuration + spinDuration) / logoDuration, easing: 'ease-in-out' },
-    { transform: 'translate(0, 0) scale(1) rotateY(360deg)' }
-  ], { duration: logoDuration });
-
-  const lines = [...document.querySelectorAll('#hero-title > *')].map((line, index) =>
-    line.animate([
-      { transform: 'translateX(-48px)', opacity: 0 },
-      { transform: 'translateX(0)', opacity: 1 }
-    ], { delay: logoDuration + index * 160, duration: 480, easing: 'ease-out', fill: 'backwards' })
-  );
-
-  function finishIntro() {
-    brand.style.removeProperty('position');
-    brand.style.removeProperty('z-index');
-    window.removeEventListener('resize', cancelIntro);
-    document.removeEventListener('focusin', cancelIntro);
-    motionPreference.removeEventListener('change', cancelIntro);
-  }
-
-  function cancelIntro() {
-    logo.cancel();
-    reveal.cancel();
-    backdrop.remove();
-    lines.forEach(line => line.cancel());
-    finishIntro();
-  }
-
-  lines[lines.length - 1].onfinish = finishIntro;
-  window.addEventListener('resize', cancelIntro, { once: true });
-  document.addEventListener('focusin', cancelIntro, { once: true });
-  motionPreference.addEventListener('change', cancelIntro);
+const recruitMenu=document.querySelector('.recruit-menu');
+document.addEventListener('click',e=>{if(!recruitMenu.contains(e.target))recruitMenu.open=false;});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&recruitMenu.open){recruitMenu.open=false;recruitMenu.querySelector('summary').focus();}});
+const motionPreference=matchMedia('(prefers-reduced-motion: reduce)');
+if(!motionPreference.matches&&window.scrollY===0&&typeof Element.prototype.animate==='function'){
+ const screen=document.createElement('div'), word=document.createElement('div');
+ screen.className='intro-screen';word.className='intro-wordmark';
+ screen.setAttribute('aria-hidden','true');word.setAttribute('aria-hidden','true');
+ word.innerHTML='JobMatch<span>.</span>';
+ document.body.append(screen,word);
+ const target=document.getElementById('recruit-target'), b=word.getBoundingClientRect(), t=target.getBoundingClientRect();
+ const dx=t.left+t.width/2-(b.left+b.width/2),dy=t.top+t.height/2-(b.top+b.height/2);
+ const center='translate(-50%,-50%)', hold=500,spin=1050,travel=450,total=hold+spin+travel;
+ const logo=word.animate([
+ {transform:center+' rotateY(0deg)',opacity:1},
+ {transform:center+' rotateY(0deg)',opacity:1,offset:hold/total},
+ {transform:center+' rotateY(360deg)',opacity:1,offset:(hold+spin)/total},
+ {transform:'translate(calc(-50% + '+dx+'px), calc(-50% + '+dy+'px)) scale(.08) rotateY(360deg)',opacity:0}
+ ],{duration:total,fill:'forwards',easing:'linear'});
+ const reveal=screen.animate([{opacity:1},{opacity:0}],{delay:hold+spin,duration:travel,fill:'both'});
+ const menuReveal=target.animate([{opacity:0},{opacity:0},{opacity:1}],{duration:total,fill:'backwards',easing:'ease-in'});
+ const lines=[...document.querySelectorAll('#hero-title > *')].map((line,i)=>line.animate([{transform:'translateX(-48px)',opacity:0},{transform:'translateX(0)',opacity:1}],{delay:total+i*160,duration:480,easing:'ease-out',fill:'backwards'}));
+ function finish(){screen.remove();word.remove();window.removeEventListener('resize',cancel);document.removeEventListener('focusin',cancel);motionPreference.removeEventListener('change',cancel);}
+ function cancel(){[logo,reveal,menuReveal,...lines].forEach(a=>a.cancel());finish();}
+ logo.onfinish=finish;
+ window.addEventListener('resize',cancel,{once:true});document.addEventListener('focusin',cancel,{once:true});motionPreference.addEventListener('change',cancel);
 }
 
 

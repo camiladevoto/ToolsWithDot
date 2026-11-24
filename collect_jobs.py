@@ -184,6 +184,26 @@ def read_boards(config):
             slug=validate_slug(board['slug']); company=clean(board.get('company') or slug)
             yield provider,slug,company
 
+def merge_shortlist(jobs, now):
+    """Include recently reviewed direct listings and replace matching ATS duplicates."""
+    source = ROOT / 'shortlisted-jobs.json'
+    if not source.exists():
+        return jobs
+
+    def key(job):
+        url = urllib.parse.urlsplit(job['url'])
+        host = url.netloc.lower().removeprefix('www.')
+        return host, url.path.rstrip('/')
+
+    curated = json.loads(source.read_text(encoding='utf8'))
+    reviewed = [
+        job for job in curated
+        if dt.timedelta(0) <= now - dt.datetime.fromisoformat(job['last_checked_utc']) < dt.timedelta(days=14)
+    ]
+    promoted = {key(job) for job in reviewed}
+    return reviewed + [job for job in jobs if key(job) not in promoted]
+
+
 def run():
     config=json.loads(CONFIG.read_text(encoding='utf8'))
     jobs=[]; errors=[]; succeeded=0
@@ -209,6 +229,7 @@ def run():
         sys.exit(1)
     jobs=list({j['id']:j for j in jobs}.values())
     jobs.sort(key=lambda j:(j['company'].casefold(),j['title'].casefold()))
+    jobs = merge_shortlist(jobs, dt.datetime.now(dt.timezone.utc))
     output={'updated_utc':dt.datetime.now(dt.timezone.utc).isoformat(timespec='seconds'),
             'sources_checked':succeeded,'source_errors':len(errors),'jobs':jobs}
     temp=OUTPUT.with_suffix('.json.tmp')

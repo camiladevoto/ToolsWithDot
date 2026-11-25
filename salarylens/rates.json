@@ -54,5 +54,13 @@
       "social": "https://www.inps.it/it/it/inps-comunica/notizie/dettaglio-news-page.news.2026.02.gestione-separata-le-aliquote-contributive-per-il-2026.html"
     }
   },
-  "fx": null
+  "fx": {
+    "date": "2026-11-25",
+    "rates": {
+      "EUR": 1.0,
+      "CHF": 0.9085,
+      "AUD": 1.6644
+    },
+    "source": "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml"
+  }
 }

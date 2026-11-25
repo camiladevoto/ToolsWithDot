@@ -1,0 +1,58 @@
+{
+  "version": "v0.1",
+  "reviewed": "2026-11-25",
+  "countries": {
+    "ES": {
+      "name": "Spain",
+      "currency": "EUR",
+      "source": "https://sede.agenciatributaria.gob.es/Sede/Retenciones.shtml",
+      "social": "https://www.boe.es/eli/es/o/2026/03/30/pjc297",
+      "benchmark": 29540.26,
+      "benchmarkLabel": "2024 national mean gross annual earnings per worker (INE)",
+      "benchmarkSource": "https://www.ine.es/dyngs/Prensa/EAES2024.htm"
+    },
+    "AU": {
+      "name": "Australia",
+      "currency": "AUD",
+      "source": "https://www.ato.gov.au/tax-rates-and-codes/tax-rates-australian-residents",
+      "social": "https://www.ato.gov.au/tax-rates-and-codes/key-superannuation-rates-and-thresholds/super-guarantee",
+      "year": "2026–27",
+      "brackets": [
+        [
+          18200,
+          0
+        ],
+        [
+          45000,
+          0.15
+        ],
+        [
+          135000,
+          0.3
+        ],
+        [
+          190000,
+          0.37
+        ],
+        [
+          null,
+          0.45
+        ]
+      ],
+      "superRate": 12
+    },
+    "CH": {
+      "name": "Switzerland",
+      "currency": "CHF",
+      "source": "https://www.estv.admin.ch/",
+      "social": "https://www.ahv-iv.ch/"
+    },
+    "IT": {
+      "name": "Italy",
+      "currency": "EUR",
+      "source": "https://www.agenziaentrate.gov.it/",
+      "social": "https://www.inps.it/it/it/inps-comunica/notizie/dettaglio-news-page.news.2026.02.gestione-separata-le-aliquote-contributive-per-il-2026.html"
+    }
+  },
+  "fx": null
+}

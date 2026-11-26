@@ -55,11 +55,11 @@
     }
   },
   "fx": {
-    "date": "2026-11-25",
+    "date": "2026-11-26",
     "rates": {
       "EUR": 1.0,
-      "CHF": 0.9085,
-      "AUD": 1.6644
+      "CHF": 0.9153,
+      "AUD": 1.654
     },
     "source": "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml"
   }
